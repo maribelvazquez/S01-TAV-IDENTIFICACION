@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S01 · Identificación del cliente y expediente | Taller Antilavado 360</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#12224A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312224A'/><text x='16' y='23' font-size='19' font-family='Georgia' font-weight='bold' fill='%23F2A541' text-anchor='middle'>1</text></svg>">
+<style>
+:root{--navy:#12224A;--navy2:#1E2761;--navy3:#1B3061;--ice:#CADCFC;--amber:#F2A541;
+--red:#B3261E;--green:#1B5E3F;--orange:#C4622B;--gray:#5A6472;--light:#F4F6FA;--ink:#16202E;--line:#E2E7F0;
+--ambbg:#FDF3E3;--ambtx:#8A5A12}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:#fff;line-height:1.55;font-size:17px}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* ---------- CABECERA ---------- */
+header{background:var(--navy);color:#fff;padding:34px 0 26px}
+.kick{color:var(--amber);font-size:11px;font-weight:800;letter-spacing:2.6px;margin:0 0 10px}
+header h1{font-size:34px;margin:0 0 10px;line-height:1.15}
+header p.lead{color:var(--ice);margin:0;font-size:17px;max-width:760px}
+.meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.badge{background:var(--navy3);border-radius:20px;padding:7px 15px;font-size:13px;color:var(--ice);font-weight:600}
+.badge.hot{background:var(--amber);color:var(--navy);font-weight:800}
+
+/* ---------- NAV ---------- */
+nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);
+box-shadow:0 2px 12px rgba(18,34,74,.07)}
+nav .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav button{background:none;border:0;padding:15px 11px;font-size:14px;font-weight:700;color:var(--gray);
+cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;font-family:inherit}
+nav button.on{color:var(--navy);border-bottom-color:var(--amber)}
+nav button:hover{color:var(--navy)}
+
+/* ---------- SECCIONES ---------- */
+section{display:none;padding:34px 0 70px}
+section.on{display:block}
+h2{font-size:29px;color:var(--navy);margin:0 0 6px;line-height:1.2}
+.sub{color:var(--gray);font-size:16px;margin:0 0 26px;max-width:820px}
+h3{font-size:20px;color:var(--navy);margin:32px 0 12px}
+
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.card.dark{background:var(--navy);color:#fff;border-color:var(--navy)}
+.card.dark h4,.card.dark .big{color:#fff}
+.card.dark p{color:var(--ice)}
+.card.amb{background:var(--ambbg);border-color:var(--amber)}
+.card.amb h4,.card.amb p,.card.amb .big{color:var(--ambtx)}
+.card h4{font-family:Georgia,serif;font-size:19px;margin:0 0 8px;color:var(--navy)}
+.card p{margin:0 0 8px;font-size:15px;color:var(--gray)}
+.card p:last-child{margin-bottom:0}
+.big{font-family:Georgia,serif;font-size:34px;font-weight:bold;color:var(--navy);line-height:1.1;margin:0 0 6px}
+
+/* ---------- ETIQUETAS DE CITA ---------- */
+.ref{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;line-height:1;
+padding:4px 7px;border-radius:5px;margin-right:6px;vertical-align:1px;font-family:Calibri,"Segoe UI",Arial,sans-serif}
+.r-l{background:#E3E9F7;color:#12224A}.r-r{background:#E4F2EB;color:#245C45}
+.r-rcg{background:#FDF1DC;color:#8C570D}.r-cpf{background:#F3E6F2;color:#6B2160}
+.fund{font-size:13.5px;color:var(--ambtx);margin-top:10px}
+
+.quote{background:var(--light);border-left:5px solid var(--navy);border-radius:0 12px 12px 0;
+padding:18px 22px;margin:20px 0;font-family:Georgia,serif;font-size:17px;font-style:italic;color:var(--navy)}
+.note{background:var(--ambbg);border:1px solid var(--amber);border-radius:12px;padding:18px 22px;
+margin:20px 0;color:var(--ambtx);font-size:15.5px}
+.note b{color:#6B4A12}
+.punch{background:var(--navy);color:#fff;border-radius:14px;padding:22px 26px;margin:22px 0}
+.punch .t{font-family:Georgia,serif;font-size:22px;font-weight:bold;margin:0 0 6px}
+.punch .s{color:var(--ice);font-size:15px;margin:0}
+.punch .t.amb{color:var(--amber)}
+
+table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+th{background:var(--navy2);color:#fff;text-align:left;padding:11px 13px;font-size:13.5px}
+td{padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.hot td{background:var(--ambbg);font-weight:700;color:var(--ambtx)}
+
+/* ---------- EXPEDIENTE INTERACTIVO ---------- */
+.picker{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--light);
+border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:22px}
+.picker label{font-weight:800;color:var(--navy);font-size:15px}
+select{font-family:inherit;font-size:16px;padding:11px 14px;border:2px solid var(--navy);
+border-radius:9px;background:#fff;color:var(--ink);font-weight:600;min-width:330px;cursor:pointer}
+.scorebar{position:sticky;top:53px;z-index:20;background:#fff;border-bottom:1px solid var(--line);
+padding:13px 0;margin-bottom:18px}
+.scorebar .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.bar{flex:1;min-width:170px;height:12px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .3s}
+.sc{font-size:15px;font-weight:800;color:var(--navy);white-space:nowrap}
+.sem{padding:6px 14px;border-radius:16px;font-size:13px;font-weight:800;color:#fff}
+.req{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:11px;background:#fff}
+.req.done{background:#F6FBF8;border-color:#BFE0CE}
+.req.no{background:#FCF2F1;border-color:#F0C9C5}
+.req .top{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:7px}
+.pill{font-size:11px;font-weight:800;letter-spacing:.6px;padding:3px 9px;border-radius:11px;
+background:var(--navy2);color:#fff}
+.pill.doc{background:#245C45}.pill.con{background:var(--orange)}
+.num{font-size:13.5px;font-weight:800;color:var(--gray)}
+.req .txt{font-size:15.5px;margin:0 0 10px}
+.req .nv{background:var(--ambbg);border-radius:8px;padding:9px 12px;font-size:13.5px;color:var(--ambtx);margin:0 0 10px}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opts button{font-family:inherit;font-size:13.5px;font-weight:700;padding:9px 16px;border-radius:9px;
+border:1.5px solid var(--line);background:#fff;color:var(--gray);cursor:pointer}
+.opts button.sel[data-v="si"]{background:var(--green);color:#fff;border-color:var(--green)}
+.opts button.sel[data-v="pa"]{background:var(--orange);color:#fff;border-color:var(--orange)}
+.opts button.sel[data-v="no"]{background:var(--red);color:#fff;border-color:var(--red)}
+.opts button.sel[data-v="na"]{background:#6B7480;color:#fff;border-color:#6B7480}
+
+.dl{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:12px;
+padding:18px 20px;margin-bottom:12px;text-decoration:none;color:inherit}
+.dl:hover{border-color:var(--amber);background:var(--ambbg)}
+.dl .ext{font-family:Georgia,serif;font-weight:bold;font-size:15px;color:var(--amber);
+background:var(--navy);border-radius:9px;padding:11px 13px;min-width:66px;text-align:center}
+.dl .n{font-weight:800;font-size:16px;color:var(--navy)}
+.dl .d{font-size:14px;color:var(--gray)}
+
+footer{background:var(--navy);color:#8FA4C9;padding:30px 0 40px;font-size:13.5px}
+footer b{color:#fff}
+@media(max-width:900px){.g4,.g3{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}
+header h1{font-size:26px}h2{font-size:23px}body{font-size:16px}select{min-width:100%}}
+@media(max-width:600px){.g4,.g3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="app">
+
+<header><div class="wrap">
+  <p class="kick">SESIÓN 1 · MARTES 18 DE AGOSTO DE 2026 · 16:00 A 18:00 H</p>
+  <h1>Identificación del cliente y expediente</h1>
+  <p class="lead">De todo lo que el 11 de agosto vimos como &laquo;esto es de 2027&raquo;, el expediente es lo único que te cae en <b id="dias">104</b> días.</p>
+  <div class="meta">
+    <span class="badge hot" id="cuenta">— días para el 30 de noviembre de 2026</span>
+    <span class="badge">111 requisitos · 9 tipos de cliente</span>
+    <span class="badge">Cotejado contra el ACUERDO 115/2026</span>
+  </div>
+</div></header>
+
+<nav><div class="wrap" id="nav"></div></nav>
+
+<!-- ============ INICIO ============ -->
+<section id="s-inicio" class="on"><div class="wrap">
+  <h2>Lo que vamos a hacer hoy</h2>
+  <p class="sub">Dos horas. La última media hora la trabajas tú, no yo.</p>
+  <table>
+    <tr><th style="width:110px">Hora</th><th>Bloque</th></tr>
+    <tr><td><b>16:00</b></td><td>Calendario y encuadre</td></tr>
+    <tr><td><b>16:10</b></td><td>Quién es tu cliente, y por qué identificar no es avisar</td></tr>
+    <tr><td><b>16:25</b></td><td>Cómo hay que identificar · primer ejercicio</td></tr>
+    <tr><td><b>16:45</b></td><td>El expediente: qué lleva, qué cambió y el Beneficiario Controlador</td></tr>
+    <tr><td><b>17:12</b></td><td>Padrón, abstención y verificación anual</td></tr>
+    <tr class="hot"><td><b>17:20</b></td><td>TALLER · llenas tu expediente con un cliente real</td></tr>
+    <tr><td><b>17:50</b></td><td>Del expediente al riesgo · preguntas</td></tr>
+  </table>
+
+  <h3>El calendario definitivo del taller</h3>
+  <div class="note"><b>Son siete sesiones, no seis.</b> El programa publicado prometía seis. Se imparten siete, sin costo adicional. Y el <b>14 de septiembre es LUNES</b>: es el único cambio de día de todo el taller.</div>
+  <table>
+    <tr><th style="width:60px">#</th><th style="width:150px">Fecha</th><th>Sesión</th></tr>
+    <tr><td><b>1</b></td><td>mar 18 ago</td><td>Identificación del cliente y expediente</td></tr>
+    <tr><td><b>2</b></td><td>mar 25 ago</td><td>Metodología de riesgos y grado de riesgo</td></tr>
+    <tr><td><b>3</b></td><td>mar 1 sep</td><td>Manual, Representante y capacitación</td></tr>
+    <tr><td><b>4</b></td><td>mar 8 sep</td><td>Monitoreo, aviso de 24 h, Beneficiario Controlador y efectivo</td></tr>
+    <tr class="hot"><td><b>5</b></td><td>LUN 14 sep</td><td>Los sectores, uno por uno</td></tr>
+    <tr><td><b>6</b></td><td>mar 22 sep</td><td>Autoridad, auditoría de efectividad y cierre</td></tr>
+  </table>
+  <p class="sub">Todas de 16:00 a 18:00 h del centro, por Zoom, con liga en plataforma.</p>
+</div></section>
+
+<!-- ============ CLIENTE ============ -->
+<section id="s-cliente"><div class="wrap">
+  <h2>Quién es tu cliente</h2>
+  <p class="sub">Antes de identificar hay que saber a quién. Y qué obligación se dispara, porque no es una sola.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Persona física</h4><p>Nacional o extranjera, residente o visitante. El anexo cambia según cuál sea.</p></div>
+    <div class="card"><h4>Persona moral</h4><p>Mexicana, extranjera, de derecho público, o con régimen simplificado.</p></div>
+    <div class="card"><h4>Fideicomiso</h4><p>Adicionado en 2025. Deja de ser una duda: es cliente, y tiene su propio anexo.</p></div>
+  </div>
+  <div class="quote">&laquo;Cliente o Usuaria, a cualquier persona física o moral, así como fideicomisos que celebren actos u operaciones con quienes realicen Actividades Vulnerables.&raquo;
+  <div class="fund"><span class="ref r-l">L</span> Artículo 3, fracción III Bis · adicionada el 16 de julio de 2025</div></div>
+
+  <h3>Identificar no es avisar</h3>
+  <div class="grid g2">
+    <div class="card"><h4 style="color:#1B5E3F">IDENTIFICAR</h4>
+      <p style="font-size:17px;color:#16202E"><b>Pedir, verificar y guardar quién es tu cliente.</b></p>
+      <p>Es la regla general. El artículo 17 dice que las Actividades Vulnerables son, por tanto, objeto de identificación. El umbral es la excepción que cada fracción fija — y seis fracciones no tienen ninguno.</p>
+      <div class="fund"><span class="ref r-l">L</span> Artículo 18, fracción I</div></div>
+    <div class="card"><h4 style="color:#B3261E">AVISAR</h4>
+      <p style="font-size:17px;color:#16202E"><b>Reportar al SAT esa operación.</b></p>
+      <p>Sólo cuando se alcanza el umbral de aviso de tu propia fracción, que nunca es el mismo que el de identificación. A más tardar el día 17 del mes siguiente.</p>
+      <div class="fund"><span class="ref r-l">L</span> Artículo 17 · Artículo 18, fracción VI</div></div>
+  </div>
+  <div class="punch"><p class="t amb">Puedes tener obligación de identificar sin tener obligación de avisar. Nunca al revés.</p>
+  <p class="s">Si tu control sólo se enciende cuando la operación llega al monto del aviso, ya incumpliste el de identificación mucho antes.</p></div>
+</div></section>
+
+<!-- ============ COMO IDENTIFICAR ============ -->
+<section id="s-como"><div class="wrap">
+  <h2>Cómo hay que identificar</h2>
+  <p class="sub">Directa, verificada y cruzada contra el RFC. Y sabiendo sumar en ventanas de seis meses.</p>
+  <div class="grid g3">
+    <div class="card"><h4>1 · Directa</h4><p>Tú identificas y conoces al cliente. No un tercero por ti, no el promotor, no la inmobiliaria aliada.</p></div>
+    <div class="card"><h4>2 · Verificada</h4><p>Contra documento oficial vigente, del que recabas copia legible y cotejada contra el original.</p></div>
+    <div class="card"><h4>3 · Documentada</h4><p>Lo que no quedó en el expediente, para efectos de una verificación, no ocurrió.</p></div>
+  </div>
+  <div class="note"><b>Medios electrónicos:</b> se admiten medios ópticos, electrónicos o de cualquier otra tecnología — pero el expediente se integra <b>previamente</b>. Si operas primero y armas después, incumpliste aunque tengas todo. <span class="ref r-rcg">RCG</span> Artículo 18</div>
+
+  <h3>La actividad u ocupación contra el RFC</h3>
+  <div class="quote">&laquo;Para los casos en que se establezca una Relación de negocios, se solicitará a la Persona Cliente o Usuaria la información sobre su actividad u ocupación, basándose entre otros, en los avisos de inscripción y actualización de actividades presentados para efectos del Registro Federal de Contribuyentes.&raquo;
+  <div class="fund"><span class="ref r-l">L</span> Artículo 18, fracción <b>II</b> — no la I</div></div>
+  <div class="grid g3">
+    <div class="card"><h4>Sólo si hay Relación de negocios</h4><p>Una operación aislada no la genera. Y la fe pública queda excluida por definición.</p></div>
+    <div class="card"><h4>El RFC es la vara</h4><p>Si el cliente dice que vende ropa y su RFC dice servicios de construcción, ahí hay algo que preguntar.</p></div>
+    <div class="card amb"><h4>Y hay que dejar constancia</h4><p>No basta consultarlo: hay que poder demostrar que se consultó, cuándo y qué salió.</p></div>
+  </div>
+
+  <h3>La suma de seis meses</h3>
+  <div class="quote">&laquo;La acumulación deberá considerar un periodo de <b>hasta</b> seis meses, debiéndose presentar el Aviso al momento de realizar la última operación con la que se alcance o supere el umbral, aun cuando no se haya agotado el periodo referido.&raquo;
+  <div class="fund"><span class="ref r-r">R</span> Artículo 7 · reformado el 27 de marzo de 2026</div></div>
+  <div class="grid g3">
+    <div class="card"><h4>No esperas al día 180</h4><p>El aviso va cuando se alcanza el umbral, no al cierre del periodo.</p></div>
+    <div class="card"><h4>Sólo suman las que cuentan</h4><p>Se acumulan únicamente las operaciones que individualmente caen en supuesto de identificación.</p></div>
+    <div class="card"><h4>Sin umbral, todo acumula</h4><p>Si tu fracción no fija monto de identificación, todos los actos entran a la suma.</p></div>
+  </div>
+  <div class="punch"><p class="t">Si tu control es que alguien se acuerde, no tienes control.</p></div>
+</div></section>
+
+<!-- ============ EXPEDIENTE ============ -->
+<section id="s-exp"><div class="wrap">
+  <h2>Tu expediente, requisito por requisito</h2>
+  <p class="sub">Elige tu tipo de cliente. Aparecen sólo los renglones que te aplican, con el texto literal del anexo y su fundamento. Nada se guarda ni se envía: todo vive en tu navegador.</p>
+  <div class="picker">
+    <label for="tipo">Tipo de cliente:</label>
+    <select id="tipo"></select>
+    <button onclick="reset()" style="font-family:inherit;font-size:14px;font-weight:700;padding:11px 18px;border-radius:9px;border:1.5px solid var(--line);background:#fff;color:var(--gray);cursor:pointer">Limpiar respuestas</button>
+  </div>
+</div>
+<div class="scorebar"><div class="wrap">
+  <span class="sc" id="sc">0 de 0 requisitos</span>
+  <div class="bar"><i id="pb"></i></div>
+  <span class="sem" id="sem" style="background:#6B7480">Sin contestar</span>
+</div></div>
+<div class="wrap"><div id="lista"></div>
+  <div class="note" id="bcnote"><b>Los cuatro últimos renglones son del Beneficiario Controlador.</b> Se recaban siempre que el Cliente sea persona moral o fideicomiso. Dos excepciones en <span class="ref r-rcg">RCG</span> 23 Quinquies 2: cliente que cotiza en bolsa con clave de pizarra, y personas morales de los Anexos 4 Bis, 6 Bis, 7-A y 7 Bis A.</div>
+</div></section>
+
+<!-- ============ QUE CAMBIO ============ -->
+<section id="s-cambio"><div class="wrap">
+  <h2>Qué cambió el 7 de agosto</h2>
+  <p class="sub">De 361 renglones comparados, 58 cambiaron. La mayoría es redacción: lenguaje incluyente y &laquo;primer/segundo apellido&raquo;. Cuatro cambios sí mueven tu operación.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Se acabó la cédula profesional</h4>
+      <p>Queda excluida expresamente del catálogo de identificaciones válidas, también para el apoderado.</p>
+      <div class="fund">Anexos 3, 4, 4 Bis, 5, 6, 6 Bis y 8</div></div>
+    <div class="card"><h4>Se cae la constancia de CURP</h4>
+      <p>Ya no se recaba cuando la CURP consta en otra identificación, como la credencial del INE. Es simplificación real.</p>
+      <div class="fund">Anexo 3, inciso b) ii)</div></div>
+    <div class="card"><h4>De declarar a identificar el Beneficiario Controlador</h4>
+      <p>En persona moral desaparece la constancia declarativa. Ya no basta preguntar y guardar la respuesta firmada.</p>
+      <div class="fund">Anexos 4 y 6, inciso b) v)</div></div>
+    <div class="card"><h4>El fideicomiso también tiene Beneficiario Controlador</h4>
+      <p>Numeral nuevo: si tu cliente es un fideicomiso, hay que identificar a su Beneficiario Controlador.</p>
+      <div class="fund">Anexo 8, inciso b) iv)</div></div>
+  </div>
+  <div class="note"><b>Y una supresión que casi nadie tiene:</b> el Anexo 6 Bis <b>deroga</b> la constancia de Dueño Beneficiario para embajadas, consulados y organismos internacionales.</div>
+</div></section>
+
+<!-- ============ BC ============ -->
+<section id="s-bc"><div class="wrap">
+  <h2>El Beneficiario Controlador</h2>
+  <p class="sub">No es nuevo. Lo que cambió es qué te exige, y cuándo.</p>
+  <div class="grid g4">
+    <div class="card"><h4>Ya existía</h4><p>La Ley lo define, y las Reglas vigentes ya obligan a integrarlo al expediente por la fracción VII del artículo 12.</p><div class="fund"><span class="ref r-l">L</span> 3, fr. III</div></div>
+    <div class="card amb"><h4>17 jul 2025</h4><p>Más del veinticinco por ciento del capital, control efectivo en última instancia, y equiparable a beneficiario final y propietario real.</p><div class="fund"><span class="ref r-l">L</span> 3, fr. III reformada</div></div>
+    <div class="card dark"><h4>30 nov 2026</h4><p>En persona moral y fideicomiso deja de bastar que el cliente lo declare: hay que identificarlo.</p><div class="fund" style="color:#F2A541"><span class="ref r-rcg">RCG</span> 12 fr. VII</div></div>
+    <div class="card"><h4>1 mar 2027</h4><p>Cómo se determina quién es: control efectivo, orden de prelación y cascada en fideicomisos.</p><div class="fund"><span class="ref r-rcg">RCG</span> Cap. III Quinquies</div></div>
+  </div>
+  <div class="punch"><p class="t amb">Lo que cambia no es que exista. Es que la constancia firmada por el cliente ya no te salva.</p>
+  <p class="s">Y no es parejo: en persona física se conserva la constancia declarativa. El cambio es para persona moral y fideicomiso.</p></div>
+
+  <h3>Las dos excepciones</h3>
+  <div class="grid g2">
+    <div class="card amb"><h4>1 · Cliente que cotiza en bolsa</h4><p>Mexicana o mercado del exterior reconocido, siempre que proporcione su clave de pizarra, referencia o identificador.</p></div>
+    <div class="card amb"><h4>2 · Personas morales de cuatro anexos</h4><p>Las previstas en los Anexos 4 Bis, 6 Bis, 7-A y 7 Bis A — derecho público y régimen simplificado.</p></div>
+  </div>
+  <div class="fund" style="margin-top:10px"><span class="ref r-rcg">RCG</span> Artículo 23 Quinquies 2 · <b>Cuidado con el alcance:</b> está redactada para el cliente que cotiza. No dice nada de sus subsidiarias.</div>
+
+  <div class="punch" style="margin-top:26px"><p class="t amb">Ojo con el 25%: no es un solo número.</p>
+  <p class="s">La Ley dice <b>MÁS DEL 25%</b> de los derechos de voto (<span class="ref r-l">L</span> 3, fr. III). La Regla dice <b>25% O MÁS</b> de la composición accionaria (<span class="ref r-rcg">RCG</span> 23 Quinquies, fr. I). No se contradicen: miden cosas distintas.</p></div>
+</div></section>
+
+<!-- ============ CASOS ============ -->
+<section id="s-casos"><div class="wrap">
+  <h2>Los ocho casos que rompen el expediente</h2>
+  <p class="sub">El expediente fácil lo arma cualquiera. Éstos ya tienen respuesta en el texto, sólo que vive en los artículos de en medio que casi nadie lee.</p>
+  <div id="casos"></div>
+</div></section>
+
+<!-- ============ CADENA ============ -->
+<section id="s-cadena"><div class="wrap">
+  <h2>La cadena de evidencia</h2>
+  <p class="sub">Un expediente completo no basta si la operación no se puede reconstruir de punta a punta. Donde no hay artículo, lo decimos.</p>
+  <div id="cadena" class="grid g3"></div>
+  <div class="note"><b>Los pasos 5 y 6 no son norma: son método nuestro.</b> El comprobante de pago y la conciliación no tienen artículo propio. Se incluyen porque son lo que hace verificable el resto.</div>
+  <h3>Y lo que la autoridad ya da por cierto</h3>
+  <div class="quote">&laquo;El SAT presumirá como cierta la información contenida en los comprobantes fiscales digitales por internet y en las bases de datos que lleven o tengan en su poder o a las que tengan acceso.&raquo;
+  <div class="fund"><span class="ref r-r">R</span> Artículo 10 Bis, párrafo final · adicionado el 27 de marzo de 2026</div></div>
+  <div class="grid g3">
+    <div class="card"><h4>No tiene que probarlo</h4><p>Lo presume cierto. Quien tiene que desvirtuarlo eres tú.</p></div>
+    <div class="card"><h4>Ni decirte qué consultó</h4><p>No está obligado a revelarte qué bases usó, cuando la información la generaste tú mismo.</p></div>
+    <div class="card"><h4>Por eso todo debe cuadrar</h4><p>El monto del CFDI, el del aviso y el del expediente tienen que ser el mismo número.</p></div>
+  </div>
+</div></section>
+
+<!-- ============ PADRON ============ -->
+<section id="s-padron"><div class="wrap">
+  <h2>Padrón, abstención y verificación anual</h2>
+  <p class="sub">Tres obligaciones cortas que se olvidan justo porque son cortas.</p>
+  <div class="grid g2">
+    <div class="card"><h4>RFC</h4><p>Tu registro fiscal. Lo actualizas en el portal del SAT.</p><p style="color:#B3261E;font-weight:700">Actualizar éste NO actualiza el otro.</p></div>
+    <div class="card"><h4>SPPLD</h4><p>Tu alta, modificación y baja en el Padrón, por el Portal en Internet.</p><p style="color:#B3261E;font-weight:700">Es donde te van a buscar primero.</p></div>
+  </div>
+  <div class="note"><b>Tu tarea de esta semana:</b> entra a los dos y compara el domicilio, letra por letra. Tarda veinte minutos, no depende de nadie más, y si no la haces te cuesta aunque hayas cumplido todo lo demás. <span class="ref r-l">L</span> Artículo 18, fracción IV Bis</div>
+
+  <h3>Dos artículos 21 que no son el mismo</h3>
+  <div class="grid g2">
+    <div class="card"><div class="fund" style="margin:0 0 8px"><span class="ref r-l">L</span> Artículo 21</div>
+      <h4>El deber de abstenerse</h4>
+      <p>Si el cliente se niega a darte la información o documentación necesaria, te abstienes de llevar a cabo el acto u operación.</p>
+      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#1B5E3F"><b>&laquo;Sin responsabilidad alguna.&raquo;</b></p>
+      <p>No es que puedas negarte: es que debes, y la Ley te cubre.</p></div>
+    <div class="card"><div class="fund" style="margin:0 0 8px"><span class="ref r-rcg">RCG</span> Artículo 21</div>
+      <h4>La verificación anual</h4>
+      <p>Cuando menos una vez al año, verificas que los expedientes de tus clientes con Relación de negocios tengan todos los datos y documentos.</p>
+      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#8A5A12"><b>Ya es obligatoria.</b></p>
+      <p>Y el Instrumento de hoy es, literalmente, el formato con el que se hace.</p></div>
+  </div>
+  <div class="punch"><p class="t">Por eso cada cita lleva su marca.</p><p class="s">El 21 de la Ley y el 21 de las Reglas no tienen nada que ver. Sin la marca, los artículos homónimos se confunden.</p></div>
+
+  <h3>Conservación</h3>
+  <div class="grid g3">
+    <div class="card"><p class="big">10 años</p><p>Desde la realización de la Actividad Vulnerable, no desde el cierre del ejercicio.</p></div>
+    <div class="card amb"><p class="big">salvo XIV</p><p>La única fracción exceptuada del plazo: comercio exterior.</p></div>
+    <div class="card"><p class="big">2 sistemas</p><p>En el domicilio registrado ante la Secretaría — que debe coincidir con el del RFC.</p></div>
+  </div>
+  <div class="fund"><span class="ref r-l">L</span> Artículo 18, párrafo posterior a las fracciones &nbsp;·&nbsp; <span class="ref r-r">R</span> Artículo 20 para avisos, soporte y acuses</div>
+</div></section>
+
+<!-- ============ DESCARGAS ============ -->
+<section id="s-dl"><div class="wrap">
+  <h2>Descargables de la sesión</h2>
+  <p class="sub">Son tuyos, los puedes compartir con tu equipo y no caducan.</p>
+  <a class="dl" href="S01_ALU_02_Instrumento_Expediente.xlsx" download><span class="ext">XLSX</span>
+    <span><span class="n">Instrumento de expediente</span><br><span class="d">Cinco hojas: cómo se usa, instrumento con selector, casos difíciles, trazabilidad y tu brecha.</span></span></a>
+  <a class="dl" href="S01_ALU_03_Instrumento_Expediente.pdf" download><span class="ext">PDF</span>
+    <span><span class="n">Instrumento · versión imprimible</span><br><span class="d">La cuartilla para archivar físicamente en el expediente.</span></span></a>
+  <a class="dl" href="S01_ALU_01_Presentacion.pptx" download><span class="ext">PPTX</span>
+    <span><span class="n">Presentación de la sesión</span><br><span class="d">Las 27 láminas, por si prefieres repasar en ese formato.</span></span></a>
+  <div class="note" style="margin-top:24px"><b>Tarea para el martes 25:</b> llena el Instrumento con dos clientes más. Uno fácil y uno que te dé miedo. El fácil no te enseña nada.</div>
+  <div class="punch"><p class="t amb">Identifica. Documenta. Demuestra.</p>
+  <p class="s">El expediente es el primer piso. Si está mal, todo lo que construyas encima se cae. Próxima sesión: martes 25 de agosto, Metodología de riesgos y grado de riesgo.</p></div>
+</div></section>
+
+<footer><div class="wrap">
+  <p><b>GMC360 · 360Educa · ASONOC · LEXQUO</b> — Taller Antilavado 360: de la Ley a la práctica</p>
+  <p>Material de estudio para participantes inscritos. No constituye asesoría legal para un caso concreto.<br>
+  Fuente: ACUERDO 115/2026, DOF 7 de agosto de 2026; LFPIORPI y su Reglamento vigentes. El único texto con valor legal es el publicado en el Diario Oficial de la Federación.</p>
+</div></footer>
+</div>
+
+<script>
+var DATA = {"req": [{"t": "3", "n": "a) i)", "c": "Dato", "r": "Primer apellido, segundo apellido y nombre(s), sin abreviaturas o, en caso de ser extranjero, los apellidos completos que correspondan y nombre (s);", "f": "RCG 12 fr. I · Anexo 3, inciso a) i)", "nv": ""}, {"t": "3", "n": "a) ii)", "c": "Dato", "r": "Fecha de nacimiento;", "f": "RCG 12 fr. I · Anexo 3, inciso a) ii)", "nv": ""}, {"t": "3", "n": "a) iii)", "c": "Dato", "r": "País de nacimiento;", "f": "RCG 12 fr. I · Anexo 3, inciso a) iii)", "nv": ""}, {"t": "3", "n": "a) iv)", "c": "Dato", "r": "País de nacionalidad;", "f": "RCG 12 fr. I · Anexo 3, inciso a) iv)", "nv": ""}, {"t": "3", "n": "a) v)", "c": "Dato", "r": "Actividad, ocupación, profesión, actividad o giro del negocio al que se dedique el Cliente o Usuaria, para los casos en que se establezca una Relación de negocios;", "f": "RCG 12 fr. I · Anexo 3, inciso a) v)", "nv": ""}, {"t": "3", "n": "a) vi)", "c": "Dato", "r": "Domicilio en el lugar de residencia, compuesto de los siguientes datos: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda, en su caso; código postal y país;", "f": "RCG 12 fr. I · Anexo 3, inciso a) vi)", "nv": ""}, {"t": "3", "n": "a) vii)", "c": "Dato", "r": "Número(s) de teléfono en que se pueda localizar, incluida la clave de larga distancia y, en su caso, extensión, cuando cuenten con aquél;", "f": "RCG 12 fr. I · Anexo 3, inciso a) vii)", "nv": ""}, {"t": "3", "n": "a) viii)", "c": "Dato", "r": "Correo electrónico, en su caso;", "f": "RCG 12 fr. I · Anexo 3, inciso a) viii)", "nv": ""}, {"t": "3", "n": "a) ix)", "c": "Dato", "r": "Clave Única de Registro de Población y la clave del Registro Federal de Contribuyentes, cuando cuente con ellas, y", "f": "RCG 12 fr. I · Anexo 3, inciso a) ix)", "nv": ""}, {"t": "3", "n": "a) x)", "c": "Dato", "r": "Datos de la identificación con la que se identificó, consistentes en: nombre de la identificación; autoridad que la emite, y número de la misma.", "f": "RCG 12 fr. I · Anexo 3, inciso a) x)", "nv": ""}, {"t": "3", "n": "a) párrafo final", "c": "Dato", "r": "Adicionalmente, tratándose de personas que tengan su lugar de residencia en el extranjero y a la vez cuenten con domicilio en territorio nacional en donde puedan recibir correspondencia dirigida a ellas, se deberá asentar en el expediente los datos relativos a dicho domicilio, con los mismos elementos que los contemplados en el numeral vi) anterior.", "f": "RCG 12 fr. I · Anexo 3, inciso a) párrafo final", "nv": ""}, {"t": "3", "n": "b) i)", "c": "Documento", "r": "Identificación, que deberá ser, en todo caso, un documento original oficial emitido por autoridad competente, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años, que contenga la fotografía, firma y, en su caso, domicilio del propio Cliente o Usuaria.", "f": "RCG 12 fr. I · Anexo 3, inciso b) i)", "nv": ""}, {"t": "3", "n": "b) i) párrafo 2", "c": "Documento", "r": "Para efectos de lo dispuesto por este numeral, se considerarán como documentos válidos de identificación la credencial para votar expedida por el Instituto Nacional Electoral, así como cualquier identificación vigente, excepto la cédula profesional, o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años con fotografía y firma, emitida por autoridades mexicanas federales, estatales o municipales, y las demás que, en su caso, apruebe la UIF. Asimismo, respecto de las personas físicas de nacionalidad extranjera, se considerarán como documentos válidos de identificación, además de los anteriormente referidos en este párrafo, el pasaporte o la documentación expedida por el Instituto Nacional de Migración que acredite su condición de estancia en el país;", "f": "RCG 12 fr. I · Anexo 3, inciso b) i) párrafo 2", "nv": "Se excluye expresamente la cédula profesional como identificación válida."}, {"t": "3", "n": "b) ii)", "c": "Documento", "r": "Constancia de la Clave Única de Registro de Población, expedida por la Secretaría de Gobernación o Cédula de Identificación Fiscal expedida por el SAT, cuando el Cliente o Usuaria cuente con ellas; No será necesario presentar la constancia de la Clave Única de Registro de Población si esta aparece en otro documento o identificación oficial.", "f": "RCG 12 fr. I · Anexo 3, inciso b) ii)", "nv": "Simplificación real: se elimina la constancia de CURP cuando la CURP consta en otra identificación (p. ej. la credencial del INE)."}, {"t": "3", "n": "b) iii)", "c": "Documento", "r": "Comprobante que acredite el domicilio, cuando el domicilio manifestado por el Cliente o Usuaria de quien realice la Actividad Vulnerable no coincida con el de la identificación o ésta no lo contenga. En este supuesto, será necesario que quien realice la Actividad Vulnerable recabe e integre al expediente respectivo copia de un documento que acredite el domicilio del Cliente o Usuaria, que podrá ser algún recibo de pago por servicios domiciliados o estados de cuenta bancarios, todos ellos con una antigüedad no mayor a tres meses a su fecha de emisión, o el contrato de arrendamiento vigente a la fecha de presentación por el Cliente o Usuaria y registrado ante la autoridad fiscal competente, la Constancia de inscripción en el Registro Federal de Contribuyentes, así como los demás que, en su caso, apruebe la UIF;", "f": "RCG 12 fr. I · Anexo 3, inciso b) iii)", "nv": ""}, {"t": "3", "n": "b) iv)", "c": "Constancia", "r": "Constancia por la que se acredite que quien realice la Actividad Vulnerable solicitó a su Cliente o Usuaria, información acerca de si tiene conocimiento de la existencia del Beneficiario Controlador, la cual deberá estar firmada por el Cliente o Usuaria de manera autógrafa o bien, mediante Firma Electrónica.", "f": "RCG 12 fr. I · Anexo 3, inciso b) iv)", "nv": "Dos cambios sustantivos: (1) Dueño Beneficiario pasa a Beneficiario Controlador; (2) se admite Firma Electrónica además de la autógrafa."}, {"t": "3", "n": "b) iv) párrafo 2", "c": "Constancia", "r": "En el supuesto en que la persona física manifieste que sí tiene conocimiento de la existencia del Beneficiario Controlador, quien realice la Actividad Vulnerable deberá identificarlo de conformidad a lo dispuesto en la fracción VII del artículo 12 de las presentes reglas, cuando dicho Cliente o Usuaria cuente con dicha información, y", "f": "RCG 12 fr. I · Anexo 3, inciso b) iv) párrafo 2", "nv": "Cambio de figura (BC) y de redacción. Se conserva el condicionante “cuando cuente con dicha información”."}, {"t": "3", "n": "b) v)", "c": "Documento", "r": "Carta poder o copia certificada del documento expedido por fedatario público, según corresponda, para el caso en que la persona física actúe como apoderado de otra persona, las cuales deberán cumplir los términos establecidos en la legislación común, a fin de que se acrediten las facultades conferidas al apoderado, así como copia de una identificación oficial y comprobante de domicilio de este, que cumplan con los requisitos señalados en este Anexo respecto de dichos documentos, con independencia de los datos y documentos relativos al poderdante.", "f": "RCG 12 fr. I · Anexo 3, inciso b) v)", "nv": ""}, {"t": "4", "n": "a) i)", "c": "Dato", "r": "Denominación o razón social;", "f": "RCG 12 fr. II · Anexo 4, inciso a) i)", "nv": ""}, {"t": "4", "n": "a) ii)", "c": "Dato", "r": "Fecha de constitución;", "f": "RCG 12 fr. II · Anexo 4, inciso a) ii)", "nv": ""}, {"t": "4", "n": "a) iii)", "c": "Dato", "r": "País de nacionalidad;", "f": "RCG 12 fr. II · Anexo 4, inciso a) iii)", "nv": ""}, {"t": "4", "n": "a) iv)", "c": "Dato", "r": "Actividad, giro mercantil, actividad u objeto social para los casos en que se establezca una Relación de Negocios;", "f": "RCG 12 fr. II · Anexo 4, inciso a) iv)", "nv": ""}, {"t": "4", "n": "a) v)", "c": "Dato", "r": "Domicilio, compuesto de los elementos siguientes: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda, en su caso; código postal y país;", "f": "RCG 12 fr. II · Anexo 4, inciso a) v)", "nv": ""}, {"t": "4", "n": "a) vi)", "c": "Dato", "r": "Número(s) de teléfono de dicho domicilio, incluida la clave de larga distancia y, en su caso, extensión, cuando cuenten con aquél;", "f": "RCG 12 fr. II · Anexo 4, inciso a) vi)", "nv": ""}, {"t": "4", "n": "a) vii)", "c": "Dato", "r": "Correo electrónico, en su caso;", "f": "RCG 12 fr. II · Anexo 4, inciso a) vii)", "nv": ""}, {"t": "4", "n": "a) viii)", "c": "Dato", "r": "Clave del Registro Federal de Contribuyentes, cuando cuente con ella, y", "f": "RCG 12 fr. II · Anexo 4, inciso a) viii)", "nv": ""}, {"t": "4", "n": "a) ix)", "c": "Dato", "r": "Nombre(s), primer y segundo apellidos o, en caso de ser extranjero, los apellidos completos que correspondan y nombre (s), sin abreviaturas, así como fecha de nacimiento, clave del Registro Federal de Contribuyentes o Clave Única de Registro de Población del representante, apoderados legales o personas que realicen el acto u operación a nombre de la persona moral de que se trate. Asimismo, deberán recabar datos de su identificación, consistentes en: nombre de la identificación; autoridad que la emite, y número de la misma;", "f": "RCG 12 fr. II · Anexo 4, inciso a) ix)", "nv": ""}, {"t": "4", "n": "b) i)", "c": "Documento", "r": "Testimonio o copia certificada del instrumento público que acredite su constitución e inscripción en el registro público que corresponda, de acuerdo con la naturaleza de la persona moral, o de cualquier instrumento en el que consten los datos de su constitución y los de su inscripción en dicho registro, o bien, del documento que, de acuerdo con su naturaleza o el régimen que le resulte aplicable a la persona moral de que se trate, acredite su existencia.", "f": "RCG 12 fr. II · Anexo 4, inciso b) i)", "nv": ""}, {"t": "4", "n": "b) i) párrafo 2", "c": "Documento", "r": "En caso de que la persona moral sea de reciente constitución y, en tal virtud, no se encuentre aún inscrita en el registro público que corresponda de acuerdo con su naturaleza, quien realice la Actividad Vulnerable de que se trate deberá obtener un escrito firmado por persona legalmente facultada que acredite su personalidad en términos del instrumento público que acredite su constitución a que se refiere el inciso b) numeral iv) de este Anexo, en el que conste la obligación de llevar a cabo la inscripción respectiva y proporcionar, en su oportunidad, los datos correspondientes a quien realice la Actividad Vulnerable;", "f": "RCG 12 fr. II · Anexo 4, inciso b) i) párrafo 2", "nv": ""}, {"t": "4", "n": "b) ii)", "c": "Documento", "r": "Cédula de Identificación Fiscal expedida por el SAT, en caso de contar con ésta;", "f": "RCG 12 fr. II · Anexo 4, inciso b) ii)", "nv": ""}, {"t": "4", "n": "b) iii)", "c": "Documento", "r": "Comprobante que acredite el domicilio a que se refiere el numeral v), del inciso a) anterior, que podrá ser algún recibo de pago por servicios domiciliados o estados de cuenta bancarios, todos ellos con una antigüedad no mayor a tres meses a su fecha de emisión, o el contrato de arrendamiento vigente a la fecha de presentación por el Cliente o Usuaria y registrado ante la autoridad fiscal competente, la Constancia de inscripción en el Registro Federal de Contribuyentes, así como los demás que, en su caso, apruebe la UIF;", "f": "RCG 12 fr. II · Anexo 4, inciso b) iii)", "nv": ""}, {"t": "4", "n": "b) iv)", "c": "Documento", "r": "Testimonio o copia certificada del instrumento que contenga los poderes del representante o apoderados legales, expedido por fedatario público, cuando no estén contenidos en el instrumento público que acredite la constitución de la persona moral de que se trate, así como la identificación de cada uno de dichos representantes, apoderados legales o personas que realicen el acto u operación a nombre de dicha persona moral, que deberá ser, en todo caso, un documento original oficial emitido por autoridad competente, vigente o que la fecha de vencimiento, al momento de su presentación no sea mayor a dos años, que contenga la fotografía, firma y, en su caso, domicilio de la referida persona. Para efectos de lo dispuesto por este numeral, se considerarán como documentos válidos de identificación la credencial para votar expedida por el Instituto Nacional Electoral, así como cualquier identificación vigente, excepto la cédula profesional, o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años con fotografía y firma, emitida por autoridades mexicanas federales, estatales o municipales, y las demás que, en su caso, apruebe la UIF.", "f": "RCG 12 fr. II · Anexo 4, inciso b) iv)", "nv": "Se excluye expresamente la cédula profesional como identificación válida."}, {"t": "4", "n": "b) iv) párrafo 2", "c": "Documento", "r": "Asimismo, respecto de las personas físicas de nacionalidad extranjera, se considerarán como documentos válidos de identificación, además de los anteriormente referidos en este numeral, el pasaporte o la documentación expedida por el Instituto Nacional de Migración que acredite su condición de estancia en el país, y", "f": "RCG 12 fr. II · Anexo 4, inciso b) iv) párrafo 2", "nv": ""}, {"t": "4", "n": "b) v)", "c": "Constancia", "r": "Quien realice la Actividad Vulnerable deberá identificar de conformidad a lo dispuesto en la fracción VII, segundo párrafo del artículo 12 de las presentes reglas, al Beneficiario Controlador. En el supuesto en que el representante o apoderados legales de la persona moral manifiesten que sí tienen conocimiento de la existencia del Dueño Beneficiario, quien realice la Actividad Vulnerable deberá identificarlo de conformidad a lo dispuesto en la fracción VII del artículo 12 de las presentes Reglas, cuando dicho Cliente o Usuario cuente con dicha información.", "f": "RCG 12 fr. II · Anexo 4, inciso b) v)", "nv": "Sustitución total del requisito: desaparece la constancia declarativa y nace la obligación directa de identificar al Beneficiario Controlador conforme al artículo 12, fracción VII, segundo párrafo."}, {"t": "4 Bis", "n": "a) i)", "c": "Dato", "r": "Nombre de la persona moral mexicana de derecho público que corresponda;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso a) i)", "nv": ""}, {"t": "4 Bis", "n": "a) ii)", "c": "Dato", "r": "Fecha de creación o de constitución;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso a) ii)", "nv": ""}, {"t": "4 Bis", "n": "a) iii)", "c": "Dato", "r": "Domicilio, compuesto de los elementos siguientes: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda, en su caso; código postal y país;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso a) iii)", "nv": ""}, {"t": "4 Bis", "n": "a) iv)", "c": "Dato", "r": "Número(s) de teléfono de dicho domicilio, incluida la clave de larga distancia y, en su caso, extensión, cuando cuenten con aquél;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso a) iv)", "nv": ""}, {"t": "4 Bis", "n": "a) v)", "c": "Dato", "r": "Correo electrónico, en su caso;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso a) v)", "nv": ""}, {"t": "4 Bis", "n": "a) vi)", "c": "Dato", "r": "Clave del Registro Federal de Contribuyentes, cuando cuente con ella, y", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso a) vi)", "nv": ""}, {"t": "4 Bis", "n": "a) vii)", "c": "Dato", "r": "Nombre(s), primer y segundo apellidos, sin abreviaturas, así como fecha de nacimiento, clave del Registro Federal de Contribuyentes o Clave Única de Registro de Población de los servidores públicos que realicen el acto u operación a nombre de la persona moral mexicana de derecho público de que se trate. Asimismo, deberán recabar datos de su identificación, consistentes en: nombre de la identificación; autoridad que la emite, y número de la misma;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso a) vii)", "nv": ""}, {"t": "4 Bis", "n": "b) i)", "c": "Documento", "r": "Documento que sirva para acreditar su legal existencia;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso b) i)", "nv": ""}, {"t": "4 Bis", "n": "b) ii)", "c": "Documento", "r": "Cédula de Identificación Fiscal expedida por el SAT, en caso de contar con ésta;", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso b) ii)", "nv": ""}, {"t": "4 Bis", "n": "b) iii)", "c": "Documento", "r": "Comprobante que acredite el domicilio a que se refiere el numeral iii), del inciso a) anterior, que podrá ser algún recibo de pago por servicios domiciliados o estados de cuenta bancarios, todos ellos con una antigüedad no mayor a tres meses a su fecha de emisión, o el contrato de arrendamiento vigente a la fecha de presentación por el Cliente o Usuaria y registrado ante la autoridad fiscal competente, la Constancia de inscripción en el Registro Federal de Contribuyentes, así como los demás que, en su caso, apruebe la UIF, y", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso b) iii)", "nv": ""}, {"t": "4 Bis", "n": "b) iv)", "c": "Documento", "r": "Documento que sirva para comprobar las facultades de los servidores públicos que realicen el acto u operación a nombre de la persona moral mexicana de derecho público, para la cual deberá estarse a lo que dispongan las leyes, reglamentos, decretos o estatutos orgánicos que las creen y regulen su constitución y operación y, en su caso, copia certificada de su nombramiento o por instrumento público expedido por fedatario, según corresponda, así como la identificación de cada uno de los servidores públicos que realicen el acto u operación a nombre de la persona moral mexicana de derecho público, que deberá ser, en todo caso, un documento original oficial emitido por autoridad competente, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años, que contenga la fotografía, firma y, en su caso, domicilio de la referida persona. Para efectos de lo dispuesto por este numeral, se considerarán como documentos válidos de identificación la credencial para votar expedida por el Instituto Nacional Electoral, así como cualquier identificación vigente, excepto cédula profesional, o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años con fotografía y firma, emitida por autoridades mexicanas federales, estatales o municipales y, las demás que, en su caso, apruebe la UIF.", "f": "RCG 12 fr. II Bis · Anexo 4 Bis, inciso b) iv)", "nv": "Se excluye expresamente la cédula profesional como identificación válida."}, {"t": "5", "n": "a) i)", "c": "Dato", "r": "Apellidos completos que correspondan y nombre(s), sin abreviaturas;", "f": "RCG 12 fr. III · Anexo 5, inciso a) i)", "nv": ""}, {"t": "5", "n": "a) ii)", "c": "Dato", "r": "Fecha de nacimiento;", "f": "RCG 12 fr. III · Anexo 5, inciso a) ii)", "nv": ""}, {"t": "5", "n": "a) iii)", "c": "Dato", "r": "País de nacimiento;", "f": "RCG 12 fr. III · Anexo 5, inciso a) iii)", "nv": ""}, {"t": "5", "n": "a) iv)", "c": "Dato", "r": "País de nacionalidad;", "f": "RCG 12 fr. III · Anexo 5, inciso a) iv)", "nv": ""}, {"t": "5", "n": "a) v)", "c": "Dato", "r": "Actividad, ocupación, profesión, actividad o giro del negocio al que se dedique el Cliente o Usuaria, para los casos en que se establezca una Relación de negocios;", "f": "RCG 12 fr. III · Anexo 5, inciso a) v)", "nv": ""}, {"t": "5", "n": "a) vi)", "c": "Dato", "r": "Domicilio de su lugar de residencia, compuesto de los elementos siguientes: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda, en su caso; código postal y país, y", "f": "RCG 12 fr. III · Anexo 5, inciso a) vi)", "nv": ""}, {"t": "5", "n": "a) vii)", "c": "Dato", "r": "Datos del documento con el que se identificó, consistentes en: nombre de la acreditación; autoridad que la emite, y número de la misma.", "f": "RCG 12 fr. III · Anexo 5, inciso a) vii)", "nv": ""}, {"t": "5", "n": "a) párrafo final", "c": "Dato", "r": "Adicionalmente, tratándose de personas que tengan su lugar de residencia en el extranjero y a la vez cuenten con domicilio en territorio nacional en donde puedan recibir correspondencia dirigida a ellas, se deberá asentar en el expediente los datos relativos a dicho domicilio, con los mismos elementos que los contemplados en este Anexo.", "f": "RCG 12 fr. III · Anexo 5, inciso a) párrafo final", "nv": ""}, {"t": "5", "n": "b) i)", "c": "Documento", "r": "Pasaporte o documento original oficial emitido por autoridad competente del país de origen, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años, que contenga la fotografía, firma y, en su caso, domicilio del referido Cliente o Usuaria, que acredite su nacionalidad;", "f": "RCG 12 fr. III · Anexo 5, inciso b) i)", "nv": ""}, {"t": "5", "n": "b) ii)", "c": "Documento", "r": "Documento oficial expedido por el Instituto Nacional de Migración, que acredite su internación o legal estancia en el país, cuando cuente con este;", "f": "RCG 12 fr. III · Anexo 5, inciso b) ii)", "nv": ""}, {"t": "5", "n": "b) iii)", "c": "Documento", "r": "Comprobante que acredite el domicilio de su lugar de residencia, cuando el domicilio manifestado por el Cliente o Usuaria a quien realice la Actividad Vulnerable no coincida con el de la identificación o ésta no lo contenga. En este supuesto, será necesario que quien realice la Actividad Vulnerable recabe e integre al expediente respectivo copia de un documento que acredite el domicilio del Cliente o Usuaria, que podrá ser algún recibo de pago por servicios domiciliados o estados de cuenta bancarios, todos ellos con una antigüedad no mayor a tres meses a su fecha de emisión, o el contrato de arrendamiento vigente a la fecha de presentación por el Cliente o Usuaria y registrado ante la autoridad fiscal competente, la Constancia de inscripción en el Registro Federal de Contribuyentes, así como los demás que, en su caso, apruebe la UIF.", "f": "RCG 12 fr. III · Anexo 5, inciso b) iii)", "nv": ""}, {"t": "5", "n": "b) iii) párrafo 3", "c": "Constancia", "r": "Para la realización de las Actividades Vulnerables previstas en las fracciones I, II –salvo en los casos de tarjetas de crédito o de servicios–, III, VI, VII, XIII, XIV y XVI del artículo 17 de la Ley, quienes realicen la Actividad Vulnerable de que se trate deberán recabar e integrar al expediente respectivo una constancia firmada por el Cliente o Usuaria donde manifieste el domicilio y los elementos contemplados en el numeral vi) del inciso a) del presente Anexo;", "f": "RCG 12 fr. III · Anexo 5, inciso b) iii) párrafo 3", "nv": "Se incorpora la fracción XVI del artículo 17 de la Ley (nueva Actividad Vulnerable) al régimen de constancia de domicilio."}, {"t": "5", "n": "b) iv)", "c": "Constancia", "r": "Constancia por la que se acredite que quien realice la Actividad Vulnerable solicitó a su Cliente o Usuaria información acerca de si tiene conocimiento de la existencia del Beneficiario Controlador, la cual deberá estar firmada por el Cliente o Usuaria de manera autógrafa o bien, mediante Firma Electrónica.", "f": "RCG 12 fr. III · Anexo 5, inciso b) iv)", "nv": "Dueño Beneficiario pasa a Beneficiario Controlador; además cambia quién firma: ya no “los que participen directamente en el acto u operación” sino el propio Cliente o Usuaria, con firma autógrafa o electrónica."}, {"t": "5", "n": "b) iv) párrafo 2", "c": "Constancia", "r": "En el supuesto en que la persona física manifieste que sí tiene conocimiento de la existencia del Beneficiario Controlador, quien realice la Actividad Vulnerable deberá identificarlo de conformidad a lo dispuesto en la fracción VII del artículo 12 de las presentes reglas, cuando dicho Cliente o Usuaria cuente con dicha información, y", "f": "RCG 12 fr. III · Anexo 5, inciso b) iv) párrafo 2", "nv": "Cambio de figura: Dueño Beneficiario a Beneficiario Controlador."}, {"t": "5", "n": "b) v)", "c": "Documento", "r": "Carta poder o copia certificada del documento expedido por fedatario público, según corresponda, para el caso en que la persona física actúe como apoderado de otra persona, las cuales deberán cumplir los términos establecidos en la legislación común, a fin de que se acrediten las facultades conferidas al apoderado, así como copia de una identificación oficial, excepto cédula profesional, y comprobante de domicilio de este, que cumplan con los requisitos señalados en este Anexo respecto de dichos documentos, con independencia de los datos y documentos relativos al poderdante.", "f": "RCG 12 fr. III · Anexo 5, inciso b) v)", "nv": "Se excluye la cédula profesional también para el apoderado."}, {"t": "6", "n": "a) i)", "c": "Dato", "r": "Denominación o razón social;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) i)", "nv": ""}, {"t": "6", "n": "a) ii)", "c": "Dato", "r": "Fecha de constitución;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) ii)", "nv": ""}, {"t": "6", "n": "a) iii)", "c": "Dato", "r": "País de nacionalidad;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) iii)", "nv": ""}, {"t": "6", "n": "a) iv)", "c": "Dato", "r": "Actividad, giro mercantil, u objeto social para los casos en que se establezca una Relación de Negocios;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) iv)", "nv": ""}, {"t": "6", "n": "a) v)", "c": "Dato", "r": "Clave del Registro Federal de Contribuyentes o, en su caso, número de identificación fiscal de su país de nacionalidad, cuando cuente con ellas;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) v)", "nv": ""}, {"t": "6", "n": "a) vi)", "c": "Dato", "r": "Domicilio, compuesto de los elementos siguientes: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda, en su caso; código postal y país;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) vi)", "nv": ""}, {"t": "6", "n": "a) vii)", "c": "Dato", "r": "Número(s) de teléfono de dicho domicilio, incluida la clave de larga distancia y, en su caso, extensión, cuando cuenten con aquél;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) vii)", "nv": ""}, {"t": "6", "n": "a) viii)", "c": "Dato", "r": "Correo electrónico, en su caso, y", "f": "RCG 12 fr. IV · Anexo 6, inciso a) viii)", "nv": ""}, {"t": "6", "n": "a) ix)", "c": "Dato", "r": "Nombre(s) y primer y segundo apellidos o, en caso de ser extranjero, los apellidos completos que correspondan y nombre(s), sin abreviaturas, así como fecha de nacimiento, clave del Registro Federal de Contribuyentes o Clave Única de Registro de Población del representante, apoderados legales o personas que realicen el acto u operación a nombre de la persona moral de que se trate. Asimismo, deberán recabar datos de su identificación, consistentes en: nombre de la identificación; autoridad que la emite, y número de la misma;", "f": "RCG 12 fr. IV · Anexo 6, inciso a) ix)", "nv": ""}, {"t": "6", "n": "b) i)", "c": "Documento", "r": "Documento que compruebe su constitución;", "f": "RCG 12 fr. IV · Anexo 6, inciso b) i)", "nv": ""}, {"t": "6", "n": "b) ii)", "c": "Documento", "r": "Comprobante que acredite el domicilio a que se refiere el numeral vi), del inciso a) anterior, que podrá ser algún recibo de pago por servicios domiciliados o estados de cuenta bancarios, todos ellos con una antigüedad no mayor a tres meses a su fecha de emisión, o el contrato de arrendamiento vigente a la fecha de presentación por el Cliente o Usuaria y registrado ante la autoridad fiscal competente, la Constancia de inscripción en el Registro Federal de Contribuyentes, así como los demás que, en su caso, apruebe la UIF;", "f": "RCG 12 fr. IV · Anexo 6, inciso b) ii)", "nv": ""}, {"t": "6", "n": "b) iii)", "c": "Documento", "r": "Testimonio o copia certificada del instrumento que contenga los poderes del representante o apoderados legales, expedido por fedatario público, cuando no estén contenidos en el documento que compruebe la constitución de la persona moral de que se trate, así como la identificación de dichos representantes, apoderados legales o personas que realicen el acto u operación con dicha persona moral, que deberá ser, en todo caso, un documento original oficial emitido por autoridad competente, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años a la fecha de su presentación, que contenga la fotografía, firma y, en su caso, domicilio de la referida persona.", "f": "RCG 12 fr. IV · Anexo 6, inciso b) iii)", "nv": ""}, {"t": "6", "n": "b) iii) párrafo 2", "c": "Documento", "r": "Para efectos de lo dispuesto por este numeral, se considerarán como documentos válidos de identificación la credencial para votar expedida por el Instituto Nacional Electoral, así como cualquier identificación vigente, excepto cédula profesional, o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años con fotografía y firma, emitida por autoridades mexicanas federales, estatales y municipales, y las demás que, en su caso, apruebe la UIF. Asimismo, respecto de las personas físicas de nacionalidad extranjera, se considerarán como documentos válidos de identificación, además de los anteriormente referidos en este párrafo, el pasaporte o la documentación expedida por el Instituto Nacional de Migración que acredite su condición de estancia en el país. En el caso de aquellos representantes o apoderados legales de nacionalidad extranjera que no cuenten con pasaporte, la identificación deberá ser, en todo caso, un documento original oficial emitido por autoridad competente del país de origen, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años a la fecha de su presentación, que contenga la fotografía, firma y, en su caso, domicilio del citado representante. Para efectos de lo anterior, se considerarán como documentos válidos de identificación, la licencia de conducir y las credenciales emitidas por autoridades federales del país de que se trate.", "f": "RCG 12 fr. IV · Anexo 6, inciso b) iii) párrafo 2", "nv": "Se excluye la cédula profesional del catálogo de identificaciones válidas."}, {"t": "6", "n": "b) iv)", "c": "Documento", "r": "Cédula de Identificación Fiscal expedida por el SAT o en su defecto, comprobante de asignación del número de identificación fiscal, emitido por autoridad competente de su país de nacionalidad, cuando cuenten con cualquiera de éstas, y", "f": "RCG 12 fr. IV · Anexo 6, inciso b) iv)", "nv": ""}, {"t": "6", "n": "b) v)", "c": "Constancia", "r": "Quien realice la Actividad Vulnerable deberá identificar de conformidad a lo dispuesto en la fracción VII, segundo párrafo del artículo 12 de las presentes reglas, al Beneficiario Controlador.", "f": "RCG 12 fr. IV · Anexo 6, inciso b) v)", "nv": "Desaparece la constancia declarativa y se sustituye por la obligación directa de IDENTIFICAR al Beneficiario Controlador. Ya no basta con preguntar y documentar la respuesta."}, {"t": "6 Bis", "n": "a) i)", "c": "Dato", "r": "Denominación o nombre;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso a) i)", "nv": ""}, {"t": "6 Bis", "n": "a) ii)", "c": "Dato", "r": "Fecha de establecimiento en territorio nacional o clave del Registro Federal de Contribuyentes;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso a) ii)", "nv": ""}, {"t": "6 Bis", "n": "a) iii)", "c": "Dato", "r": "Domicilio compuesto de los elementos siguientes: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda y, en su caso, código postal;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso a) iii)", "nv": ""}, {"t": "6 Bis", "n": "a) iv)", "c": "Dato", "r": "Número(s) de teléfono de dicho domicilio, incluida la clave de larga distancia y, en su caso, extensión, cuando cuenten con aquél;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso a) iv)", "nv": ""}, {"t": "6 Bis", "n": "a) v)", "c": "Dato", "r": "Correo electrónico, en su caso, y", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso a) v)", "nv": ""}, {"t": "6 Bis", "n": "a) vi)", "c": "Dato", "r": "Nombre(s), primer y segundo apellidos, sin abreviaturas, así como fecha de nacimiento, clave del Registro Federal de Contribuyentes o Clave Única de Registro de Población del representante, apoderados legales o personas que realicen el acto u operación a nombre de la persona moral de que se trate. Asimismo, deberán recabar datos de su identificación, consistentes en: nombre de la identificación; autoridad que la emite, y número de la misma;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso a) vi)", "nv": ""}, {"t": "6 Bis", "n": "b) i)", "c": "Documento", "r": "Documento que compruebe su constitución, representación o establecimiento en nuestro país, como puede ser el certificado de matrícula consular;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso b) i)", "nv": ""}, {"t": "6 Bis", "n": "b) ii)", "c": "Documento", "r": "Comprobante que acredite el domicilio a que se refiere el numeral iv), del inciso a) anterior, que podrá ser algún recibo de pago por servicios domiciliados o estados de cuenta bancarios, todos ellos con una antigüedad no mayor a tres meses a su fecha de emisión, o el contrato de arrendamiento vigente a la fecha de presentación por el Cliente o Usuaria y registrado ante la autoridad fiscal competente, la Constancia de inscripción en el Registro Federal de Contribuyentes, así como los demás que, en su caso, apruebe la UIF;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso b) ii)", "nv": ""}, {"t": "6 Bis", "n": "b) iii)", "c": "Documento", "r": "Testimonio o copia certificada del instrumento que contenga los poderes del representante o apoderados legales, expedido por fedatario público, o documento emitido por autoridad competente que compruebe la representación de la persona física que actúa a nombre de la persona moral de que se trate, cuando no estén contenidos en el documento que compruebe la constitución, representación o establecimiento de dicha persona moral, así como la identificación de los representantes, apoderados legales o personas físicas antes mencionadas, que deberá ser, en todo caso, un documento original oficial emitido por autoridad competente, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años, que contenga la fotografía, firma y, en su caso, domicilio de la referida persona.", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso b) iii)", "nv": ""}, {"t": "6 Bis", "n": "b) iii) párrafo 2", "c": "Documento", "r": "Para efectos de lo dispuesto por este numeral, se considerarán como documentos válidos de identificación cualquier identificación vigente, excepto cédula profesional, o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años con fotografía y firma, emitida por autoridades federales, estatales o municipales, el pasaporte o la documentación expedida por el Instituto Nacional de Migración que acredite su condición de estancia en el país y las demás que, en su caso, apruebe la UIF.", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso b) iii) párrafo 2", "nv": "Se excluye la cédula profesional del catálogo de identificaciones válidas."}, {"t": "6 Bis", "n": "b) iii) párrafo 3", "c": "Documento", "r": "En el caso de aquellos representantes o apoderados legales que se encuentren fuera del territorio nacional y que no cuenten con pasaporte, la identificación deberá ser, en todo caso, un documento original oficial emitido por autoridad competente del país de origen, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años, que contenga la fotografía, firma y, en su caso, domicilio del citado representante. Para efectos de lo anterior, se considerarán como documentos válidos de identificación, la licencia de conducir y las credenciales emitidas por autoridades federales del país de que se trate;", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso b) iii) párrafo 3", "nv": ""}, {"t": "6 Bis", "n": "b) iv)", "c": "Documento", "r": "Cédula de Identificación Fiscal expedida por el SAT o en su defecto, comprobante de asignación del número de identificación fiscal, emitido por autoridad competente de su país de nacionalidad, cuando cuenten con cualquiera de éstas, y", "f": "RCG 12 fr. IV Bis · Anexo 6 Bis, inciso b) iv)", "nv": ""}, {"t": "7", "n": "a) i)", "c": "Dato", "r": "Denominación o razón social;", "f": "RCG 12 fr. V · Anexo 7, inciso a) i)", "nv": ""}, {"t": "7", "n": "a) ii)", "c": "Dato", "r": "Actividad u objeto social cuando se establezca una Relación de Negocios;", "f": "RCG 12 fr. V · Anexo 7, inciso a) ii)", "nv": ""}, {"t": "7", "n": "a) iii)", "c": "Dato", "r": "Fecha de constitución o clave del Registro Federal de Contribuyentes;", "f": "RCG 12 fr. V · Anexo 7, inciso a) iii)", "nv": ""}, {"t": "7", "n": "a) iv)", "c": "Dato", "r": "Domicilio compuesto de los elementos siguientes: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda, en su caso; código postal y país;", "f": "RCG 12 fr. V · Anexo 7, inciso a) iv)", "nv": ""}, {"t": "7", "n": "a) v)", "c": "Dato", "r": "Número(s) de teléfono de dicho domicilio, incluida la clave de larga distancia y, en su caso, extensión, cuando cuenten con aquél;", "f": "RCG 12 fr. V · Anexo 7, inciso a) v)", "nv": ""}, {"t": "7", "n": "a) vi)", "c": "Dato", "r": "Correo electrónico, en su caso, y", "f": "RCG 12 fr. V · Anexo 7, inciso a) vi)", "nv": ""}, {"t": "7", "n": "a) vii)", "c": "Dato", "r": "Nombre(s), primer y segundo apellidos, sin abreviaturas, así como fecha de nacimiento, clave del Registro Federal de Contribuyentes o Clave Única de Registro de Población del representante, apoderados legales o personas que realicen el acto u operación a nombre de la persona moral de que se trate. Asimismo, deberán recabar datos de su identificación, consistentes en: nombre de la identificación; autoridad que la emite, y número de la misma.", "f": "RCG 12 fr. V · Anexo 7, inciso a) vii)", "nv": ""}, {"t": "7 Bis", "n": "a) i)", "c": "Dato", "r": "Nombre de la persona moral de derecho público que corresponda;", "f": "RCG 12 fr. V Bis · Anexo 7 Bis, inciso a) i)", "nv": ""}, {"t": "7 Bis", "n": "a) ii)", "c": "Dato", "r": "Fecha de creación o clave del Registro Federal de Contribuyentes, y", "f": "RCG 12 fr. V Bis · Anexo 7 Bis, inciso a) ii)", "nv": ""}, {"t": "7 Bis", "n": "a) iii)", "c": "Dato", "r": "Domicilio, compuesto de los elementos siguientes: nombre de la calle, avenida o vía de que se trate, debidamente especificada; número exterior y, en su caso, interior; colonia o urbanización; demarcación territorial, municipio o demarcación política similar que corresponda, en su caso; ciudad o población, entidad federativa, estado, provincia, departamento o demarcación política similar que corresponda, en su caso, y código postal, y", "f": "RCG 12 fr. V Bis · Anexo 7 Bis, inciso a) iii)", "nv": ""}, {"t": "7 Bis", "n": "a) iv)", "c": "Dato", "r": "Nombre(s), primer y segundo apellidos, sin abreviaturas, así como fecha de nacimiento de los funcionarios o servidores públicos que realicen el acto u operación a nombre de la dependencia, entidad, oficina u organismo de que se trate.", "f": "RCG 12 fr. V Bis · Anexo 7 Bis, inciso a) iv)", "nv": ""}, {"t": "8", "n": "a) i)", "c": "Dato", "r": "Denominación o razón social del fiduciario;", "f": "RCG 12 fr. VI · Anexo 8, inciso a) i)", "nv": ""}, {"t": "8", "n": "a) ii)", "c": "Dato", "r": "Número, referencia o identificador del fideicomiso;", "f": "RCG 12 fr. VI · Anexo 8, inciso a) ii)", "nv": ""}, {"t": "8", "n": "a) iii)", "c": "Dato", "r": "Clave del Registro Federal de Contribuyentes del fideicomiso, cuando cuente con ella, y", "f": "RCG 12 fr. VI · Anexo 8, inciso a) iii)", "nv": ""}, {"t": "8", "n": "a) iv)", "c": "Dato", "r": "Nombre(s), primer y segundo apellidos, sin abreviaturas, así como, fecha de nacimiento, clave del Registro Federal de Contribuyentes o Clave Única de Registro de Población del apoderado legal o delegado fiduciario que, con su firma, puedan obligar al fideicomiso para efectos de la realización del acto u operación de que se trate. Asimismo, deberán recabar datos de la identificación con la que se identificó, consistentes en: nombre de la identificación; autoridad que la emite, y número de la misma;", "f": "RCG 12 fr. VI · Anexo 8, inciso a) iv)", "nv": ""}, {"t": "8", "n": "b) i)", "c": "Documento", "r": "Testimonio o copia certificada del instrumento que contenga la constitución del fideicomiso;", "f": "RCG 12 fr. VI · Anexo 8, inciso b) i)", "nv": ""}, {"t": "8", "n": "b) ii)", "c": "Documento", "r": "Cédula de Identificación Fiscal del fideicomiso, expedida por el SAT, en caso de contar con ésta, y", "f": "RCG 12 fr. VI · Anexo 8, inciso b) ii)", "nv": ""}, {"t": "8", "n": "b) iii)", "c": "Documento", "r": "Testimonio o copia certificada del instrumento que contenga los poderes del apoderado legal o delegado fiduciario, expedido por Fedatario Público, cuando no estén contenidos en el instrumento público que acredite la constitución del fideicomiso de que se trate, así como la identificación de cada uno de los referidos apoderados legales o delegados fiduciarios, que deberá ser, en todo caso, un documento original oficial emitido por autoridad competente, vigente o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años, que contenga la fotografía, firma y, en su caso, domicilio de la referida persona.", "f": "RCG 12 fr. VI · Anexo 8, inciso b) iii)", "nv": ""}, {"t": "8", "n": "b) iii) párrafo 2", "c": "Documento", "r": "Para efectos de lo dispuesto por este numeral, se considerarán como documentos válidos de identificación la credencial para votar expedida por el Instituto Nacional Electoral, así como cualquier identificación vigente, excepto cédula profesional, o que la fecha de vencimiento, al momento de su presentación, no sea mayor a dos años con fotografía y firma, emitida por autoridades mexicanas federales, estatales o municipales, y las demás que, en su caso, apruebe la UIF. Asimismo, respecto de las personas físicas de nacionalidad extranjera, se considerarán como documentos válidos de identificación, además de los anteriormente referidos en este párrafo, el pasaporte o la documentación expedida por el Instituto Nacional de Migración que acredite su condición de estancia en el país.", "f": "RCG 12 fr. VI · Anexo 8, inciso b) iii) párrafo 2", "nv": "Se excluye la cédula profesional del catálogo de identificaciones válidas."}, {"t": "8", "n": "b) iv)", "c": "Constancia", "r": "Quien realice la Actividad Vulnerable deberá identificar de conformidad a lo dispuesto en la fracción VII, segundo párrafo del artículo 12 de las presentes reglas, al Beneficiario Controlador del fideicomiso.", "f": "RCG 12 fr. VI · Anexo 8, inciso b) iv)", "nv": "Numeral nuevo: cuando el CLIENTE es un fideicomiso, hay obligación expresa de identificar a su Beneficiario Controlador. Antes el Anexo 8 no contenía ninguna referencia a Dueño Beneficiario."}, {"t": "BC", "n": "a) i)", "c": "Dato", "r": "Primer apellido, segundo apellido y nombre(s), sin abreviaturas o, en caso de ser extranjero, los apellidos completos que correspondan y nombre(s).", "f": "RCG 12 fr. VII · Anexo 3, inciso a) i)", "nv": "Se recaba siempre que el Cliente sea persona moral o fideicomiso. Dos excepciones en RCG 23 Quinquies 2."}, {"t": "BC", "n": "a) ii)", "c": "Dato", "r": "Fecha de nacimiento.", "f": "RCG 12 fr. VII · Anexo 3, inciso a) ii)", "nv": "Se recaba siempre que el Cliente sea persona moral o fideicomiso. Dos excepciones en RCG 23 Quinquies 2."}, {"t": "BC", "n": "a) iv)", "c": "Dato", "r": "País de nacionalidad.", "f": "RCG 12 fr. VII · Anexo 3, inciso a) iv)", "nv": "Se recaba siempre que el Cliente sea persona moral o fideicomiso. Dos excepciones en RCG 23 Quinquies 2."}, {"t": "BC", "n": "a) ix)", "c": "Dato", "r": "Clave Única de Registro de Población y clave del Registro Federal de Contribuyentes, cuando cuente con ellas.", "f": "RCG 12 fr. VII · Anexo 3, inciso a) ix)", "nv": "Se recaba siempre que el Cliente sea persona moral o fideicomiso. Dos excepciones en RCG 23 Quinquies 2."}], "tipos": [{"k": "3", "lbl": "Persona física mexicana o residente", "fr": "I", "anx": "Anexo 3"}, {"k": "4", "lbl": "Persona moral mexicana", "fr": "II", "anx": "Anexo 4"}, {"k": "4 Bis", "lbl": "Persona moral mexicana de derecho público", "fr": "II Bis", "anx": "Anexo 4 Bis"}, {"k": "5", "lbl": "Persona física extranjera (visitante)", "fr": "III", "anx": "Anexo 5"}, {"k": "6", "lbl": "Persona moral extranjera", "fr": "IV", "anx": "Anexo 6"}, {"k": "6 Bis", "lbl": "Embajada, consulado u organismo internacional", "fr": "IV Bis", "anx": "Anexo 6 Bis"}, {"k": "7", "lbl": "Régimen simplificado · Anexo 7-A", "fr": "V", "anx": "Anexo 7"}, {"k": "7 Bis", "lbl": "Régimen simplificado de derecho público", "fr": "V Bis", "anx": "Anexo 7 Bis"}, {"k": "8", "lbl": "Fideicomiso", "fr": "VI", "anx": "Anexo 8"}]};
+
+var SECS=[['s-inicio','La sesión'],['s-cliente','Cliente'],['s-como','Cómo identificar'],
+['s-exp','Tu expediente'],['s-cambio','Qué cambió'],['s-bc','Beneficiario'],
+['s-casos','Casos difíciles'],['s-cadena','Evidencia'],['s-padron','Padrón'],
+['s-dl','Descargas']];
+
+var CASOS=[
+['El cliente se niega a darte la información o los documentos','Te abstienes de llevar a cabo el acto u operación, «sin responsabilidad alguna». No es que puedas negarte: es que debes, y la Ley te cubre. Deja constancia escrita de la negativa y de la fecha.','l','L 21'],
+['El documento de identificación trae tachaduras o enmendaduras','Recabas otro medio de identificación. Si no lo hay, solicitas DOS referencias bancarias o comerciales y DOS referencias personales, y verificas esos datos con quienes las suscriben ANTES de operar.','rcg','RCG 12'],
+['Hay indicios de que el cliente actúa por cuenta de otra persona y no lo declaró','El artículo 22 fija qué hacer cuando cuentas con información basada en indicios o hechos de que tu cliente actúa por cuenta de otro sin haberlo manifestado.','rcg','RCG 22'],
+['Ese cliente ya fue identificado por otra empresa de tu grupo empresarial','El expediente puede integrarlo y conservarlo cualquiera de las personas morales del grupo, y pueden intercambiarse los datos — pero con tres condiciones, y una es que quien lo conserve observe los criterios de identificación de quien realiza la actividad. No es automático.','rcg','RCG 14'],
+['Realizas operaciones a nombre de los trabajadores o del personal de tu cliente','Debes convenir POR ESCRITO con el cliente solicitante su obligación de mantener ese expediente a tu disposición para consulta y de proporcionártelo cuando lo requieras.','rcg','RCG 16'],
+['Toda la operación es a distancia y nunca ves al cliente en persona','Se admiten medios electrónicos, ópticos o de cualquier otra tecnología — pero el expediente se integra PREVIAMENTE. Si operas primero y armas después, incumpliste aunque tengas todo.','rcg','RCG 18'],
+['Tu cliente califica como de riesgo bajo, o como de riesgo medio','Bajo riesgo: medidas simplificadas, con obligación de solicitar los documentos en original o copia certificada por fedatario. Riesgo medio: régimen propio del 17 Bis. Si el cliente se aparta de los criterios de bajo riesgo, integras el expediente completo.','rcg','RCG 17 y 17 Bis'],
+['Eres fedatario y en la fe pública no hay Relación de negocios','Identificas a quien comparece al momento del acto, y tienes por cumplida la obligación del artículo 12 si la información requerida ya consta en el instrumento. El 13 Bis regula la fe pública al Poder Judicial.','rcg','RCG 13 y 13 Bis']];
+
+var CADENA=[['Expediente','Integrado antes o durante la operación, o antes de establecer la Relación de negocios.','RCG 12 · L 18 fr. I',1],
+['Actividad u ocupación','Solicitada cuando hay Relación de negocios, apoyándose en los avisos del RFC.','L 18 fr. II',1],
+['Documento del acto','Contrato, escritura, factura, orden: el papel que prueba qué se pactó, cuándo y por cuánto.','L 18 fr. IV',1],
+['CFDI','El comprobante fiscal, consistente con lo que declaraste. El SAT lo presume cierto.','R 10 Bis',1],
+['Comprobante de pago','Cómo entró el dinero. Es lo que amarra el CFDI con la realidad.','Buena práctica',0],
+['Conciliación','Que contrato, CFDI y pago sean el mismo monto. Si no, hay que explicarlo por escrito.','Método GMC360',0],
+['Cálculo de acumulación','La suma por cliente en el periodo de hasta seis meses.','R 7',1],
+['Aviso y acuse','Copia del aviso, su soporte y el acuse. Diez años desde la presentación.','R 20',1],
+['Resguardo','Físico o electrónico, en el domicilio registrado ante la Secretaría.','L 18, párrafo final',1]];
+
+var estado={}, tipoSel='4';
+
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init);
+else init();
+
+function init(){
+  var nav=document.getElementById('nav');
+  SECS.forEach(function(s,i){
+    var b=document.createElement('button');
+    b.textContent=s[1]; b.onclick=function(){ir(s[0],b)}; if(i===0)b.className='on';
+    nav.appendChild(b);
+  });
+  var d0=new Date(2026,10,30), hoy=new Date();
+  var dias=Math.max(0,Math.ceil((d0-hoy)/86400000));
+  document.getElementById('dias').textContent=dias;
+  document.getElementById('cuenta').textContent=dias+' días para el 30 de noviembre de 2026';
+
+  var sel=document.getElementById('tipo');
+  DATA.tipos.forEach(function(t){
+    var o=document.createElement('option'); o.value=t.k;
+    o.textContent=t.lbl+'  ·  '+t.anx; if(t.k==='4')o.selected=true; sel.appendChild(o);
+  });
+  sel.onchange=function(){ tipoSel=this.value; pinta(); };
+
+  document.getElementById('casos').innerHTML = CASOS.map(function(c,i){
+    return '<div class="card" style="margin-bottom:14px"><h4>'+(i+1)+' · '+c[0]+'</h4><p style="font-size:15.5px">'+c[1]+
+      '</p><div class="fund"><span class="ref r-'+c[2]+'">'+(c[2]==='l'?'L':'RCG')+'</span> Artículo '+c[3].replace(/^(L|RCG) /,'')+'</div></div>';
+  }).join('');
+
+  document.getElementById('cadena').innerHTML = CADENA.map(function(c,i){
+    return '<div class="card'+(c[3]?'':' amb')+'"><h4>'+(i+1)+' · '+c[0]+'</h4><p>'+c[1]+
+      '</p><div class="fund">'+c[2]+'</div></div>';
+  }).join('');
+  pinta();
+}
+
+function ir(id,btn){
+  SECS.forEach(function(s){ document.getElementById(s[0]).className=''; });
+  document.getElementById(id).className='on';
+  var bs=document.getElementById('nav').children;
+  for(var i=0;i<bs.length;i++) bs[i].className='';
+  btn.className='on';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function aplica(r){ return r.t===tipoSel || r.t==='BC'; }
+
+function pinta(){
+  var rs=DATA.req.filter(aplica);
+  document.getElementById('lista').innerHTML = rs.map(function(r,i){
+    var k=r.t+'|'+r.n, v=estado[k]||'';
+    var cls = v==='si'?' done' : (v==='no'?' no':'');
+    var pill = r.c==='Dato'?'':(r.c==='Documento'?' doc':' con');
+    return '<div class="req'+cls+'">'+
+      '<div class="top"><span class="pill'+pill+'">'+r.c.toUpperCase()+'</span>'+
+      '<span class="num">'+r.n+'</span>'+(r.t==='BC'?'<span class="num" style="color:#8A5A12">BENEFICIARIO CONTROLADOR</span>':'')+'</div>'+
+      '<p class="txt">'+r.r+'</p>'+
+      (r.nv?'<p class="nv"><b>Cambió en 2026:</b> '+r.nv+'</p>':'')+
+      '<div class="fund" style="margin-bottom:10px"><span class="ref r-rcg">RCG</span> '+r.f.replace('RCG ','')+'</div>'+
+      '<div class="opts">'+
+      ['si|Lo tengo','pa|A medias','no|No lo tengo','na|No aplica'].map(function(o){
+        var p=o.split('|');
+        return '<button data-v="'+p[0]+'" class="'+(v===p[0]?'sel':'')+'" onclick="marca(\''+k+'\',\''+p[0]+'\')">'+p[1]+'</button>';
+      }).join('')+'</div></div>';
+  }).join('');
+  score(rs);
+}
+
+function marca(k,v){ estado[k] = (estado[k]===v ? '' : v); pinta(); }
+function reset(){ estado={}; pinta(); }
+
+function score(rs){
+  var base=0,si=0,pa=0,no=0,sin=0;
+  rs.forEach(function(r){
+    var v=estado[r.t+'|'+r.n]||'';
+    if(v==='na') return;
+    base++;
+    if(v==='si')si++; else if(v==='pa')pa++; else if(v==='no')no++; else sin++;
+  });
+  var pct = base? Math.round(((si+pa*0.5)/base)*100) : 0;
+  document.getElementById('sc').textContent = si+' de '+base+' requisitos completos';
+  document.getElementById('pb').style.width = pct+'%';
+  var s=document.getElementById('sem');
+  if(sin>0){ s.textContent='Faltan '+sin+' por contestar'; s.style.background='#6B7480'; }
+  else if(pct>=90){ s.textContent='VERDE · '+pct+'% · expediente defendible'; s.style.background='#1B5E3F'; }
+  else if(pct>=60){ s.textContent='ÁMBAR · '+pct+'% · tiene huecos'; s.style.background='#C4622B'; }
+  else { s.textContent='ROJO · '+pct+'% · no resiste una verificación'; s.style.background='#B3261E'; }
+}
+</script>
+</body>
+</html>
