@@ -1,0 +1,126 @@
+═══════════════════════════════════════════════════════════════════════════
+ AULA ANTILAVADO 360 · SITIO COMPLETO
+ Sube TODO esto. Repara la S01 y publica la S02 de una sola vez.
+ GMC360 · 360Educa · 24 de agosto de 2026
+═══════════════════════════════════════════════════════════════════════════
+
+QUÉ ES ESTO
+───────────────────────────────────────────────────────────────────────────
+
+Esta carpeta ES el aula completa. Todo. Portada, sesión 1, sesión 2 y la
+configuración. No hay que instalar ni compilar nada: se sube tal cual.
+
+   index.html    la portada, con la sesión 2 YA activada
+   s01/          la sesión 1 completa (index + sus 3 descargables)
+   s02/          la sesión 2 completa (index + hojas + 4 descargables)
+   netlify.toml  configuración — no la toques
+   _headers      configuración — no la toques
+   robots.txt    le dice a Google que no indexe el aula
+
+Al subir todo esto, lo que esté roto se reemplaza por la versión buena.
+No hace falta borrar nada primero.
+
+
+ANTES DE EMPEZAR: EL REPOSITORIO CORRECTO
+───────────────────────────────────────────────────────────────────────────
+
+Cambiarle el nombre al proyecto en Netlify NO cambió a qué repositorio está
+conectado. Tienes que subir esto al repositorio que Netlify ya está mirando,
+o no va a servir de nada.
+
+Para saber cuál es, en Netlify:
+
+   Tu proyecto "aula-lfpiorpi360"
+   → Project configuration → Build & deploy → Repository
+
+Ahí aparece el nombre. Ése, y sólo ése.
+
+   ➜ NO crees un repositorio nuevo.
+   ➜ Si ya creaste uno nuevo por error, déjalo ahí sin usar; no estorba.
+
+
+PASOS
+───────────────────────────────────────────────────────────────────────────
+
+1. Abre ese repositorio en github.com
+
+2. Botón "Add file"  →  "Upload files"
+
+3. En tu computadora abre ESTA carpeta.
+   Selecciona TODO lo que hay adentro:
+       Ctrl+E   en Windows
+       Cmd+A    en Mac
+
+   Arrástralo todo junto a la zona que dice "Drag files here".
+
+   IMPORTANTE: arrastras el CONTENIDO de la carpeta, no la carpeta.
+   Si al final ves en GitHub una carpeta con el nombre de esta carpeta,
+   está mal: bórrala y repite arrastrando lo de adentro.
+
+4. Espera a que suban. Son 37 archivos, uno o dos minutos.
+   La barra de arriba te va diciendo cuántos van.
+
+5. GitHub te avisará que varios archivos ya existen y los va a reemplazar.
+   ESO ESTÁ BIEN. Es exactamente lo que queremos.
+
+6. Abajo, en "Commit changes", escribe:   Aula completa S01 y S02
+   Clic en "Commit changes".
+
+7. Netlify republica solo. Entre 30 segundos y 2 minutos.
+   Lo ves en Netlify → Deploys. Espera a que diga "Published".
+
+
+COMPROBACIÓN — HAZLA COMPLETA, NO A MEDIAS
+───────────────────────────────────────────────────────────────────────────
+
+Abre una ventana de INCÓGNITO (Ctrl+Shift+N / Cmd+Shift+N) y prueba, EN
+ESTE ORDEN:
+
+   1. https://aula-lfpiorpi360.netlify.app/
+      □ te pide contraseña
+      □ entras con 360Educa2026
+      □ ves la portada con colores, no en blanco y negro
+      □ la tarjeta 1 y la tarjeta 2 se ven activas (las otras cuatro, grises)
+
+   2. Clic en la tarjeta 1
+      □ abre la sesión 1 con colores
+      □ bajan sus 3 descargables
+
+   3. Regresa y clic en la tarjeta 2
+      □ abre la sesión 2 con colores
+      □ bajan sus 4 descargables
+      □ los enlaces a las hojas de la matriz abren
+
+Si algo de esto falla, avísame ahora. No lo dejes para mañana.
+
+
+SI ALGO SIGUE ROTO
+───────────────────────────────────────────────────────────────────────────
+
+"Todo se ve en blanco y negro, sin colores"
+    Se subió mal la estructura. En GitHub, en la pantalla principal del
+    repositorio, debes ver directamente:  index.html, s01, s02,
+    netlify.toml, _headers, robots.txt
+    Si en vez de eso ves UNA sola carpeta, arrastraste la carpeta en lugar
+    de su contenido. Bórrala y repite.
+
+"La sesión 1 dice que no existe / error 404"
+    La carpeta debe llamarse exactamente  s01  en minúsculas.
+    Lo mismo para  s02.
+
+"Las descargas no bajan"
+    Revisa que s01/ tenga sus 3 archivos y que s02/ tenga la subcarpeta
+    descargables/ con 4 archivos y la subcarpeta hojas/ con 19.
+
+"Netlify no republica"
+    Netlify → Deploys → "Trigger deploy" → "Deploy site".
+
+
+PARA LA SESIÓN 3 Y LAS QUE SIGUEN
+───────────────────────────────────────────────────────────────────────────
+
+Lo mismo, pero sólo con lo nuevo: subes la carpeta s03/ y el index.html
+actualizado al MISMO repositorio. Netlify republica solo.
+Ya no vuelves a tocar Netlify nunca.
+
+═══════════════════════════════════════════════════════════════════════════

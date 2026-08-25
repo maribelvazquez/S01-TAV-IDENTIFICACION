@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S02 · Metodología de riesgos y grado de riesgo · Antilavado 360</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Antilavado 360 · Sesión 02</p>
+    <h1>Metodología de riesgos<br>y grado de riesgo</h1>
+    <p class="meta">Martes 25 de agosto de 2026 · 16:00 a 18:00 h (CDMX)</p>
+    <p class="meta">Imparte: Maribel Vázquez Menchaca</p>
+    <div class="citas" style="margin-top:18px">
+      <span class="cita L"><i>L</i><span>18 fr. VII</span></span>
+      <span class="cita RCG"><i>RCG</i><span>Cap. II Quáter</span></span>
+      <span class="cita RCG"><i>RCG</i><span>Cap. III Bis</span></span>
+      <span class="cita R"><i>R</i><span>15</span></span>
+    </div>
+    <p class="sede">ASONOC · GMC360 · 360Educa</p>
+  </div>
+</header>
+
+<nav class="blocks">
+  <div class="wrap">
+    <ol>
+      <li><a href="#apertura"><b>0 – 10</b>Apertura</a></li>
+      <li><a href="#concepto"><b>10 – 25</b>Qué es el EBR</a></li>
+      <li><a href="#elementos"><b>25 – 40</b>Los cuatro elementos</a></li>
+      <li><a href="#calculo"><b>40 – 55</b>Inherente y residual</a></li>
+      <li><a href="#cliente"><b>55 – 75</b>Grado del cliente</a></li>
+      <li><a href="#regimen"><b>75 – 90</b>Régimen</a></li>
+      <li><a href="#taller"><b>90 – 110</b>Taller</a></li>
+      <li><a href="#cierre"><b>110 – 120</b>Cierre</a></li>
+      <li><a href="hojas/mapa.html"><b>guía</b>La matriz hoja por hoja</a></li>
+      <li><a href="#descargas"><b>&nbsp;</b>Descargas</a></li>
+    </ol>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ══ APERTURA ══ -->
+<section class="bloque" id="apertura">
+  <span class="reloj">0 – 10 min</span>
+  <h2>Empecemos por tu tarea</h2>
+  <p class="sub">Dos clientes en el Instrumento de expediente: uno fácil y uno difícil.</p>
+  <div class="grid g2">
+    <div class="card">
+      <h4>El fácil</h4>
+      <p>Persona física, mexicana, residente, una sola operación, pago bancarizado. Lo llenaste en diez minutos.<br><br><b>¿Eso lo vuelve de riesgo bajo?</b></p>
+    </div>
+    <div class="card dark">
+      <h4>El difícil</h4>
+      <p>Persona moral de reciente constitución, socios que no aparecen, pago fraccionado. Ahí te trabaste.<br><br><b>¿Y eso lo vuelve de riesgo alto?</b></p>
+    </div>
+  </div>
+  <p>Ninguna de las dos preguntas se contesta con intuición. Se contestan con un modelo escrito, y eso es lo de hoy.</p>
+
+  <h3>El reloj ya está corriendo</h3>
+  <blockquote>
+    La metodología debe estar a disposición de la autoridad desde el 1 de marzo de 2027, con información del año inmediato anterior. Si no se cuenta con el año completo, con la información disponible desde el inicio de la Actividad Vulnerable.
+    <cite>Transitorio Segundo del ACUERDO 115/2026</cite>
+  </blockquote>
+  <div class="banda">Los doce meses que vas a tener que enseñar son <strong>los que estás operando hoy</strong>.</div>
+
+  <h3>Dos evaluaciones distintas, y se confunden todo el tiempo</h3>
+  <p>Están en el mismo archivo. No son la misma obligación ni miden lo mismo.</p>
+  <table>
+    <thead><tr><th style="width:16%"></th><th style="width:42%">La evaluación de la ENTIDAD</th><th style="width:42%">El grado de riesgo del CLIENTE</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Qué mide</td><td>Qué tan expuesto está tu negocio</td><td>Qué tanto riesgo representa esa persona</td></tr>
+      <tr><td class="k">Cada cuándo</td><td>Una vez al año, sobre doce meses de operación</td><td>Al alta y al menos cada seis meses</td></tr>
+      <tr><td class="k">Qué produce</td><td>Riesgo inherente y residual del negocio</td><td>Grado de riesgo: bajo, medio o alto</td></tr>
+      <tr><td class="k">Fundamento</td><td><span class="cita RCG"><i>RCG</i><span>Cap. II Quáter · 10 Septies a 10 Septies 6</span></span></td><td><span class="cita RCG"><i>RCG</i><span>Cap. III Bis · 23 Bis a 23 Bis 4</span></span></td></tr>
+      <tr><td class="k">Hoy</td><td>Se recorre completa y se lleva de tarea con datos propios</td><td><b>Se llena en vivo</b></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══ CONCEPTO ══ -->
+<section class="bloque" id="concepto">
+  <span class="reloj">10 – 25 min</span>
+  <h2>Qué es el enfoque basado en riesgos</h2>
+  <p class="sub">La Ley lo pide en once palabras. Todo lo demás está en las Reglas.</p>
+  <blockquote>
+    Llevar a cabo una evaluación con un enfoque basado en Riesgos […] que les permita <b>identificar, analizar, entender y mitigar</b> sus Riesgos, así como los de las personas Clientes o Usuarias.
+    <cite>Artículo 18, fracción VII de la Ley · adicionada DOF 16-07-2025</cite>
+  </blockquote>
+  <div class="grid g4">
+    <div class="card"><h4>Identificar</h4><p>Qué te expone, con nombre propio.</p></div>
+    <div class="card"><h4>Analizar</h4><p>Cuánto pesa cada cosa.</p></div>
+    <div class="card"><h4>Entender</h4><p>Por qué pesa lo que pesa.</p></div>
+    <div class="card"><h4>Mitigar</h4><p>Qué haces al respecto y cómo lo pruebas.</p></div>
+  </div>
+
+  <h3>Y qué no es</h3>
+  <ul class="marca">
+    <li><b>No es una lista de verificación.</b> Una lista se contesta igual para todos. El EBR produce resultados distintos para negocios distintos, y por eso te obliga a justificar los tuyos.</li>
+    <li><b>No es impacto por probabilidad.</b> Ese modelo viene de GAFILAT, de la ISO 31000 y de la guía de la CNBV. Son referencias respetables, pero las Reglas no piden ni impacto ni probabilidad ni severidad.</li>
+    <li><b>No es un documento que se archiva.</b> La norma no pide tenerlo: pide que los resultados cambien tus políticas, en un plazo de doce meses contados desde que los tuviste.</li>
+  </ul>
+
+  <h3>Separar la norma de la buena práctica</h3>
+  <div class="grid g2">
+    <div class="card">
+      <p class="et">Lo que las Reglas sí exigen</p>
+      <ul class="marca" style="margin-top:8px">
+        <li>Cuatro elementos de riesgo, con sus indicadores</li>
+        <li>Un valor a cada indicador y a cada elemento</li>
+        <li>Los mitigantes del Manual y su efectiva aplicación</li>
+        <li>Indicadores de 139 Quáter y 400 Bis en cada elemento</li>
+        <li>Al menos doce meses de información real</li>
+        <li>La Evaluación Nacional de Riesgos como insumo</li>
+      </ul>
+    </div>
+    <div class="card" style="background:#fff">
+      <p class="et">Lo que es buena práctica, no norma</p>
+      <ul class="marca" style="margin-top:8px;color:var(--gris)">
+        <li>Impacto, probabilidad y severidad</li>
+        <li>Mapas de calor de 5 × 5</li>
+        <li>Apetito de riesgo expresado en número</li>
+        <li>Escalas de 1 a 5 y sus umbrales</li>
+        <li>Los cuatro factores de GAFI: cliente, producto, geografía y canal</li>
+      </ul>
+    </div>
+  </div>
+  <p><em>La columna derecha no está prohibida y mejora tu modelo. Sólo no la presentes como si fuera la exigencia.</em></p>
+
+  <h3>Los cuatro momentos del método</h3>
+  <table>
+    <thead><tr><th style="width:16%">Momento</th><th style="width:52%">Qué implica</th><th style="width:32%">Fundamento</th></tr></thead>
+    <tbody>
+      <tr><td class="k">1 · Diseñar</td><td>El método por escrito, dentro del Manual de Políticas Internas</td><td><span class="cita RCG"><i>RCG</i><span>10 Septies</span></span></td></tr>
+      <tr><td class="k">2 · Implementar</td><td>Correrlo con doce meses de datos reales, conciliados con tu mecanismo automatizado</td><td><span class="cita RCG"><i>RCG</i><span>10 Septies 2</span></span></td></tr>
+      <tr><td class="k">3 · Revisar</td><td>Cada doce meses, o antes si se actualiza la Evaluación Nacional de Riesgos</td><td><span class="cita RCG"><i>RCG</i><span>10 Septies 3</span></span></td></tr>
+      <tr><td class="k">4 · Ajustar</td><td>Modificar las políticas conforme al resultado, señalando al menos el año y el mes</td><td><span class="cita RCG"><i>RCG</i><span>10 Septies 2, últ. párr.</span></span></td></tr>
+    </tbody>
+  </table>
+  <div class="banda">Los dos plazos de doce meses <strong>no son el mismo</strong>: uno es revisar la evaluación, el otro es modificar las políticas. Corren en paralelo.</div>
+</section>
+
+<!-- ══ ELEMENTOS ══ -->
+<section class="bloque" id="elementos">
+  <span class="reloj">25 – 40 min</span>
+  <h2>Los cuatro elementos de riesgo</h2>
+  <p class="sub">No los eliges tú: están en el texto, y son el mínimo.</p>
+  <blockquote>
+    Identificar los elementos e indicadores asociados a cada uno de ellos que explican <b>cómo y en qué medida</b> se puede encontrar expuesta al Riesgo, considerando <b>al menos</b>, los siguientes elementos:<br>
+    a) actos u operaciones; b) tipo de personas Clientes o Usuarias; c) países y áreas geográficas; d) transacciones y canales de envío o distribución.
+    <cite>RCG, artículo 10 Septies 1, fracción I</cite>
+  </blockquote>
+  <table>
+    <thead><tr><th style="width:8%"></th><th style="width:38%">Elemento</th><th style="width:34%">Qué describe</th><th style="width:20%">Peso en el ejemplo</th></tr></thead>
+    <tbody>
+      <tr><td class="k">a</td><td>Actos u operaciones</td><td>Lo que vendes o intermedias</td><td class="k">20 %</td></tr>
+      <tr><td class="k">b</td><td>Tipo de personas Clientes o Usuarias</td><td>Con quién lo haces</td><td class="k">30 %</td></tr>
+      <tr><td class="k">c</td><td>Países y áreas geográficas</td><td>Dónde ocurre</td><td class="k">15 %</td></tr>
+      <tr><td class="k">d</td><td>Transacciones y canales de envío o distribución</td><td>Cómo se paga y por dónde entra</td><td class="k">35 %</td></tr>
+    </tbody>
+  </table>
+  <p><em>Los porcentajes son del ejemplo inmobiliario que trae la matriz, no de la norma. Los tuyos los asignas tú y los justificas por escrito.</em></p>
+
+  <h3>Cuidado: no son los cuatro factores de GAFI</h3>
+  <div class="grid g2">
+    <div class="card" style="background:#fff">
+      <p class="et">Buena práctica internacional</p>
+      <h4 style="color:var(--gris)">Los cuatro de GAFI</h4>
+      <p style="color:var(--gris)">Cliente · Producto o servicio · Geografía · Canal</p>
+    </div>
+    <div class="card">
+      <p class="et">Obligatorios, con este nombre</p>
+      <h4>Los cuatro de las Reglas</h4>
+      <p>Actos u operaciones · Tipo de personas Clientes o Usuarias · Países y áreas geográficas · Transacciones y canales de envío o distribución</p>
+    </div>
+  </div>
+  <div class="banda">«Producto» y «canal» no aparecen como elementos. Lo que la norma llama <strong>transacciones y canales</strong> es una sola categoría, no dos.</div>
+  <p>Si tu matriz está construida sobre los cuatro de GAFI, no está mal: tiene que poder mapearse a los cuatro de las Reglas, porque ésos son los que el revisor va a buscar por nombre.</p>
+
+  <h3>De elemento a indicador</h3>
+  <p>El elemento dice dónde mirar. El indicador es lo que de verdad mides. En la matriz que te llevas son veinticinco.</p>
+  <table>
+    <thead><tr><th style="width:26%">Elemento</th><th style="width:10%">Indicadores</th><th style="width:64%">Cuáles</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Actos u operaciones</td><td class="k">5</td><td>Valor · liquidez · anonimato · transferencia u ocultamiento de valor · exposición al financiamiento al terrorismo</td></tr>
+      <tr><td class="k">Clientes o Usuarias</td><td class="k">8</td><td>Tipo de persona · antigüedad · giro · nacionalidad · residencia · condición PEP · listas · Beneficiario Controlador</td></tr>
+      <tr><td class="k">Países y áreas</td><td class="k">4</td><td>Jurisdicción de la operación · área geográfica nacional · vínculo con jurisdicciones sancionadas · congruencia de domicilio</td></tr>
+      <tr><td class="k">Transacciones y canales</td><td class="k">8</td><td>Instrumento monetario · moneda · monto frente a umbrales · frecuencia · canal · origen · destino · canales idóneos para FT</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Los indicadores que no puedes quitar</h3>
+  <blockquote>
+    Deberán establecer dentro de su metodología indicadores específicos relacionados con los delitos previstos en los artículos 139 Quáter y 400 Bis del Código Penal Federal, <b>para cada uno de los elementos de Riesgo</b>.
+    <cite>RCG, artículo 10 Septies 1, último párrafo</cite>
+  </blockquote>
+  <div class="grid g2">
+    <div class="card"><h4>139 Quáter</h4><p>Financiamiento al terrorismo.</p></div>
+    <div class="card"><h4>400 Bis</h4><p>Operaciones con recursos de procedencia ilícita.</p></div>
+  </div>
+  <div class="citas">
+    <span class="cita CPF"><i>CPF</i><span>139 Quáter</span></span>
+    <span class="cita CPF"><i>CPF</i><span>400 Bis</span></span>
+    <span class="cita RCG"><i>RCG</i><span>10 Septies 1, último párr.</span></span>
+  </div>
+  <div class="banda">Dice «para cada uno de los elementos». Son <strong>ocho indicadores mínimos</strong>, dos por elemento. En la matriz vienen bloqueados: no admiten «No aplica».</div>
+
+  <h3>La doble ponderación</h3>
+  <div class="grid g2">
+    <div class="card">
+      <p class="et">Peso del indicador</p>
+      <p>Opera sólo dentro de su elemento y se normaliza solo. No tiene que sumar nada en particular: lo que importa es la proporción entre ellos.</p>
+    </div>
+    <div class="card dark">
+      <p class="et">Peso del elemento</p>
+      <p>Éste sí debe sumar 100 % entre los cuatro, y es el que mueve el resultado de toda la entidad.</p>
+    </div>
+  </div>
+  <blockquote>
+    Asignar un valor a cada uno de ellos de manera consistente <b>en función de su importancia</b> para describir dichos Riesgos.
+    <cite>RCG, artículo 10 Septies 1, fracción II</cite>
+  </blockquote>
+
+  <h3>La misma operación, dos veces</h3>
+  <p>Mismos porcentajes. Mismos controles. Lo único que cambió fue el peso de los indicadores.</p>
+  <div class="cifras">
+    <div class="cifra">
+      <p class="et">Pesos planos · 0.04 en los 25</p>
+      <p class="n">8.39</p>
+      <p class="lv">MEDIO BAJO</p>
+      <p class="nota">el reparto que nadie calibró</p>
+    </div>
+    <div class="cifra on">
+      <p class="et">Pesos calibrados y justificados</p>
+      <p class="n">9.51</p>
+      <p class="lv">MEDIO</p>
+      <p class="nota">el mismo negocio, bien medido</p>
+    </div>
+  </div>
+  <div class="banda ambar">El reparto plano no es neutral: <strong>subestimó el riesgo un nivel completo</strong>.</div>
+</section>
+
+<!-- ══ CÁLCULO ══ -->
+<section class="bloque" id="calculo">
+  <span class="reloj">40 – 55 min</span>
+  <h2>Riesgo inherente y riesgo residual</h2>
+  <p class="sub">Repartes el 100 % de tu operación entre tres perfiles. De ahí salen dos medidas.</p>
+  <table>
+    <thead><tr><th style="width:22%">Medida</th><th style="width:32%">Fórmula</th><th style="width:46%">Qué representa</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Calificación</td><td>5 × %Alto + 3 × %Medio + 1 × %Bajo</td><td>Qué tan riesgoso es el perfil de tu operación en ese indicador</td></tr>
+      <tr><td class="k">Concentración</td><td>1 + 4 × (%Alto + %Medio)</td><td>Qué tanto del negocio está expuesto. Criterio conservador: lo medio cuenta como exposición</td></tr>
+      <tr><td class="k">Riesgo inherente</td><td>Calificación × Concentración</td><td>Rango de 1 a 25</td></tr>
+    </tbody>
+  </table>
+  <p>La pregunta que contestas al repartir <b>no es qué te parece riesgoso</b>, sino qué proporción de tu operación de doce meses cayó en cada perfil. Es un dato, no una opinión.</p>
+
+  <h3>Los mitigantes: el denominador que no eliges</h3>
+  <blockquote>
+    Identificar los Mitigantes […] debiendo considerar <b>todas</b> las políticas, criterios, medidas y procedimientos internos previstos en el Manual de Políticas Internas, así como <b>su efectiva aplicación</b>.
+    <cite>RCG, artículo 10 Septies 1, fracción III</cite>
+  </blockquote>
+  <p>En un modelo que promedia los controles que el usuario decide capturar, registrar menos controles mejora el resultado. Es un incentivo perverso que cualquier auditor detecta. Por eso la efectividad se mide contra un denominador fijo: <b>las catorce obligaciones del artículo 37 Bis</b>.</p>
+  <table>
+    <thead><tr><th style="width:50%">Contenido mínimo del Manual</th><th style="width:50%">&nbsp;</th></tr></thead>
+    <tbody>
+      <tr><td>I · Identificación y conocimiento de Clientes</td><td>VIII · Seguimiento y acumulación frente a umbrales</td></tr>
+      <tr><td>II · Mecanismos de clasificación de Riesgo</td><td>IX · Identificación en listas de autoridades</td></tr>
+      <tr><td>III · Debida diligencia según el Grado de Riesgo</td><td>X · Funciones de la Representante Encargada</td></tr>
+      <tr><td>IV · Seguimiento reforzado de PEP</td><td>XI · Programas de capacitación</td></tr>
+      <tr><td>V · Detección de desvíos del Perfil transaccional</td><td>XII · Control interno, supervisión y auditoría</td></tr>
+      <tr><td>VI · Presentación de Avisos e Informes</td><td>XIII · Confidencialidad de la información</td></tr>
+      <tr><td>VII · Conservación de información</td><td>XIV · Actualización del propio Manual</td></tr>
+    </tbody>
+  </table>
+  <div class="citas">
+    <span class="cita RCG"><i>RCG</i><span>37 Bis</span></span>
+    <span class="cita RCG"><i>RCG</i><span>37 Bis 2</span></span>
+  </div>
+  <p>Sólo las fracciones <b>V, VIII y X</b> admiten «No aplica», y de forma condicionada: la V para quien opera exclusivamente con clientes ocasionales sin relación de negocios, la VIII para fracciones cuyo umbral no admite acumulación, y la X para la persona física sin estructura. Siempre con constancia en el Manual.</p>
+
+  <h3>Cómo se mide que un control sirve</h3>
+  <p>Con la misma escala que usará el auditor en su dictamen.</p>
+  <table>
+    <thead><tr><th style="width:34%">Resultado</th><th style="width:16%">Equivale a</th><th style="width:50%">Cuándo se usa</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Cumple</td><td class="k">100 %</td><td>La eficacia se demuestra y no hay recomendaciones</td></tr>
+      <tr><td class="k">Cumple mayoritariamente</td><td class="k">75 %</td><td>La eficacia no se demuestra por completo</td></tr>
+      <tr><td class="k">Cumple parcialmente</td><td class="k">40 %</td><td>No se demuestra por no contar con evidencia suficiente</td></tr>
+      <tr><td class="k">No cumple</td><td class="k">0 %</td><td>No cubre los elementos necesarios, o es un incumplimiento</td></tr>
+      <tr><td class="k">No aplica</td><td class="k">—</td><td>La obligación no es exigible para tu entidad</td></tr>
+    </tbody>
+  </table>
+  <div class="banda">Sin numeral del Manual y sin evidencia de aplicación efectiva, la obligación <strong>computa cero</strong> por bien redactada que esté. Control diseñado, control implementado y control operando efectivamente son tres estados distintos.</div>
+  <p><b>Tope de reducción: 50 %.</b> Aunque cumplas las catorce al cien por ciento, el riesgo inherente baja a la mitad y nunca a cero: el control mitiga, no elimina. Este tope y los cortes entre niveles son criterio propio documentado en la hoja PARÁMETROS, <em>no son norma</em>.</p>
+
+  <h3>Riesgo residual = Riesgo inherente × (1 − Reducción)</h3>
+  <p>Es el número que tiene consecuencias:</p>
+  <table>
+    <thead><tr><th style="width:28%">Consecuencia</th><th style="width:52%">Qué cambia</th><th style="width:20%">Fundamento</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Régimen de auditoría</td><td>Riesgo bajo o medio: puede dictaminar el área de auditoría interna. Riesgo alto: forzosamente auditor externo independiente</td><td><span class="cita L"><i>L</i><span>18 fr. XI</span></span></td></tr>
+      <tr><td class="k">Medidas simplificadas</td><td>Sólo con riesgo bajo documentado. Con medio o alto, no proceden</td><td><span class="cita R"><i>R</i><span>15</span></span></td></tr>
+      <tr><td class="k">Tolerancia</td><td>Fuera del máximo que declaró tu órgano de administración, el plan de acción deja de ser opcional</td><td><span class="cita RCG"><i>RCG</i><span>10 Septies 2</span></span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══ CLIENTE ══ -->
+<section class="bloque" id="cliente">
+  <span class="reloj">55 – 75 min · recorrido del ejemplo</span>
+  <h2>El grado de riesgo del cliente</h2>
+  <p class="sub">Abre la hoja <b>B CLIENTE</b> de la matriz. Catorce factores, con el caso de ejemplo resuelto de principio a fin.</p>
+  <blockquote>
+    Deberán contar con un modelo de evaluación de Riesgos, que deberá ser <b>coherente con la metodología</b> a que se refiere el Capítulo II Quáter […] Deberán establecer, al menos, tres clasificaciones, consistentes en Grados de Riesgo <b>bajo, medio y alto</b>, pudiendo establecer tantos Grados intermedios como consideren necesario.
+    <cite>RCG, artículo 23 Bis</cite>
+  </blockquote>
+
+  <h3>Los 23 factores, en las dos familias que nombra la norma</h3>
+  <p>El <code>Art. 23 Bis 2</code> no habla de los cuatro elementos —ésos son de la evaluación de la <b>entidad</b>—. Para el Cliente dice: <em>«incluyendo al menos los siguientes: I. Características inherentes… II. Características transaccionales»</em>.</p>
+  <div class="grid g2">
+    <div class="card">
+      <p class="et">Características inherentes · fracción I · peso 45 %</p>
+      <ul class="marca" style="margin-top:8px">
+        <li>Tipo de persona y estructura</li>
+        <li>Fecha de nacimiento o de constitución</li>
+        <li>Actividad, ocupación, profesión o giro</li>
+        <li>País de nacionalidad · domicilio de residencia</li>
+        <li>Condición PEP · coincidencia en listas</li>
+        <li>Beneficiario Controlador</li>
+        <li>Fuente de los ingresos · naturaleza y propósito de la relación</li>
+      </ul>
+    </div>
+    <div class="card" style="background:#fff">
+      <p class="et">Características transaccionales · fracción II · peso 55 %</p>
+      <ul class="marca" style="margin-top:8px">
+        <li>Producto o servicio contratado</li>
+        <li>Monto frente al perfil y a los umbrales</li>
+        <li>Frecuencia · volumen · número de contrapartes</li>
+        <li>Instrumento monetario · tipo de moneda</li>
+        <li>Origen y destino de los recursos</li>
+        <li>Canal de la operación</li>
+        <li>Geografía de la operación y congruencia con el domicilio</li>
+      </ul>
+    </div>
+  </div>
+  <div class="citas"><span class="cita RCG"><i>RCG</i><span>23 Bis 2 fr. I y II</span></span></div>
+
+  <h3>Cada factor dice de qué dato sale</h3>
+  <p>Un factor sólo existe si hay un dato del que alimentarlo. La hoja <b>VARIABLES</b> trae la fuente de cada uno:</p>
+  <table>
+    <thead><tr><th style="width:38%">Factor</th><th style="width:62%">De dónde sale el dato</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Fecha de constitución o nacimiento</td><td>Anexo 3 a) ii) · Anexo 4 a) ii)</td></tr>
+      <tr><td class="k">Actividad, ocupación o giro</td><td>Anexo 3 a) v) · Anexo 4 a) iv)</td></tr>
+      <tr><td class="k">Nacionalidad</td><td>Anexo 3 a) iv) · Anexo 4 a) iii)</td></tr>
+      <tr><td class="k">Domicilio de residencia</td><td>Anexo 3 a) vi) · Anexo 4 a) v)</td></tr>
+      <tr><td class="k">Beneficiario Controlador</td><td>Anexo 3 b) iv) · Anexo 4 b) v) · Anexo 8 b) iv)</td></tr>
+      <tr><td class="k">Condición PEP</td><td><b>Anexo 10</b>, que es nuevo · <code>RCG 23 Bis 3</code> y <code>23 Bis 4</code></td></tr>
+      <tr><td class="k">Frecuencia y volumen</td><td>Mecanismo automatizado · <code>RCG 41 fr. II</code></td></tr>
+      <tr><td class="k">Monto frente al perfil</td><td>Perfil transaccional · <code>RCG 23 Ter 1</code></td></tr>
+    </tbody>
+  </table>
+  <div class="banda">Si un factor no sale de ningún dato, <strong>no es factor: es una corazonada</strong>. Por eso el anonimato no está aquí — no es atributo del Cliente, es del producto.</div>
+
+  <h3>El anonimato se mide en el producto, no en el cliente</h3>
+  <p>Un mismo cliente cambia de riesgo según lo que contrate. Por eso la hoja <b>PRODUCTOS</b> califica cada producto o servicio contra seis indicadores en columna —valor, liquidez, anonimato que permite, facilidad de transferir u ocultar valor, exposición al financiamiento al terrorismo y uso de efectivo— y el nivel del producto sale del promedio. B CLIENTE sólo lo elige de la lista.</p>
+  <p>Los seis indicadores son los del elemento 1 de la hoja A1, de modo que el producto se mide igual en los dos modelos.</p>
+
+  <h3>Qué significa que sea «coherente»</h3>
+  <div class="grid g4">
+    <div class="card"><p class="et">Igual que A1</p><h4>La escala</h4><p>Alto 5 · Medio 3 · Bajo 1</p></div>
+    <div class="card"><p class="et">Igual que A1</p><h4>El criterio de peso</h4><p>Asignado «en función de su importancia», nunca plano</p></div>
+    <div class="card"><p class="et">Como lo nombra el 23 Bis 2</p><h4>La agrupación</h4><p>Inherentes y transaccionales, no los cuatro elementos</p></div>
+    <div class="card dark"><p class="et">Lo único distinto</p><h4>No hay concentración</h4><p>Un Cliente no se reparte en porcentajes. Corre de 1 a 5, no de 1 a 25</p></div>
+  </div>
+
+  <h3>Cómo se lee la calificación</h3>
+  <table>
+    <thead><tr><th style="width:16%">Grado</th><th style="width:20%">Calificación</th><th style="width:64%">Qué expediente le corresponde</th></tr></thead>
+    <tbody>
+      <tr><td class="k">BAJO</td><td>de 1.00 a 2.33</td><td>Expediente conforme al Art. 12; medidas simplificadas <b>sólo si además la entidad</b> es de riesgo bajo (Art. 15 del Reglamento)</td></tr>
+      <tr><td class="k">MEDIO</td><td>de 2.34 a 3.66</td><td>Expediente completo del Art. 12 de las Reglas (Art. 17 Bis)</td></tr>
+      <tr><td class="k">ALTO</td><td>de 3.67 a 5.00</td><td>Expediente reforzado: Arts. 23 Ter 3, 23 Ter 4 y, si además es PEP, 23 Ter 5</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Cuándo el grado alto no se discute</h3>
+  <p>Dos supuestos en que el modelo no decide: lo decide la norma.</p>
+  <ul class="marca">
+    <li><b>Personas Políticamente Expuestas extranjeras</b>, sin importar lo que arroje tu puntaje ponderado.</li>
+    <li><b>No residentes en territorio mexicano</b> que se encuentren, estén vinculados o tengan efectos en países o jurisdicciones de régimen fiscal preferente, o señaladas por no contar con medidas para prevenir, detectar y combatir estas operaciones, o por aplicarlas deficientemente. La UIF publica la lista en el Portal en Internet.</li>
+  </ul>
+  <div class="banda">En estos casos hay que recabar además <strong>las razones por las que celebraron el acto u operación en territorio mexicano</strong>.</div>
+  <div class="citas"><span class="cita RCG"><i>RCG</i><span>23 Bis 4</span></span></div>
+  <p><b>Ojo con la PEP nacional:</b> no es alto obligatorio. Para la PEP mexicana, el artículo 23 Bis 3 pide factores de riesgo adicionales que permitan determinar si su comportamiento transaccional corresponde razonablemente con sus ingresos, funciones, nivel y responsabilidad.</p>
+  <p>El grado se reevalúa <b>al menos cada seis meses</b>, con mayor frecuencia mientras mayor sea. <span class="cita RCG"><i>RCG</i><span>23 Bis 1</span></span></p>
+</section>
+
+<!-- ══ RÉGIMEN ══ -->
+<section class="bloque" id="regimen">
+  <span class="reloj">75 – 90 min</span>
+  <h2>Del grado sale el expediente</h2>
+  <p class="sub">Debida diligencia reforzada: tres artículos escalonados, no una lista suelta.</p>
+  <table>
+    <thead><tr><th style="width:16%">Artículo</th><th style="width:84%">Qué obliga cuando el grado es alto</th></tr></thead>
+    <tbody>
+      <tr><td class="k">23 Ter 3</td><td>Requerir mayor información sobre la actividad preponderante, revisión y monitoreo más estricto del comportamiento transaccional, y aplicar cuestionarios de identificación sobre origen y destino de los recursos. Puede ser remoto, con Firma Electrónica de quien lo suscribe.</td></tr>
+      <tr><td class="k">23 Ter 4</td><td><b>Persona física:</b> medidas reforzadas sobre origen y destino, y datos del cónyuge, dependientes económicos y sociedades con las que mantenga vínculos patrimoniales.<br><b>Persona moral:</b> mayor información de accionistas o socios, verificando los datos en los registros electrónicos de la Secretaría de Economía.</td></tr>
+      <tr><td class="k">23 Ter 5</td><td>Cuando además es Persona Políticamente Expuesta con grado alto: aprobación previa de un directivo o su equivalente. Si quien realiza la Actividad Vulnerable es persona física, se subsana con constancia motivada.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Medidas simplificadas: la confusión más cara</h3>
+  <p>Dos condiciones distintas, y hacen falta las dos.</p>
+  <div class="grid g2">
+    <div class="card">
+      <p class="et">Lo que decide el expediente</p>
+      <h4>El grado del CLIENTE</h4>
+      <p>Bajo, medio o alto. De ahí sale el régimen de debida diligencia que le toca a esa persona.</p>
+    </div>
+    <div class="card dark">
+      <p class="et">Lo que decide las simplificadas</p>
+      <h4>El riesgo de la ENTIDAD</h4>
+      <p>Sólo si tu evaluación de entidad quedó en bajo puedes cumplir la identificación con medidas simplificadas.</p>
+    </div>
+  </div>
+  <blockquote>
+    Podrán dar cumplimiento a la obligación de identificación de la persona Cliente o Usuaria […] a través de <b>medidas simplificadas cuando quienes las realicen sean consideradas de bajo riesgo</b>, conforme a la evaluación a la que se refiere el artículo 18, fracción VII, de la Ley.
+    <cite>Reglamento, artículo 15</cite>
+  </blockquote>
+  <div class="grid g2">
+    <div class="card" style="background:#fff;border-left:5px solid #B23B2E">
+      <h4 style="color:#B23B2E">Error uno</h4>
+      <p>Creer que un cliente de riesgo bajo ya da derecho a expediente simplificado. No: eso depende de la evaluación de tu entidad.</p>
+    </div>
+    <div class="card" style="background:#fff;border-left:5px solid #B23B2E">
+      <h4 style="color:#B23B2E">Error dos</h4>
+      <p>Creer que si la entidad salió baja, todos los clientes van simplificados. Tampoco: el cliente de grado alto sigue llevando reforzada.</p>
+    </div>
+  </div>
+
+  <h3>Y esto no se queda en papel</h3>
+  <p>El mecanismo automatizado tiene que ejecutar el modelo, no sólo guardarlo.</p>
+  <table>
+    <thead><tr><th style="width:14%">Fracción</th><th style="width:86%">Qué debe hacer el mecanismo</th></tr></thead>
+    <tbody>
+      <tr><td class="k">III</td><td>Proveer la información que se incluirá en la metodología del Capítulo II Quáter</td></tr>
+      <tr><td class="k">IV</td><td>Ejecutar el modelo de evaluación de Riesgos del Capítulo III Bis para clasificar por Grado de Riesgo, conservando el histórico de modificaciones de grado y de perfil transaccional por al menos <b>diez años</b></td></tr>
+      <tr><td class="k">V</td><td>Ejecutar un sistema de alertas para clientes de Grado de Riesgo alto, Personas Políticamente Expuestas, personas en las listas del artículo 38 y jurisdicciones señaladas</td></tr>
+    </tbody>
+  </table>
+  <div class="citas">
+    <span class="cita RCG"><i>RCG</i><span>41</span></span>
+    <span class="cita L"><i>L</i><span>18 fr. X</span></span>
+  </div>
+  <p>El artículo 41 pide que el mecanismo sea <em>razonablemente adecuado al volumen, naturaleza y complejidad</em> de tus operaciones y a tu riesgo. No exige un sistema comercial. Lo que no puede es no existir. Y tu evaluación no puede tener inconsistencias con lo que ese mecanismo arroja.</p>
+
+  <h3>Documentar la metodología</h3>
+  <ul class="marca">
+    <li><b>El diseño de la metodología va dentro del Manual</b>, junto con los criterios de apertura, limitación o terminación de relaciones comerciales, que deben ser congruentes con ella. <span class="cita RCG"><i>RCG</i><span>37, último párr.</span></span></li>
+    <li><b>Las revisiones y actualizaciones constan por escrito</b> y están a disposición del SAT cuando lo requiera. <span class="cita RCG"><i>RCG</i><span>10 Septies 3</span></span></li>
+    <li><b>Todo se conserva al menos diez años</b> y se entrega al SAT o a la UIF cuando lo pidan. <span class="cita RCG"><i>RCG</i><span>10 Septies 3, últ. párr.</span></span></li>
+  </ul>
+</section>
+
+<!-- ══ RECORRIDO ══ -->
+<section class="bloque" id="taller">
+  <span class="reloj">90 – 110 min</span>
+  <h2>El recorrido completo: la matriz hoja por hoja</h2>
+  <p class="sub">Diecisiete pestañas, con el caso de la inmobiliaria resuelto al cien por ciento. Se ve el archivo entero, no un pedazo.</p>
+  <p>El orden de las pestañas <b>no es</b> el orden de trabajo, y ésa es la primera confusión que hay que quitar. El recorrido real arranca en PARÁMETROS, sigue en INICIO, y la hoja A9 se parte en dos porque sus dos primeras secciones van <em>antes</em> de capturar un solo porcentaje.</p>
+  <table>
+    <thead><tr><th style="width:16%">Paso</th><th style="width:30%">Hoja</th><th style="width:54%">Qué se resuelve ahí</th></tr></thead>
+    <tbody>
+      <tr><td class="k">0</td><td><a href="hojas/parametros.html">PARÁMETROS</a></td><td>UMA, tolerancia declarada y tope de reducción</td></tr>
+      <tr><td class="k">1</td><td><a href="hojas/inicio.html">INICIO</a></td><td>Actividad Vulnerable, datos de la entidad y las tres cifras de doce meses</td></tr>
+      <tr><td class="k">2</td><td><a href="hojas/a9-1.html">A9 · secciones 1 y 2</a></td><td>La ENR y la conciliación con el mecanismo automatizado</td></tr>
+      <tr><td class="k">3</td><td><a href="hojas/a1.html">A1 EXPOSICIÓN</a></td><td>Los 25 indicadores, los dos pesos y las justificaciones</td></tr>
+      <tr><td class="k">4</td><td><a href="hojas/a2.html">A2 CONSECUENCIAS</a></td><td>Qué pasaría si el riesgo se materializa</td></tr>
+      <tr><td class="k">5</td><td><a href="hojas/a3.html">A3 INHERENTE</a></td><td>El riesgo antes de controles, en tres niveles</td></tr>
+      <tr><td class="k">6</td><td><a href="hojas/a4.html">A4 CONTROLES MÍNIMOS</a> y <a href="hojas/a4bis.html">A4 BIS</a></td><td>Las catorce obligaciones y los controles por encima del mínimo</td></tr>
+      <tr><td class="k">7</td><td><a href="hojas/a5.html">A5 RESIDUAL</a></td><td>Lo que queda después de los controles</td></tr>
+      <tr><td class="k">8</td><td><a href="hojas/a6.html">A6 TABLERO</a></td><td>El resumen ejecutivo y las cuatro consecuencias del número</td></tr>
+      <tr><td class="k">9</td><td><a href="hojas/a8.html">A8 TOLERANCIA</a></td><td>El veredicto y el plan de acción</td></tr>
+      <tr><td class="k">10</td><td><a href="hojas/a9-2.html">A9 · secciones 3 a 7</a></td><td>Aprobación, plazos, versiones y conservación</td></tr>
+      <tr><td class="k">Aparte</td><td><a href="hojas/a7.html">A7 NUEVOS PRODUCTOS</a></td><td>Antes de cada lanzamiento, no en la evaluación anual</td></tr>
+      <tr><td class="k">Aparte</td><td><a href="hojas/bcliente.html">B CLIENTE</a></td><td>El grado de riesgo de un Cliente a la vez</td></tr>
+      <tr><td class="k">Aparte</td><td><a href="hojas/productos.html">PRODUCTOS</a> y <a href="hojas/variables.html">VARIABLES</a></td><td>El nivel de riesgo de lo que ofreces, y el catálogo de variables con la fuente de cada dato</td></tr>
+      <tr><td class="k">Ref.</td><td><a href="hojas/catalogo.html">CATÁLOGO</a> y <a href="hojas/base.html">BASE</a></td><td>Las quince fracciones con sus umbrales, y los textos de guía de las 30 actividades</td></tr>
+    </tbody>
+  </table>
+  <div class="banda ambar">Cada hoja tiene su propia página: <strong><a href="hojas/mapa.html" style="color:var(--navy)">qué se hace, qué no, cómo sabes que terminaste y qué trae el ejemplo</a></strong>.</div>
+
+  <h3>Los números del caso, para seguir el recorrido</h3>
+  <div class="grid g4">
+    <div class="card"><p class="et">Inherente</p><h4>9.51 · MEDIO</h4><p>Calificación 2.78 × concentración 3.43</p></div>
+    <div class="card"><p class="et">Mitigantes</p><h4>78.2 %</h4><p>Con tope del 50 %, reduce 39.1 %</p></div>
+    <div class="card dark"><p class="et">Residual</p><h4>5.79 · MEDIO BAJO</h4><p>Aceptable / monitorear</p></div>
+    <div class="card"><p class="et">Veredicto</p><h4>Dentro de tolerancia</h4><p>Y aun así, cinco renglones de plan de acción</p></div>
+  </div>
+</section>
+
+<!-- ══ CIERRE ══ -->
+<section class="bloque" id="cierre">
+  <span class="reloj">110 – 120 min</span>
+  <h2>Antes de los errores: un caso real</h2>
+  <p class="sub">Un modelo de grado de riesgo de cliente que circula en el mercado. Once factores, promediados sin ponderar.</p>
+  <div class="grid g3">
+    <div class="card"><h4>El abogado que no era de riesgo</h4><p>El cliente del ejemplo está calificado <b>MUY ALTO</b> en actividad económica. El resultado final del cliente sale <b>MEDIO BAJO</b>.</p></div>
+    <div class="card"><h4>Escalas mezcladas</h4><p>Casi todos los factores van de 1 a 3, pero dos van de 1 a 5. En un promedio simple, esos dos pesan más sin que nadie lo haya decidido.</p></div>
+    <div class="card dark"><h4>El techo invisible</h4><p>El peor cliente imaginable, con todo al máximo, da <b>3.27</b>. Ese modelo <b>no puede producir ALTO ni MUY ALTO</b> para nadie.</p></div>
+  </div>
+  <div class="banda ambar">Un modelo que estructuralmente no alcanza el grado alto <strong>no cumple el Art. 23 Bis</strong>, y hace imposible el Art. 23 Bis 4.</div>
+  <div class="card" style="margin:20px 0">
+    <p class="et">La prueba que puedes correr en tu propia matriz en dos minutos</p>
+    <p>Pon todos los factores en el peor valor posible y mira qué grado sale. <b>Si no sale alto, el modelo está roto.</b> Es la revisión más barata que existe y casi nadie la hace.</p>
+  </div>
+
+  <h2>Los tres errores que tiran una matriz</h2>
+  <p class="sub">Ninguno es de cálculo. Los tres son de sustento.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Copiada</h4><p>Una matriz de plantilla describe un negocio que no es el tuyo. Se detecta en un minuto: los porcentajes no corresponden a las cifras de doce meses que tú mismo declaraste.</p></div>
+    <div class="card"><h4>Sin evidencia</h4><p>Un control descrito en el Manual pero sin bitácora, acuse o registro que pruebe que opera, computa cero.</p></div>
+    <div class="card"><h4>Sin actualizar</h4><p>La evaluación vence a los doce meses, y antes si se actualiza la Evaluación Nacional de Riesgos. Una matriz vencida no es prueba de cumplimiento.</p></div>
+  </div>
+
+  <h3>Para la próxima</h3>
+  <ol class="pasos">
+    <li><b>Dos clientes más en B CLIENTE.</b> Uno que creas de riesgo bajo y uno que creas de riesgo alto. Comprueba si el modelo te da la razón.</li>
+    <li><b>El recorrido de A1 a A9 con tus datos.</b> Sin llenar todavía: identifica qué información te falta y de dónde la vas a sacar. Ésa es tu lista de trabajo real.</li>
+    <li><b>El apartado de metodología de tu Manual.</b> Media cuartilla: qué elementos usas, cómo ponderas y cada cuándo revisas.</li>
+  </ol>
+  <div class="banda">S03 · martes 1 de septiembre · <strong>Avisos, umbrales y acumulación</strong></div>
+</section>
+
+<!-- ══ DESCARGAS ══ -->
+<section class="bloque" id="descargas">
+  <h2>Descargables de la sesión</h2>
+  <p class="sub">Todo lo de hoy, en tres archivos.</p>
+  <div class="dl">
+    <a href="descargables/S02_ALU_05_Matriz_Riesgo_EBR_EN_BLANCO.xlsx">
+      <b>Matriz de riesgo EBR · EN BLANCO</b>
+      <span>La misma herramienta, lista para tus datos. Conserva fórmulas, guías, catálogos y el catálogo de VARIABLES como punto de partida. <b>Ésta es la que vas a usar.</b> XLSX</span>
+    </a>
+    <a href="descargables/S02_ALU_03_Matriz_Riesgo_EBR.xlsx">
+      <b>Matriz de riesgo EBR · CON EL EJEMPLO</b>
+      <span>Diecisiete hojas con el caso de la inmobiliaria resuelto al cien por ciento. Es el que se recorre en clase y el que se consulta cuando no sepas qué poner. XLSX</span>
+    </a>
+    <a href="descargables/S02_ALU_02_Guia_de_uso_Matriz.docx">
+      <b>Guía de uso de la matriz</b>
+      <span>Escrita para quien nunca ha hecho una evaluación de riesgos: qué es el riesgo, el recorrido paso por paso, los diez errores, qué imprimir ante un requerimiento, glosario de 25 términos y un anexo con una ficha por pestaña para imprimir. 39 páginas. DOCX</span>
+    </a>
+    <a href="descargables/S02_ALU_01_Presentacion.pptx">
+      <b>Presentación de la sesión</b>
+      <span>Las treinta y dos láminas. Respaldo de la clase. PPTX</span>
+    </a>
+    <a href="hojas/mapa.html">
+      <b>La matriz, hoja por hoja</b>
+      <span>Guía rápida de las diecisiete pestañas: qué se hace en cada una, qué no, cómo sabes que terminaste y qué trae el ejemplo. Página web</span>
+    </a>
+  </div>
+
+  <p class="aviso">Formación continua. Este taller no otorga certificación alguna.<br>
+  Las citas corresponden a la Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita (última reforma DOF 16-07-2025), su Reglamento (DOF 27-03-2026) y las Reglas de Carácter General en su texto compilado con el ACUERDO 115/2026 (DOF 07-08-2026). Vigencias escalonadas: el Capítulo II Quáter y el Capítulo III Bis rigen a partir del 1 de marzo de 2027 conforme a los Transitorios Segundo y Cuarto.</p>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <b>Antilavado 360 · de la Ley a la práctica</b>
+    ASONOC · GMC360 · 360Educa · Sesión 02 · 25 de agosto de 2026
+  </div>
+</footer>
+
+</body>
+</html>
