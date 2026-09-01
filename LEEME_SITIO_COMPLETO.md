@@ -27,6 +27,11 @@ están listados en el apartado 4.
 
 ```
 index.html                 índice del aula · la tarjeta 3 ya está activa
+biblioteca/                NUEVA · documento transversal del taller
+      Preguntas_del_Sector_ACUERDO_115.pdf   145 preguntas, 3a edicion, 89 pp.
+      Se enlaza desde las tres sesiones. Para actualizarlo se reemplaza el
+      archivo con el mismo nombre: las ligas no cambian.
+
 netlify.toml               sin cambios
 _headers  robots.txt       sin cambios
 
