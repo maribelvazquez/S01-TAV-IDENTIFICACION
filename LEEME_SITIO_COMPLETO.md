@@ -34,11 +34,14 @@ s01/  index.html           + navegación
       3 descargables
 
 s02/  index.html           + navegación · dos correcciones de contenido
+                           + siete correcciones de la matriz v9.0
       estilo.css           + regla de tablas en teléfono
-      descargables/        4 archivos
-      hojas/               19 páginas de la guía de la matriz, sin cambios
+      descargables/        5 archivos · los 4 anteriores sustituidos (matriz v9.1)
+                           + S02_ALU_06_Compendio_Sesion_02.pdf, NUEVO
+      hojas/               19 páginas · bcliente.html sustituida, 18 sin cambios
 
 s03/  index.html           NUEVA
+      diagnostico.html     NUEVA · el calificador del Manual, con el que abre la sesión
       estilo.css           copia idéntica de la de s02, con la misma regla añadida
       descargables/        5 archivos
 ```
@@ -77,9 +80,41 @@ ya llega hasta el índice del aula.
 |---|---|
 | `index.html` | La tarjeta de la sesión 3 pasa de `.soon` a liga activa, con su descripción |
 | `s01/index.html` | Barra de regreso arriba · salto de sesión abajo |
-| `s02/index.html` | Barra de regreso · salto de sesión · **dos correcciones de contenido** |
+| `s02/index.html` | Barra de regreso · salto de sesión · **dos correcciones de contenido** · **siete correcciones de la matriz v9.0** |
 | `s02/estilo.css` | Regla de tablas para pantallas de menos de 600 px |
-| `s03/` | Carpeta nueva completa |
+| `s02/descargables/` | **Los cuatro archivos sustituidos**: matriz v9.1 con ejemplo y en blanco, guía regenerada, presentación de 34 láminas · **+ compendio de 59 páginas, nuevo** |
+| `s02/hojas/bcliente.html` | **Sustituida**: 23 → 22 factores y la calificación del ejemplo 2.91 → 2.79 |
+| `s03/` | Carpeta nueva completa, incluido `diagnostico.html` |
+
+### Las correcciones de la matriz, v9.0
+
+El modelo de cliente pasó de 23 a 22 factores: se fusionaron «Frecuencia» y «Volumen»
+en uno solo, con fundamento en el **RCG 23 Ter 1 fr. II**, que los nombra juntos. El
+indicador «Tipo de persona y estructura» se limpió a «Tipo de persona», porque la
+complejidad de la estructura ya la mide el factor de Beneficiario Controlador y tenerla
+en los dos era doble conteo. El ejemplo cargado bajó de 2.91 a **2.79 · MEDIO**. La
+evaluación de la entidad no cambió: 9.51 inherente · 78.2 % de mitigantes · 5.79 residual.
+Los archivos en blanco ya no emiten calificación con datos vacíos: dicen SIN CLASIFICAR
+y SIN EVALUAR hasta que estén resueltos los veintidós factores.
+
+En `s02/index.html` eso obligó a estas correcciones de texto: «Catorce factores» → 22
+(era el error de dato más visible de la página), «Los 23 factores» → 22, «Tipo de persona
+y estructura» → «Tipo de persona», «treinta y dos láminas» → treinta y cuatro,
+«en tres archivos» → en cuatro, y las dos tarjetas de descargables reescritas.
+
+**El renglón de frecuencia y volumen.** El `RCG 23 Bis 2 fr. II` los enumera por separado
+—«tipo, volumen en número, frecuencia y monto de actos u operaciones, número de
+contrapartes…»—. El que los nombra juntos es el `23 Ter 1 fr. II`, que gobierna el **Perfil
+transaccional**: otro instrumento, otro capítulo, y no sirve de fundamento aquí. La fusión
+en un solo factor sigue siendo válida, pero por otra razón: el artículo dice «pudiendo
+incluir… entre otros», o sea lista abierta. Es **criterio propio documentado**, no algo que
+la norma nombre junto, y así lo dice ahora la página y la celda «Fuente del dato» del Excel.
+
+**Lo que muestran las dos tarjetas** son los 22 factores de la matriz agrupados en siete
+renglones cada una —diez inherentes y doce transaccionales—, no la enumeración del
+artículo: la fracción I no menciona PEP, ni listas de personas bloqueadas, ni Beneficiario
+Controlador. El encabezado y los conteos por familia ya lo dicen, para que 10 + 12 = 22 se
+vea en la página.
 
 ### Las dos correcciones de la sesión 2
 
@@ -99,7 +134,7 @@ ya llega hasta el índice del aula.
 |---|---|
 | `S03_ALU_02_Manual_Politicas_Internas.docx` | Plantilla 03 del kit. 23 apartados, 33 páginas |
 | `S03_ALU_05_Guia_Redaccion_Manual.docx` | **Nueva.** Cómo se escribe un Manual: los cuatro escalones, el mapa de las catorce fracciones, dos apartados desarrollados como modelo. Se usa en el ejercicio del minuto 36 |
-| `S03_ALU_04_Programa_Capacitacion.xlsx` | 7 hojas con fórmulas vivas. Se usa en el taller del minuto 97 |
+| `S03_ALU_04_Programa_Capacitacion.xlsx` | 8 hojas con fórmulas vivas. Se usa en el taller del minuto 97 |
 | `S03_ALU_03_Aprobacion_PEP_Riesgo_Alto.docx` | Formato del artículo 23 Ter 5, en sus dos variantes |
 | `S03_ALU_01_Presentacion.pptx` | Las 31 láminas de la sesión |
 
