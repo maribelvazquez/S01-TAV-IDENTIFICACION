@@ -29,6 +29,11 @@ están listados en el apartado 4.
 index.html                 índice del aula · la tarjeta 3 ya está activa
 biblioteca/                NUEVA · documento transversal del taller
       Preguntas_del_Sector_ACUERDO_115.pdf   145 preguntas, 3a edicion, 89 pp.
+      Reglas_de_Caracter_General_texto_compilado.pdf   texto oficial compilado
+      de las RCG con todas sus reformas, 53 pp. OJO: tiene seis erratas
+      cotejadas contra el DOF; la de peso esta en el art. 6.
+      ACUERDO_115_2026_DOF_07_agosto_2026.pdf   la publicacion del Diario
+      Oficial, 31 pp. Es la fuente con valor legal.
       Se enlaza desde las tres sesiones. Para actualizarlo se reemplaza el
       archivo con el mismo nombre: las ligas no cambian.
 
