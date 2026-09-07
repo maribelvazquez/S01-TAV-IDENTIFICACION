@@ -27,7 +27,10 @@ están listados en el apartado 4.
 
 ```
 index.html                 índice del aula · la tarjeta 3 ya está activa
-biblioteca/                NUEVA · documento transversal del taller
+biblioteca/                NUEVA · los tres documentos transversales.
+                           Se enlazan SOLO desde la portada (index.html,
+                           bloque «Biblioteca del taller»). Las sesiones
+                           traen un renglon que apunta ahi, no copias.
       Preguntas_del_Sector_ACUERDO_115.pdf   145 preguntas, 3a edicion, 89 pp.
       Reglas_de_Caracter_General_texto_compilado.pdf   texto oficial compilado
       de las RCG con todas sus reformas, 53 pp. OJO: tiene seis erratas
@@ -39,6 +42,15 @@ biblioteca/                NUEVA · documento transversal del taller
 
 netlify.toml               sin cambios
 _headers  robots.txt       sin cambios
+
+s00/  index.html           NUEVA · la clase abierta del 11 de agosto
+      autodiagnostico.html  27 preguntas con semaforo y pendientes por criticidad
+      guia/                 la guia completa de la reforma, 11 pestañas
+      sanciones/            calculadora de sanciones + su Excel
+      juego/                ahorcado de repaso
+      estilo.css            copia de la de s03
+      Viene del sitio abierto LFPIORPI-ASEVAL. Se elimino la seccion
+      /valeras/ y las dos ligas que apuntaban a ella.
 
 s01/  index.html           + navegación
       3 descargables
@@ -89,6 +101,9 @@ ya llega hasta el índice del aula.
 | Archivo | Cambio |
 |---|---|
 | `index.html` | La tarjeta de la sesión 3 pasa de `.soon` a liga activa, con su descripción |
+| `index.html` | **Tarjeta 0 nueva**: la clase abierta del 11 de agosto. Ahora las siete tarjetas coinciden con las «siete sesiones» que anuncia la portada |
+| `s00/` | **Carpeta nueva completa**, tomada del sitio abierto de la reforma, sin la sección de valeras |
+| `s01/index.html` | + salto a la sesión de apertura |
 | `s01/index.html` | Barra de regreso arriba · salto de sesión abajo |
 | `s02/index.html` | Barra de regreso · salto de sesión · **dos correcciones de contenido** · **siete correcciones de la matriz v9.0** |
 | `s02/estilo.css` | Regla de tablas para pantallas de menos de 600 px |
