@@ -56,7 +56,7 @@ s03/  index.html           diagnostico.html · estilo.css
 
 s04/  index.html           NUEVA
       estilo.css           copia idéntica de la de s03, comprobada por diff
-      descargables/        5 archivos · 43 láminas
+      descargables/        5 archivos · 44 láminas
 ```
 
 ---
@@ -102,7 +102,7 @@ Nada más se tocó. Las sesiones 0, 1 y 2 van tal como estaban, y los tres PDF q
 | `S04_ALU_04_Checklist_Beneficiario_Controlador.xlsx` | **Plantilla 05 del kit.** 6 hojas. La prelación de tres niveles con la columna que dice sola en qué nivel cerró, la cadena de control con un ejemplo de dos niveles resuelto, las dos excepciones con su alcance, y qué datos por tipo de cliente. **Se usa en el taller del minuto 84** |
 | `S04_ALU_03_Perfil_Alertas_y_Bitacoras.xlsx` | Anexo de la Plantilla 04. 5 hojas: perfil transaccional con la reevaluación a seis meses calculada, bitácora de alertas y bitácora de intentos. **Se usa en el ejercicio del minuto 20** |
 | `S04_ALU_05_Efectivo_y_Avisos.xlsx` | Anexo de la sesión. 4 hojas: la calculadora de las tres bases del `R 6`, los 28 supuestos del artículo 17 con sus umbrales y topes, y la fecha del acto por fracción del `RCG 24 Bis` |
-| `S04_ALU_01_Presentacion.pptx` | Las 43 láminas de la sesión |
+| `S04_ALU_01_Presentacion.pptx` | Las 44 láminas de la sesión |
 
 Los tres libros de Excel y el documento de Word separan, en su propia hoja o apartado, **lo
 que la norma exige de lo que es método del taller**. El formato de las bitácoras, los cuatro
@@ -135,5 +135,5 @@ verificar el Diario Oficial antes de aplicar ese apartado.
 - Las diez anclas de la barra de bloques de la sesión 4 corresponden a sus diez secciones.
 - Los cinco descargables verificados por **SHA-256** contra los originales.
 - Capturas de la sesión 4 a 1440 px y a 390 px, revisadas una por una.
-- Las cifras que aparecen escritas en la página se contaron del archivo: **42 láminas** del
+- Las cifras que aparecen escritas en la página se contaron del archivo: **44 láminas** del
   pptx, **5 y 6 y 4 hojas** de los libros de Excel, **9 páginas** del Word.
