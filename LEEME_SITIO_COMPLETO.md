@@ -1,10 +1,10 @@
 # Aula del Taller Antilavado 360 · sitio completo
 
-**Versión del 31 de agosto de 2026, con la Sesión 3 incorporada y la navegación arreglada.**
+**Versión del 7 de septiembre de 2026, con la Sesión 4 incorporada.**
 
-Este paquete es el **sitio entero**, no un parche. Reemplaza todo lo que hay hoy en el
-repositorio de Netlify. Se sube tal cual y no hay que copiar carpetas a mano ni pegar
-fragmentos en ningún archivo.
+Este paquete es el **sitio entero** —62 archivos—, no un parche. Reemplaza todo lo que hay hoy en el
+repositorio. Se sube tal cual y no hay que copiar carpetas a mano ni pegar fragmentos en
+ningún archivo.
 
 ---
 
@@ -12,87 +12,68 @@ fragmentos en ningún archivo.
 
 1. Sustituya el contenido del repositorio por el de este paquete, **conservando la raíz**
    (`index.html`, `netlify.toml`, `_headers` y `robots.txt` van en el nivel superior).
-2. Netlify reconstruye solo. No hay compilación, ni gestor de paquetes, ni proceso de build:
-   son archivos estáticos.
-3. Abra el sitio y compruebe tres cosas: que la tarjeta 3 del índice ya es clicable, que
-   desde cualquier sesión hay una liga de regreso arriba y abajo, y que las cinco descargas
-   de la sesión 3 abren.
+2. Netlify reconstruye solo. No hay compilación ni proceso de build: son archivos estáticos.
+3. Abra el sitio y compruebe tres cosas: que la **tarjeta 4** del índice ya es clicable, que
+   desde la sesión 3 el botón de «sesión siguiente» lleva a la 4, y que las **cinco descargas
+   de la sesión 4** abren.
 
-Si prefiere no reemplazar todo, los archivos que cambiaron respecto de la versión anterior
-están listados en el apartado 4.
+Los archivos que cambiaron respecto de la versión anterior están listados en el apartado 4.
 
 ---
 
 ## 2. Qué contiene
 
 ```
-index.html                 índice del aula · la tarjeta 3 ya está activa
-biblioteca/                NUEVA · los tres documentos transversales.
+index.html                 índice del aula · la tarjeta 4 ya está activa
+biblioteca/                los tres documentos transversales.
                            Se enlazan SOLO desde la portada (index.html,
                            bloque «Biblioteca del taller»). Las sesiones
-                           traen un renglon que apunta ahi, no copias.
-      Preguntas_del_Sector_ACUERDO_115.pdf   145 preguntas, 3a edicion, 89 pp.
+                           traen un renglón que apunta ahí, no copias.
+      Preguntas_del_Sector_ACUERDO_115.pdf   177 preguntas, 6a edición, 130 pp.
       Reglas_de_Caracter_General_texto_compilado.pdf   texto oficial compilado
       de las RCG con todas sus reformas, 53 pp. OJO: tiene seis erratas
-      cotejadas contra el DOF; la de peso esta en el art. 6.
-      ACUERDO_115_2026_DOF_07_agosto_2026.pdf   la publicacion del Diario
+      cotejadas contra el DOF; la de peso está en el art. 6.
+      ACUERDO_115_2026_DOF_07_agosto_2026.pdf   la publicación del Diario
       Oficial, 31 pp. Es la fuente con valor legal.
-      Se enlaza desde las tres sesiones. Para actualizarlo se reemplaza el
-      archivo con el mismo nombre: las ligas no cambian.
+      Para actualizar cualquiera de los tres se reemplaza el archivo con el
+      mismo nombre: las ligas no cambian.
 
 netlify.toml               sin cambios
 _headers  robots.txt       sin cambios
 
-s00/  index.html           NUEVA · la clase abierta del 11 de agosto
-      autodiagnostico.html  27 preguntas con semaforo y pendientes por criticidad
-      guia/                 la guia completa de la reforma, 11 pestañas
-      sanciones/            calculadora de sanciones + su Excel
-      juego/                ahorcado de repaso
-      estilo.css            copia de la de s03
-      Viene del sitio abierto LFPIORPI-ASEVAL. Se elimino la seccion
-      /valeras/ y las dos ligas que apuntaban a ella.
+s00/  index.html           la clase abierta del 11 de agosto
+      autodiagnostico.html · guia/ · sanciones/ · juego/ · estilo.css
 
-s01/  index.html           + navegación
-      3 descargables
+s01/  index.html           estilos embebidos · 3 descargables · 28 láminas
 
-s02/  index.html           + navegación · dos correcciones de contenido
-                           + siete correcciones de la matriz v9.0
-      estilo.css           + regla de tablas en teléfono
-      descargables/        5 archivos · los 4 anteriores sustituidos (matriz v9.1)
-                           + S02_ALU_06_Compendio_Sesion_02.pdf, NUEVO
-      hojas/               19 páginas · bcliente.html sustituida, 18 sin cambios
+s02/  index.html           estilo.css · hojas/ (19 páginas)
+      descargables/        5 archivos · matriz v9.1 · 34 láminas
 
-s03/  index.html           NUEVA
-      diagnostico.html     NUEVA · el calificador del Manual, con el que abre la sesión
-      estilo.css           copia idéntica de la de s02, con la misma regla añadida
-      descargables/        5 archivos
+s03/  index.html           diagnostico.html · estilo.css
+      descargables/        5 archivos · 31 láminas
+
+s04/  index.html           NUEVA
+      estilo.css           copia idéntica de la de s03, comprobada por diff
+      descargables/        5 archivos · 42 láminas
 ```
 
 ---
 
-## 3. La navegación, que era el problema
+## 3. La navegación
 
-Antes, las páginas de sesión eran **callejón sin salida**: se entraba desde el índice y no
-había forma de volver. El aula va incrustada en Thinkific dentro de un marco, así que el
-usuario tampoco tiene la barra del navegador para regresar. Quedaba atrapado.
-
-Ahora cada sesión tiene dos salidas:
+Cada sesión tiene dos salidas, porque el aula va incrustada en Thinkific dentro de un marco
+y el usuario no tiene la barra del navegador para regresar:
 
 - **Arriba**, una barra delgada con «← Todas las sesiones» y el contador «Sesión N de 6».
-- **Abajo**, antes del pie: sesión anterior, sesión siguiente, y un botón «Volver al aula».
+- **Abajo**, antes del pie: sesión anterior, sesión siguiente y un botón «Volver al aula».
 
-La sesión 1 muestra «No hay anterior» y la 3 muestra «Martes 8 de septiembre» en gris,
-para que se vea que el taller sigue y todavía no está publicada.
+La sesión 4 muestra la 3 como anterior y **«LUNES 14 de septiembre» en gris** como siguiente,
+para que se vea que el taller sigue y todavía no está publicada. El contador dice «Sesión 4
+de 6» porque la del 11 de agosto es la de apertura y no cuenta dentro de las seis.
 
-La navegación se escribió **con estilos en línea**, sin tocar las hojas de estilo ni las
-clases existentes. Las tres sesiones tienen sistemas visuales distintos —la 1 lleva sus
-estilos embebidos y pestañas con JavaScript; la 2 y la 3 comparten `estilo.css`— y así
-ninguna se altera. Lo único que las tres comparten es la clase `.wrap`, que es de la que
-se cuelga la barra para que quede alineada con el resto de la página.
-
-Las 19 hojas de la matriz de la sesión 2 ya tenían su propia navegación —anterior, siguiente
-y «volver al mapa»—, y el mapa regresa a la sesión 2. Con el arreglo de arriba, esa cadena
-ya llega hasta el índice del aula.
+La navegación va **con estilos en línea**, sin tocar las hojas de estilo ni las clases
+existentes, porque las sesiones tienen sistemas visuales distintos: la 1 lleva sus estilos
+embebidos; la 0, la 2, la 3 y la 4 comparten `estilo.css`. Lo único común es la clase `.wrap`.
 
 ---
 
@@ -100,81 +81,55 @@ ya llega hasta el índice del aula.
 
 | Archivo | Cambio |
 |---|---|
-| `index.html` | La tarjeta de la sesión 3 pasa de `.soon` a liga activa, con su descripción |
-| `index.html` | **Tarjeta 0 nueva**: la clase abierta del 11 de agosto. Ahora las siete tarjetas coinciden con las «siete sesiones» que anuncia la portada |
-| `s00/` | **Carpeta nueva completa**, tomada del sitio abierto de la reforma, sin la sección de valeras |
-| `s01/index.html` | + salto a la sesión de apertura |
-| `s01/index.html` | Barra de regreso arriba · salto de sesión abajo |
-| `s02/index.html` | Barra de regreso · salto de sesión · **dos correcciones de contenido** · **siete correcciones de la matriz v9.0** |
-| `s02/estilo.css` | Regla de tablas para pantallas de menos de 600 px |
-| `s02/descargables/` | **Los cuatro archivos sustituidos**: matriz v9.1 con ejemplo y en blanco, guía regenerada, presentación de 34 láminas · **+ compendio de 59 páginas, nuevo** |
-| `s02/hojas/bcliente.html` | **Sustituida**: 23 → 22 factores y la calificación del ejemplo 2.91 → 2.79 |
-| `s03/` | Carpeta nueva completa, incluido `diagnostico.html` |
+| `index.html` | La tarjeta de la sesión 4 pasa de `.soon` a **liga activa**, con su descripción |
+| `s03/index.html` | El bloque «sesión siguiente», que estaba en gris, ahora **enlaza a `../s04/`** |
+| `s03/index.html` | La nota de la biblioteca salió del bloque `.dl`: estaba dentro de la rejilla de descargas y su liga heredaba el estilo de tarjeta, así que «biblioteca del aula» se dibujaba como una caja grande a media frase. Es sólo un `</div>` movido; no cambia ni una palabra del texto |
+| `s04/` | **Carpeta nueva completa**: página de la sesión, hoja de estilo y cinco descargables |
 
-### Las correcciones de la matriz, v9.0
-
-El modelo de cliente pasó de 23 a 22 factores: se fusionaron «Frecuencia» y «Volumen»
-en uno solo, con fundamento en el **RCG 23 Ter 1 fr. II**, que los nombra juntos. El
-indicador «Tipo de persona y estructura» se limpió a «Tipo de persona», porque la
-complejidad de la estructura ya la mide el factor de Beneficiario Controlador y tenerla
-en los dos era doble conteo. El ejemplo cargado bajó de 2.91 a **2.79 · MEDIO**. La
-evaluación de la entidad no cambió: 9.51 inherente · 78.2 % de mitigantes · 5.79 residual.
-Los archivos en blanco ya no emiten calificación con datos vacíos: dicen SIN CLASIFICAR
-y SIN EVALUAR hasta que estén resueltos los veintidós factores.
-
-En `s02/index.html` eso obligó a estas correcciones de texto: «Catorce factores» → 22
-(era el error de dato más visible de la página), «Los 23 factores» → 22, «Tipo de persona
-y estructura» → «Tipo de persona», «treinta y dos láminas» → treinta y cuatro,
-«en tres archivos» → en cuatro, y las dos tarjetas de descargables reescritas.
-
-**El renglón de frecuencia y volumen.** El `RCG 23 Bis 2 fr. II` los enumera por separado
-—«tipo, volumen en número, frecuencia y monto de actos u operaciones, número de
-contrapartes…»—. El que los nombra juntos es el `23 Ter 1 fr. II`, que gobierna el **Perfil
-transaccional**: otro instrumento, otro capítulo, y no sirve de fundamento aquí. La fusión
-en un solo factor sigue siendo válida, pero por otra razón: el artículo dice «pudiendo
-incluir… entre otros», o sea lista abierta. Es **criterio propio documentado**, no algo que
-la norma nombre junto, y así lo dice ahora la página y la celda «Fuente del dato» del Excel.
-
-**Lo que muestran las dos tarjetas** son los 22 factores de la matriz agrupados en siete
-renglones cada una —diez inherentes y doce transaccionales—, no la enumeración del
-artículo: la fracción I no menciona PEP, ni listas de personas bloqueadas, ni Beneficiario
-Controlador. El encabezado y los conteos por familia ya lo dicen, para que 10 + 12 = 22 se
-vea en la página.
-
-### Las dos correcciones de la sesión 2
-
-1. **La banda de cierre anunciaba el tema equivocado de la sesión 3.** Decía «Avisos,
-   umbrales y acumulación», que es el tema de la sesión 4. Ahora dice el correcto.
-2. **La sección «Para la próxima» listaba tres tareas que nunca se dejaron.** La grabación
-   del 25 de agosto lo confirma: el cierre fue «bájenla, píquenle, úsenla, rómpanla».
-   Se reencuadró como **«Lo que puedes ir adelantando»**, con una línea que aclara que no
-   es tarea, y el tercer punto se cambió por la hoja «Controles», que es de donde arranca
-   la sesión 3.
+Nada más se tocó. Las sesiones 0, 1 y 2 y la carpeta `biblioteca/` van tal como estaban.
 
 ---
 
-## 5. Sesión 3 · las cinco descargas
+## 5. Sesión 4 · las cinco descargas
 
 | Archivo | Qué es |
 |---|---|
-| `S03_ALU_02_Manual_Politicas_Internas.docx` | Plantilla 03 del kit. 23 apartados, 33 páginas |
-| `S03_ALU_05_Guia_Redaccion_Manual.docx` | **Nueva.** Cómo se escribe un Manual: los cuatro escalones, el mapa de las catorce fracciones, dos apartados desarrollados como modelo. Se usa en el ejercicio del minuto 36 |
-| `S03_ALU_04_Programa_Capacitacion.xlsx` | 8 hojas con fórmulas vivas. Se usa en el taller del minuto 97 |
-| `S03_ALU_03_Aprobacion_PEP_Riesgo_Alto.docx` | Formato del artículo 23 Ter 5, en sus dos variantes |
-| `S03_ALU_01_Presentacion.pptx` | Las 31 láminas de la sesión |
+| `S04_ALU_02_Protocolo_Aviso_24_horas.docx` | **Plantilla 04 del kit.** 9 páginas, 14 apartados. Los dos avisos, el arranque del plazo, el diferimiento del envío, roles con plazos internos, el procedimiento en seis pasos, cláusulas modelo para el Manual y ficha de registro imprimible |
+| `S04_ALU_04_Checklist_Beneficiario_Controlador.xlsx` | **Plantilla 05 del kit.** 6 hojas. La prelación de tres niveles con la columna que dice sola en qué nivel cerró, la cadena de control con un ejemplo de dos niveles resuelto, las dos excepciones con su alcance, y qué datos por tipo de cliente. **Se usa en el taller del minuto 84** |
+| `S04_ALU_03_Perfil_Alertas_y_Bitacoras.xlsx` | Anexo de la Plantilla 04. 5 hojas: perfil transaccional con la reevaluación a seis meses calculada, bitácora de alertas y bitácora de intentos. **Se usa en el ejercicio del minuto 20** |
+| `S04_ALU_05_Efectivo_y_Avisos.xlsx` | Anexo de la sesión. 4 hojas: la calculadora de las tres bases del `R 6`, los 28 supuestos del artículo 17 con sus umbrales y topes, y la fecha del acto por fracción del `RCG 24 Bis` |
+| `S04_ALU_01_Presentacion.pptx` | Las 42 láminas de la sesión |
+
+Los tres libros de Excel y el documento de Word separan, en su propia hoja o apartado, **lo
+que la norma exige de lo que es método del taller**. El formato de las bitácoras, los cuatro
+pasos del ciclo de la alerta y los seis campos del protocolo están declarados como método,
+no como precepto.
 
 ---
 
-## 6. Verificación corrida sobre este paquete
+## 6. Un renglón que puede caducar de un día para otro
 
-- **13 rutas de navegación probadas con clic real**, todas funcionan: del índice a cada
-  sesión, de cada sesión al índice por arriba y por abajo, los saltos entre sesiones, y la
-  cadena hoja → mapa → sesión 2.
-- **Sin desbordamiento horizontal en teléfono.** Antes, la sesión 2 se desplazaba 75 px de
-  lado en pantallas de 390 px por culpa de una tabla; la sesión 3, 34 px. Las dos quedaron
-  en cero.
-- `s02/estilo.css` y `s03/estilo.css` **idénticos**, comprobado por `diff`.
-- Todas las clases usadas en `s03/index.html` existen en su hoja de estilo. Ninguna huérfana.
-- Las diez anclas de la barra de bloques de la sesión 3 corresponden a sus diez secciones.
-- Los cinco descargables verificados por SHA-256 contra los originales.
-- Capturas de las cuatro páginas a 1440 px y a 390 px, revisadas una por una.
+En la sesión 4, el bloque **«La fecha que todavía no existe»** dice que el envío del Aviso
+de veinticuatro horas está diferido: el `R Trans. Quinto` lo sujeta a que se actualicen los
+Anexos de la Resolución de formatos, y el `RCG Trans. Quinto` añade seis meses desde que esa
+Resolución entre en vigor.
+
+**Si esa Resolución se publica en el Diario Oficial, ese bloque deja de ser cierto** y hay
+que sustituirlo por la fecha de entrada en vigor más seis meses. Es el único contenido del
+sitio con esa fragilidad, y por eso el aviso legal del pie de la sesión 4 pide expresamente
+verificar el Diario Oficial antes de aplicar ese apartado.
+
+---
+
+## 7. Verificación corrida sobre este paquete
+
+- **56 ligas** de las seis páginas principales probadas con petición real: **ninguna rota**.
+- **Sin desbordamiento horizontal** a 1440 px ni a 390 px en el índice, en la sesión 3 y en
+  la sesión 4. Comprobado con navegador, midiendo el ancho de desplazamiento del documento.
+- **Sin errores de JavaScript** en consola en ninguna de las tres.
+- `s03/estilo.css` y `s04/estilo.css` **idénticos**, comprobado por `diff`.
+- Las diez anclas de la barra de bloques de la sesión 4 corresponden a sus diez secciones.
+- Los cinco descargables verificados por **SHA-256** contra los originales.
+- Capturas de la sesión 4 a 1440 px y a 390 px, revisadas una por una.
+- Las cifras que aparecen escritas en la página se contaron del archivo: **42 láminas** del
+  pptx, **5 y 6 y 4 hojas** de los libros de Excel, **9 páginas** del Word.
