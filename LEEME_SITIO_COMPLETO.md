@@ -1,8 +1,8 @@
 # Aula del Taller Antilavado 360 · sitio completo
 
-**Versión del 7 de septiembre de 2026, con la Sesión 4 incorporada.**
+**Versión del 8 de septiembre de 2026, con la Sesión 4 incorporada y la biblioteca completa.**
 
-Este paquete es el **sitio entero** —62 archivos—, no un parche. Reemplaza todo lo que hay hoy en el
+Este paquete es el **sitio entero** —64 archivos—, no un parche. Reemplaza todo lo que hay hoy en el
 repositorio. Se sube tal cual y no hay que copiar carpetas a mano ni pegar fragmentos en
 ningún archivo.
 
@@ -25,18 +25,20 @@ Los archivos que cambiaron respecto de la versión anterior están listados en e
 
 ```
 index.html                 índice del aula · la tarjeta 4 ya está activa
-biblioteca/                los tres documentos transversales.
+biblioteca/                CINCO documentos transversales, ordenados por capa.
                            Se enlazan SOLO desde la portada (index.html,
                            bloque «Biblioteca del taller»). Las sesiones
                            traen un renglón que apunta ahí, no copias.
-      Preguntas_del_Sector_ACUERDO_115.pdf   177 preguntas, 6a edición, 130 pp.
+      LFPIORPI_texto_vigente_DOF_16_julio_2025.pdf   NUEVO · la Ley, 39 pp.
+      Reglamento_LFPIORPI_texto_vigente_DOF_27_marzo_2026.pdf   NUEVO · 21 pp.
+      ACUERDO_115_2026_DOF_07_agosto_2026.pdf   la publicación del Diario
+      Oficial, 31 pp. Es la fuente con valor legal.
       Reglas_de_Caracter_General_texto_compilado.pdf   texto oficial compilado
       de las RCG con todas sus reformas, 53 pp. OJO: tiene seis erratas
       cotejadas contra el DOF; la de peso está en el art. 6.
-      ACUERDO_115_2026_DOF_07_agosto_2026.pdf   la publicación del Diario
-      Oficial, 31 pp. Es la fuente con valor legal.
-      Para actualizar cualquiera de los tres se reemplaza el archivo con el
-      mismo nombre: las ligas no cambian.
+      Preguntas_del_Sector_ACUERDO_115.pdf   177 preguntas, 6a edición, 130 pp.
+      Para actualizar cualquiera se reemplaza el archivo con el mismo
+      nombre: las ligas no cambian.
 
 netlify.toml               sin cambios
 _headers  robots.txt       sin cambios
@@ -54,7 +56,7 @@ s03/  index.html           diagnostico.html · estilo.css
 
 s04/  index.html           NUEVA
       estilo.css           copia idéntica de la de s03, comprobada por diff
-      descargables/        5 archivos · 42 láminas
+      descargables/        5 archivos · 43 láminas
 ```
 
 ---
@@ -85,8 +87,10 @@ embebidos; la 0, la 2, la 3 y la 4 comparten `estilo.css`. Lo único común es l
 | `s03/index.html` | El bloque «sesión siguiente», que estaba en gris, ahora **enlaza a `../s04/`** |
 | `s03/index.html` | La nota de la biblioteca salió del bloque `.dl`: estaba dentro de la rejilla de descargas y su liga heredaba el estilo de tarjeta, así que «biblioteca del aula» se dibujaba como una caja grande a media frase. Es sólo un `</div>` movido; no cambia ni una palabra del texto |
 | `s04/` | **Carpeta nueva completa**: página de la sesión, hoja de estilo y cinco descargables |
+| `biblioteca/` | **Dos documentos nuevos**: la Ley y el Reglamento, en su texto vigente. Faltaban, y el pie de todas las páginas ya los citaba |
+| `index.html` | El bloque «Biblioteca del taller» reescrito: pasa de tres a cinco documentos, **ordenados por capa** —Ley, Reglamento, Reglas—, y cada tarjeta lleva la etiqueta de cita del taller (`L`, `R`, `RCG`) en lugar de la etiqueta genérica «PDF». La biblioteca ahora enseña la nomenclatura de un vistazo |
 
-Nada más se tocó. Las sesiones 0, 1 y 2 y la carpeta `biblioteca/` van tal como estaban.
+Nada más se tocó. Las sesiones 0, 1 y 2 van tal como estaban, y los tres PDF que ya vivían en `biblioteca/` no se reemplazaron.
 
 ---
 
@@ -98,7 +102,7 @@ Nada más se tocó. Las sesiones 0, 1 y 2 y la carpeta `biblioteca/` van tal com
 | `S04_ALU_04_Checklist_Beneficiario_Controlador.xlsx` | **Plantilla 05 del kit.** 6 hojas. La prelación de tres niveles con la columna que dice sola en qué nivel cerró, la cadena de control con un ejemplo de dos niveles resuelto, las dos excepciones con su alcance, y qué datos por tipo de cliente. **Se usa en el taller del minuto 84** |
 | `S04_ALU_03_Perfil_Alertas_y_Bitacoras.xlsx` | Anexo de la Plantilla 04. 5 hojas: perfil transaccional con la reevaluación a seis meses calculada, bitácora de alertas y bitácora de intentos. **Se usa en el ejercicio del minuto 20** |
 | `S04_ALU_05_Efectivo_y_Avisos.xlsx` | Anexo de la sesión. 4 hojas: la calculadora de las tres bases del `R 6`, los 28 supuestos del artículo 17 con sus umbrales y topes, y la fecha del acto por fracción del `RCG 24 Bis` |
-| `S04_ALU_01_Presentacion.pptx` | Las 42 láminas de la sesión |
+| `S04_ALU_01_Presentacion.pptx` | Las 43 láminas de la sesión |
 
 Los tres libros de Excel y el documento de Word separan, en su propia hoja o apartado, **lo
 que la norma exige de lo que es método del taller**. El formato de las bitácoras, los cuatro
