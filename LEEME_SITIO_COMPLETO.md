@@ -1,8 +1,23 @@
 # Aula del Taller Antilavado 360 · sitio completo
 
-**Versión del 8 de septiembre de 2026, con la Sesión 4 incorporada y la biblioteca completa.**
+**VERSIÓN v6 · 10 de septiembre de 2026.**
 
-Este paquete es el **sitio entero** —64 archivos—, no un parche. Reemplaza todo lo que hay hoy en el
+> Para saber si ya subiste esta versión: abre el sitio publicado, entra a la **sesión 2** y descarga el
+> **Compendio**. Si su portada dice **«Segunda edición, 10 de septiembre de 2026»** y su segunda página
+> se titula **«Qué cambió en esta edición»**, estás viendo la v6. (Señas de la v5, que la v6 conserva:
+> la tarjeta de la sesión 5 dice «Martes 22 de septiembre · 16:00 a 19:00 — tres horas» y la sesión 2
+> cita el artículo 17 de las Reglas en el bloque de medidas simplificadas.)
+
+| Versión | Qué trae |
+|---|---|
+| v1 · 7 sep | Sesión 4 incorporada, tarjeta 4 encendida, Ley y Reglamento en la biblioteca. 43 láminas |
+| v2 · 8 sep | Lámina 35 nueva: el control del fideicomiso con la LGTOC. 44 láminas |
+| v3 · 8 sep | Evaluación Nacional de Riesgos 2023 en la biblioteca |
+| v4 · 8 sep | Corregida la cita de los diez años en los descargables de la sesión 1 |
+| v5 · 10 sep | Calendario nuevo (S5 al martes 22, tres horas; cierre el martes 29) y corrección de medidas simplificadas en la sesión 2 |
+| **v6 · 10 sep** | **Compendio de la sesión 2 reeditado por completo: segunda edición, 44 páginas, con siete correcciones de fondo. Es el único archivo que cambia respecto de la v5** |
+
+Este paquete es el **sitio entero** —65 archivos—, no un parche. Reemplaza todo lo que hay hoy en el
 repositorio. Se sube tal cual y no hay que copiar carpetas a mano ni pegar fragmentos en
 ningún archivo.
 
@@ -25,7 +40,7 @@ Los archivos que cambiaron respecto de la versión anterior están listados en e
 
 ```
 index.html                 índice del aula · la tarjeta 4 ya está activa
-biblioteca/                CINCO documentos transversales, ordenados por capa.
+biblioteca/                SEIS documentos transversales, ordenados por capa.
                            Se enlazan SOLO desde la portada (index.html,
                            bloque «Biblioteca del taller»). Las sesiones
                            traen un renglón que apunta ahí, no copias.
@@ -80,6 +95,19 @@ embebidos; la 0, la 2, la 3 y la 4 comparten `estilo.css`. Lo único común es l
 ---
 
 ## 4. Qué cambió respecto de la versión anterior
+
+### 4.1 · En la v6 (10 de septiembre) — un solo archivo
+
+| Archivo | Cambio |
+|---|---|
+| `s02/descargables/S02_ALU_06_Compendio_Sesion_02.pdf` | **Reeditado completo.** Segunda edición, 44 páginas. Se auditaron las 59 páginas de la primera y se corrigieron **cuatro errores que rompían el ejercicio** —los umbrales de la fracción V (la primera edición inventaba un umbral de aviso de 16,000 UMA; la fracción V no tiene umbral de identificación y su umbral de Aviso es de 8,025 UMA), las medidas simplificadas incompletas (son **dos** condiciones acumulativas, y el `RCG 17` no aparecía citado ni una vez en todo el documento), la fórmula de agregación por elemento y por entidad, y el conteo de indicadores bloqueados— **más nueve correcciones de conducta**, entre ellas la multa por Aviso omitido (estaba subestimada cincuenta veces), el `RCG 37 Bis 2` (no enlista fracciones), el Anexo 10 (no es fuente del dato de PEP: es la información que las autoridades entregan a la UIF conforme al `L 51 Ter`) y las dieciséis fracciones del artículo 17 más la V Bis. Trae al frente una sección **«Qué cambió en esta edición»** y un **Anexo II** de fundamentos que ahora sí incluye el `RCG 44`, el `RCG 45` y el `RCG 48` |
+| `s02/index.html` | La descripción de la tarjeta del compendio, con las señas de la segunda edición |
+| `LEEME_SITIO_COMPLETO.md` | Este archivo |
+
+Nada más cambió respecto de la v5. **Si ya subiste la v5, puedes subir sólo esos tres archivos**; el
+zip completo se entrega igual, para que no haya que decidir.
+
+### 4.2 · Historia previa
 
 | Archivo | Cambio |
 |---|---|
