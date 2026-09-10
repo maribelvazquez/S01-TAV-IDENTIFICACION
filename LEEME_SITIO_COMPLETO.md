@@ -1,6 +1,6 @@
 # Aula del Taller Antilavado 360 · sitio completo
 
-**VERSIÓN v6 · 10 de septiembre de 2026.**
+**VERSIÓN v7 · 10 de septiembre de 2026.**
 
 > Para saber si ya subiste esta versión: abre el sitio publicado, entra a la **sesión 2** y descarga el
 > **Compendio**. Si su portada dice **«Segunda edición, 10 de septiembre de 2026»** y su segunda página
@@ -15,7 +15,8 @@
 | v3 · 8 sep | Evaluación Nacional de Riesgos 2023 en la biblioteca |
 | v4 · 8 sep | Corregida la cita de los diez años en los descargables de la sesión 1 |
 | v5 · 10 sep | Calendario nuevo (S5 al martes 22, tres horas; cierre el martes 29) y corrección de medidas simplificadas en la sesión 2 |
-| **v6 · 10 sep** | **Compendio de la sesión 2 reeditado por completo: segunda edición, 44 páginas, con siete correcciones de fondo. Es el único archivo que cambia respecto de la v5** |
+| v6 · 10 sep | Compendio de la sesión 2 reeditado por completo: segunda edición, 44 páginas, con siete correcciones de fondo |
+| **v7 · 10 sep** | **Las mismas correcciones aplicadas a las páginas de la sesión 2, que se habían quedado atrás: el umbral inventado de 16,000 UMA en la ficha CATÁLOGO, el Anexo 10 como fuente de PEP, «quince fracciones», los indicadores bloqueados y el régimen de auditoría** |
 
 Este paquete es el **sitio entero** —65 archivos—, no un parche. Reemplaza todo lo que hay hoy en el
 repositorio. Se sube tal cual y no hay que copiar carpetas a mano ni pegar fragmentos en
@@ -96,7 +97,21 @@ embebidos; la 0, la 2, la 3 y la 4 comparten `estilo.css`. Lo único común es l
 
 ## 4. Qué cambió respecto de la versión anterior
 
-### 4.1 · En la v6 (10 de septiembre) — un solo archivo
+### 4.1 · En la v7 (10 de septiembre) — las páginas de la sesión 2
+
+La reedición del compendio (v6) corrigió el documento, pero **las páginas del sitio arrastraban
+los mismos errores**. Este barrido los cierra. Seis archivos:
+
+| Archivo | Cambio |
+|---|---|
+| `s02/hojas/catalogo.html` | **El umbral inventado.** Decía «Fracción V: umbral de identificación 8,025 UMA, umbral de aviso 16,000 UMA». Ahora dice identificación siempre, sin umbral, y Aviso de 8,025 UMA con su conversión a pesos. Además, «quince fracciones» → dieciséis más la V Bis, y la etiqueta de cita `L 17 Bis` —artículo que no existe— sustituida por `L 17, penúltimo párr.` |
+| `s02/hojas/variables.html` | El dato de condición PEP ya no sale del Anexo 10, sino de la declaración del Cliente y de Consulta PEP 2.0 (`RCG 23 Quáter 1`) |
+| `s02/hojas/parametros.html` | «las quince fracciones» → todas las fracciones del Art. 17 |
+| `s02/hojas/mapa.html` | Lo mismo, en la tarjeta de CATÁLOGO |
+| `s02/index.html` | Cinco correcciones: los indicadores bloqueados (**diez**, no ocho, con los dos de más declarados como criterio de la herramienta); el régimen de auditoría, que ahora incluye la vía externa electiva del `RCG 45`; las medidas simplificadas en la tabla de consecuencias, que citaban sólo el `R 15`; el renglón BAJO de la tabla de grados, que omitía el `RCG 17`; y la fuente del dato de PEP |
+| `LEEME_SITIO_COMPLETO.md` | Este archivo |
+
+### 4.2 · En la v6 (10 de septiembre) — un solo archivo
 
 | Archivo | Cambio |
 |---|---|
@@ -107,7 +122,7 @@ embebidos; la 0, la 2, la 3 y la 4 comparten `estilo.css`. Lo único común es l
 Nada más cambió respecto de la v5. **Si ya subiste la v5, puedes subir sólo esos tres archivos**; el
 zip completo se entrega igual, para que no haya que decidir.
 
-### 4.2 · Historia previa
+### 4.3 · Historia previa
 
 | Archivo | Cambio |
 |---|---|
