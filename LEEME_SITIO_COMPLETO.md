@@ -1,6 +1,6 @@
 # Aula del Taller Antilavado 360 · sitio completo
 
-**VERSIÓN v7 · 10 de septiembre de 2026.**
+**VERSIÓN v8 · 11 de septiembre de 2026.**
 
 > Para saber si ya subiste esta versión: abre el sitio publicado, entra a la **sesión 2** y descarga el
 > **Compendio**. Si su portada dice **«Segunda edición, 10 de septiembre de 2026»** y su segunda página
@@ -16,7 +16,8 @@
 | v4 · 8 sep | Corregida la cita de los diez años en los descargables de la sesión 1 |
 | v5 · 10 sep | Calendario nuevo (S5 al martes 22, tres horas; cierre el martes 29) y corrección de medidas simplificadas en la sesión 2 |
 | v6 · 10 sep | Compendio de la sesión 2 reeditado por completo: segunda edición, 44 páginas, con siete correcciones de fondo |
-| **v7 · 10 sep** | **Las mismas correcciones aplicadas a las páginas de la sesión 2, que se habían quedado atrás: el umbral inventado de 16,000 UMA en la ficha CATÁLOGO, el Anexo 10 como fuente de PEP, «quince fracciones», los indicadores bloqueados y el régimen de auditoría** |
+| v7 · 10 sep | Las mismas correcciones aplicadas a las páginas de la sesión 2: el umbral inventado de 16,000 UMA en la ficha CATÁLOGO, el Anexo 10 como fuente de PEP, «quince fracciones», los indicadores bloqueados y el régimen de auditoría |
+| **v8 · 11 sep** | **Última instancia del `RCG 37 Bis 2`: la página presentaba la restricción a las fracciones V, VIII y X como si fuera de la norma. El artículo no enlista fracciones — es criterio de la herramienta. Corregido en `s02/index.html` y en la ficha `A4`** |
 
 Este paquete es el **sitio entero** —65 archivos—, no un parche. Reemplaza todo lo que hay hoy en el
 repositorio. Se sube tal cual y no hay que copiar carpetas a mano ni pegar fragmentos en
@@ -97,7 +98,22 @@ embebidos; la 0, la 2, la 3 y la 4 comparten `estilo.css`. Lo único común es l
 
 ## 4. Qué cambió respecto de la versión anterior
 
-### 4.1 · En la v7 (10 de septiembre) — las páginas de la sesión 2
+### 4.1 · En la v8 (11 de septiembre) — el último resto del 37 Bis 2
+
+Apareció al preparar la versión suelta de la sesión 2 para otro curso. Dos archivos:
+
+| Archivo | Cambio |
+|---|---|
+| `s02/index.html` | Decía «**Sólo** las fracciones V, VIII y X admiten «No aplica»», con las citas del `RCG 37 Bis` y `37 Bis 2` debajo — lo que atribuye a la norma una restricción que es de la herramienta. El artículo **no enlista fracciones**: exenta cualquier supuesto de acto u operación que la entidad determine no realizar, con constancia en el Manual, y la exención cae cuando decida realizarlos. Reescrito, con la restricción declarada como criterio de diseño |
+| `s02/hojas/a4.html` | La misma aclaración añadida al «Ojo» de la ficha, que es donde se usa el «No aplica» |
+
+**Por qué se escapó al barrido de la v7:** los cinco patrones que se buscaron eran los del pliego
+de auditoría del compendio. Éste decía lo mismo con otras palabras —«Sólo las fracciones»— y no
+coincidía con ninguno. Buscar cadenas encuentra repeticiones; no encuentra paráfrasis. Para el
+barrido de las sesiones 0, 1, 3 y 4 hay que leer los pasajes donde se cite el artículo, no
+sólo buscar el texto de la primera versión.
+
+### 4.2 · En la v7 (10 de septiembre) — las páginas de la sesión 2
 
 La reedición del compendio (v6) corrigió el documento, pero **las páginas del sitio arrastraban
 los mismos errores**. Este barrido los cierra. Seis archivos:
@@ -111,7 +127,7 @@ los mismos errores**. Este barrido los cierra. Seis archivos:
 | `s02/index.html` | Cinco correcciones: los indicadores bloqueados (**diez**, no ocho, con los dos de más declarados como criterio de la herramienta); el régimen de auditoría, que ahora incluye la vía externa electiva del `RCG 45`; las medidas simplificadas en la tabla de consecuencias, que citaban sólo el `R 15`; el renglón BAJO de la tabla de grados, que omitía el `RCG 17`; y la fuente del dato de PEP |
 | `LEEME_SITIO_COMPLETO.md` | Este archivo |
 
-### 4.2 · En la v6 (10 de septiembre) — un solo archivo
+### 4.3 · En la v6 (10 de septiembre) — un solo archivo
 
 | Archivo | Cambio |
 |---|---|
@@ -122,7 +138,7 @@ los mismos errores**. Este barrido los cierra. Seis archivos:
 Nada más cambió respecto de la v5. **Si ya subiste la v5, puedes subir sólo esos tres archivos**; el
 zip completo se entrega igual, para que no haya que decidir.
 
-### 4.3 · Historia previa
+### 4.4 · Historia previa
 
 | Archivo | Cambio |
 |---|---|
