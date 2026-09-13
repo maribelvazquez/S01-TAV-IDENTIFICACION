@@ -1,0 +1,43 @@
+AULA ANTILAVADO 360 · PAQUETE v9 · 13 de septiembre de 2026
+===========================================================
+
+QUÉ TRAE
+Barrido de corrección normativa sobre los soportes que la v7 y la v8 no habían tocado:
+la guía de uso de la matriz, las dos matrices, la presentación de la S02, las fichas por
+pestaña, y pasajes de las sesiones 0, 1, 3 y 4.
+
+CÓMO SE SUBE
+Este paquete se copia a la RAÍZ del repositorio SOBRESCRIBIENDO los archivos que trae.
+No borres nada del repositorio antes de copiar: este zip se armó desde el sitio publicado y
+no alcanza los archivos que no se sirven por HTTP (configuración) ni los que no están enlazados.
+
+  ATENCIÓN: este zip NO incluye `netlify.toml` ni `_headers`.
+  NO LOS BORRES del repositorio: son los que ponen el sitio en noindex y autorizan
+  la incrustación en Thinkific y 360educa. Sí se incluye `robots.txt`, idéntico al publicado.
+
+ARCHIVOS MODIFICADOS EN ESTA VERSIÓN (16)
+  s00/guia/index.html                     los cuatro elementos del Cap. II Quáter (decía los de GAFI)
+  s00/juego/index.html                    pista de METODOLOGÍA: separa Cap. II Quáter de Cap. III Bis
+  s01/index.html                          respuesta de medidas simplificadas: dos condiciones
+  s01/S01_ALU_02_Instrumento_Expediente.xlsx   idem, hoja «Casos difíciles»
+  s02/index.html                          vigencias escalonadas · año y mes del 10 Septies 2 · los seis indicadores de PRODUCTOS
+  s02/hojas/a1                            diez indicadores bloqueados (2·3·3·2), no ocho
+  s02/hojas/a2                            multa por Aviso omitido: 10,000 a 65,000 UMA o 10–100 % del valor
+  s02/hojas/a8                            año y mes de los RESULTADOS · el primer dictamen es de 2029, no de 2026
+  s02/hojas/variables                     cien variables en veintiún factores con lista propia
+  s02/hojas/productos                     cinco de los seis indicadores vienen del elemento 1 de A1; el sexto se apoya en L 32
+  s02/hojas/mapa                          diecisiete pestañas
+  s02/descargables/S02_ALU_01_Presentacion.pptx        12 correcciones (ver bitácora)
+  s02/descargables/S02_ALU_02_Guia_de_uso_Matriz.docx  29 correcciones (ver bitácora)
+  s02/descargables/S02_ALU_03_Matriz_Riesgo_EBR.xlsx   10 correcciones
+  s02/descargables/S02_ALU_05_Matriz_Riesgo_EBR_EN_BLANCO.xlsx  6 correcciones
+  s03/descargables/S03_ALU_01_Presentacion.pptx        Consulta PEP 2.0: «a partir del» 30 ago 2027
+  s03/descargables/S03_ALU_02_Manual_Politicas_Internas.docx  cláusula de medidas simplificadas con las dos condiciones
+  s04/descargables/S04_ALU_02_Protocolo_Aviso_24_horas.docx   redacción del 37 Bis 2
+
+LO QUE NO CAMBIÓ
+  El compendio de la S02 (`S02_ALU_06`) sigue siendo la segunda edición del 10 de septiembre.
+  Tiene un error pendiente en el Anexo II —la entrada de `L 53 y L 54`— que sólo puede
+  corregirse desde su archivo .docx. Ver la bitácora.
+
+Ante cualquier discrepancia entre estos materiales y el Diario Oficial, manda el Diario Oficial.
