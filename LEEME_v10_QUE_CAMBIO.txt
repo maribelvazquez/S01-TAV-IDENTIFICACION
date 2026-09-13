@@ -1,0 +1,66 @@
+AULA ANTILAVADO 360 · PAQUETE v10 · 13 de septiembre de 2026
+============================================================
+
+QUÉ TRAE
+Este paquete es el repositorio completo (v9) con dos correcciones adicionales
+encontradas al revisar el repo real bajado de GitHub, no el zip de entrega.
+
+CÓMO SE SUBE
+Reemplaza TODO el contenido del repositorio con el contenido de este zip.
+No borres `netlify.toml` ni `_headers`: están incluidos y sin cambios.
+
+HALLAZGO 1 · El compendio de la S02 seguía con el error de Anexo II
+  s02/descargables/S02_ALU_06_Compendio_Sesion_02.pdf
+  Corregido con la fuente .docx que Maribel proporcionó. El renglón "L 53 y L 54"
+  ya no dice "10,000 a 65,000 días de salario mínimo" para la omisión del art. 18;
+  ahora dice correctamente 200 a 2,000 UMA para el art. 18, y reserva el rango de
+  10,000 a 65,000 UMA para la omisión de Avisos y actos prohibidos del art. 32.
+  De paso se precisó también "L 18 fr. XI" (interna es opción del RCG 44, externa
+  siempre electiva por el RCG 45).
+
+HALLAZGO 2 · Seis fichas de la S02 tenían DOS versiones y sólo una se corrigió en v9
+  El paquete v9 corrigió estas seis fichas, pero las entregó con nombre SIN
+  extensión (a1, a2, a8, mapa, productos, variables), replicando cómo se leen
+  las URLs limpias del sitio publicado. El problema: en el repositorio YA EXISTÍA
+  un archivo .html con el mismo nombre para cada una —versión más antigua, previa
+  a v9— y el paquete v9 nunca lo sobrescribió, sólo agregó el archivo sin extensión
+  al lado. Quedaron dos copias con contenido distinto conviviendo en el repo:
+
+    s02/hojas/a1          (corregido, v9)      s02/hojas/a1.html          (viejo)
+    s02/hojas/a2          (corregido, v9)      s02/hojas/a2.html          (viejo)
+    s02/hojas/a8          (corregido, v9)      s02/hojas/a8.html          (viejo)
+    s02/hojas/mapa        (corregido, v9)      s02/hojas/mapa.html        (viejo)
+    s02/hojas/productos   (corregido, v9)      s02/hojas/productos.html  (viejo)
+    s02/hojas/variables   (corregido, v9)      s02/hojas/variables.html  (viejo)
+
+  No se pudo determinar con certeza cuál de las dos copias sirve Netlify cuando
+  alguien entra a /s02/hojas/a1 -- depende de su resolución interna de archivos
+  sin extensión frente a archivos .html del mismo nombre, y no es prudente
+  apostarle. Por eso se corrigió el contenido de las seis versiones .html
+  para que diga exactamente lo mismo que su gemela sin extensión (se dejaron
+  intactos los enlaces internos de cada archivo, que usan una sintaxis distinta
+  entre las dos familias, para no romper la navegación de ninguna de las dos).
+
+  Texto que cambió dentro de los .html:
+    a1.html          "Ocho indicadores" -> "Diez indicadores" (2·3·3·2)
+    a2.html          "Multa de 200 a 65,000 UMA" -> "10,000 a 65,000 UMA o 10-100% del valor, la que resulte mayor"
+    a8.html          año y mes: aclara que es el de los RESULTADOS, no el comprometido;
+                     ejemplo: el primer dictamen es de 2028-2029, no de 2026
+    mapa.html        "quince pestañas" -> "diecisiete pestañas"
+    productos.html   "Los seis indicadores" -> "Cinco de los seis... el sexto se apoya en L 32"
+    variables.html   "103 variables en 22 factores" -> "Cien variables en veintiún factores"
+
+  RECOMENDACIÓN: una vez subido este paquete, conviene decidir con quien administra
+  el repo si conservar ambas familias de archivos (sin extensión y .html) hacia
+  adelante, o eliminar una de las dos -- mantener dos copias del mismo contenido
+  es lo que permitió que esto pasara. Mientras no se decida, este paquete deja
+  ambas copias correctas y sincronizadas.
+
+BARRIDO DE VERIFICACIÓN ADICIONAL
+Se repasó todo el repositorio (html, txt, css, y el texto interno de los docx/
+pptx/xlsx de los cuatro módulos de descargables) contra los patrones de error
+ya conocidos de auditorías previas (16,000 UMA, ocho indicadores, quince
+fracciones/pestañas, L 17 Bis, salario mínimo, 103 variables, multa de 200 UMA,
+Anexo 10 como fuente de PEP). No se encontró ningún otro caso.
+
+Ante cualquier discrepancia entre estos materiales y el Diario Oficial, manda el Diario Oficial.
