@@ -1,0 +1,30 @@
+AULA ANTILAVADO 360 · v11 · 18 de septiembre de 2026
+====================================================
+
+PROBLEMA
+En el aula (Thinkific), la Guía de la matriz de S02 mostraba el código fuente
+en lugar de la página. Afectaba a seis hojas: a1, a2, a8, mapa, productos y
+variables.
+
+CAUSA
+Esas seis hojas existían dos veces en s02/hojas/: con extensión (mapa.html) y
+sin extensión (mapa). Al pedir /s02/hojas/mapa, Netlify entregaba el archivo
+sin extensión como texto plano.
+
+QUÉ CAMBIÓ
+1. Se eliminaron los seis archivos sin extensión. Las rutas /s02/hojas/mapa,
+   etc. siguen funcionando: Netlify sirve mapa.html, igual que ya hacía con
+   las otras trece hojas. El contenido de los .html es el vigente (v10);
+   las copias sólo diferían en la forma de escribir los enlaces.
+2. netlify.toml: se agregó una regla que fuerza servir esas seis rutas como
+   HTML, por si los archivos sin extensión siguen en GitHub.
+
+AL SUBIR ESTE PAQUETE A GITHUB
+Subir archivos por la web de GitHub NO borra los que ya estaban. Borrar a mano
+en s02/hojas/ los seis archivos sin extensión: a1, a2, a8, mapa, productos,
+variables. Si no se borran, la regla de netlify.toml de todos modos corrige
+la visualización.
+
+VERIFICAR
+Abrir /s02/hojas/mapa directamente en el navegador y recargar con
+Ctrl+Shift+R. Revisar también a1, a2, a8, productos y variables en el aula.

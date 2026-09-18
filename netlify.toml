@@ -13,3 +13,32 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = "frame-ancestors 'self' https://360educa.com https://*.360educa.com https://*.thinkific.com"
+
+# v11 · Seis hojas de S02 existen también como archivo SIN extensión
+# (a1, a2, a8, mapa, productos, variables). Netlify las servía como texto
+# plano y el aula mostraba el código fuente. Se fuerza que se sirvan como HTML.
+# Si se borran esos seis archivos del repo, este bloque deja de hacer falta.
+[[headers]]
+  for = "/s02/hojas/a1"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+[[headers]]
+  for = "/s02/hojas/a2"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+[[headers]]
+  for = "/s02/hojas/a8"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+[[headers]]
+  for = "/s02/hojas/mapa"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+[[headers]]
+  for = "/s02/hojas/productos"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+[[headers]]
+  for = "/s02/hojas/variables"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
