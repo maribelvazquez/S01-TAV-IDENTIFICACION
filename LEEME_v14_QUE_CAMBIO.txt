@@ -1,0 +1,28 @@
+AULA ANTILAVADO 360 · v14 (incluye todo lo de la v12) · 21 de septiembre de 2026
+====================================================
+
+QUÉ CAMBIÓ
+1. Sesión 5 publicada: carpeta s05/ nueva
+   s05/index.html     la página de la sesión (Los sectores, uno por uno)
+   s05/estilo.css     igual al de las demás sesiones
+   s05/descargables/  S05_ALU_01_Consola_REC_Actividades_Vulnerables_v2.xlsx
+                      S05_ALU_02_Zona_de_Riesgo_v4.docx
+                      S05_ALU_03_Resumen_Sesion_05.pdf  (resumen de 9 páginas)
+2. Portada (index.html): la sesión 5 queda activa, con liga.
+3. Biblioteca: el compendio de preguntas pasa a la octava edición
+   (20-sep-2026, 194 preguntas, 144 páginas). Se conserva el mismo nombre de
+   archivo, Preguntas_del_Sector_ACUERDO_115.pdf, para que las ligas no se rompan;
+   al subirlo, reemplaza al anterior.
+4. Sesiones 0 a 4: la nota «los tres documentos de consulta» dice ahora
+   194 preguntas (antes 177).
+5. Sesión 4: el recuadro «Sesión siguiente» ya liga a la sesión 5.
+
+AL SUBIR A GITHUB
+Sube todo el contenido de esta carpeta al mismo repositorio de siempre
+(Add file → Upload files). No hace falta borrar nada.
+
+VERIFICAR
+Abrir la portada, entrar a la sesión 5, bajar a «Materiales» y descargar los tres
+archivos. En la biblioteca, abrir el compendio: la portada debe decir
+«Octava edición · 20 de septiembre de 2026 · 194 preguntas». Recargar con
+Ctrl+Shift+R si se ve la versión anterior.
