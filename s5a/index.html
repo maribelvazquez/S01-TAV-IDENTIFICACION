@@ -176,13 +176,14 @@
   <p>La identificación tendrá que venir del catálogo, y los dos candidatos son <b>&lt;prioridad&gt;</b> (3.3) y <b>&lt;tipo_alerta&gt;</b> (3.4.1). La UIF tiene plazo hasta el <b>1 de octubre de 2026</b> para publicar instructivos y catálogos. Quien cierre el diseño del flujo antes de esa fecha, lo va a rehacer.</p>
 
   <h3>6 · El texto se publicó con erratas, y hoy son texto vigente</h3>
-  <p>Comparamos el proyecto que circuló el 14 de septiembre contra lo publicado el 24: salió idéntico, hasta en los errores. Estos son los que muerden a quien programe:</p>
+  <p>Comparamos el proyecto que circuló el 14 de septiembre contra lo publicado el 24: salió idéntico, hasta en los errores. Verificamos cada uno contra el archivo del propio Diario Oficial. Éstos son los que muerden a quien programe:</p>
   <div class="tabla-scroll"><table>
     <thead><tr><th style="width:90px">Anexo</th><th style="width:170px">Dice</th><th style="width:170px">Debería decir</th><th>Riesgo</th></tr></thead>
     <tbody>
       <tr><td class="k">2-B</td><td><b>&lt;total_fg_juridicas&gt;</b></td><td>&lt;total_fig_juridicas&gt;</td><td>Falta la <b>i</b>. En los otros 19 anexos la etiqueta la lleva. Si el esquema del Portal usa la correcta, ese XML se rechaza.</td></tr>
       <tr><td class="k">9</td><td><b>&lt;tipo_pesona_moral&gt;</b></td><td>&lt;tipo_persona_moral&gt;</td><td>Falta la <b>r</b>. Mismo riesgo.</td></tr>
-      <tr><td class="k">2-B y 10</td><td><b>&lt; bc _persona_fisica&gt;</b></td><td>&lt;bc_persona_fisica&gt;</td><td>Espacios dentro de la etiqueta.</td></tr>
+      <tr><td class="k">10</td><td><b>&lt;persona&nbsp;_fisica&gt;</b> y <b>&lt;persona&nbsp;_moral&gt;</b></td><td>&lt;persona_fisica&gt; · &lt;persona_moral&gt;</td><td><b>Espacio dentro de la etiqueta</b>, en los campos 3.7.1.7.2.1 y 3.7.1.7.2.2. En los otros 63 y 64 lugares donde aparecen van sin espacio.</td></tr>
+      <tr><td class="k">12-C</td><td><b>&lt;valor_aval<u>ú</u>o_catastral&gt;</b></td><td>&lt;valor_avaluo_catastral&gt;</td><td>Lleva <b>acento dentro de la etiqueta</b>. En el Anexo 5-A el mismo campo va sin acento. Un carácter acentuado en un nombre de etiqueta es problema de codificación, además de inconsistencia.</td></tr>
       <tr><td class="k">16</td><td>Salta del 3.5.3.3.1.4.5 al 3.5.3.3.1.6</td><td>—</td><td>Falta un número en la secuencia. Hay que verificar contra el esquema cuando salga.</td></tr>
     </tbody>
   </table></div>
