@@ -1,0 +1,38 @@
+AULA ANTILAVADO 360 · v15 (incluye todo lo de la v14) · 28 de septiembre de 2026
+====================================================
+
+QUÉ CAMBIÓ
+1. Sesión extraordinaria 5.A publicada: carpeta s5a/ nueva
+   s5a/index.html     la página de la sesión (Los Anexos: los nuevos formatos de Avisos)
+   s5a/estilo.css     el de las demás sesiones, más la etiqueta de cita RES
+                      para las dos Resoluciones del 24-sep-2026
+   s5a/descargables/  S5A_ALU_01_Diagnostico_de_Brecha_Anexos.xlsx   (6 hojas)
+                      S5A_ALU_02_Comparativo_Anexos_2021_vs_2026.xlsx (5 hojas)
+                      S5A_ALU_03_Guia_Cambios_en_Sistema.docx         (10 páginas)
+                      S5A_ALU_04_Presentacion.pptx                    (32 láminas)
+                      DOF_24sep2026_Avisos_e_Informes_AV.pdf          (171 páginas)
+                      DOF_24sep2026_Alta_y_registro_AV.pdf            (6 páginas)
+2. Portada (index.html): entra la tarjeta 5·A, activa, del martes 29 de septiembre.
+   La sesión 6 se recorre al martes 6 de octubre.
+   La bajada dice ahora «Ocho sesiones, del 11 de agosto al 6 de octubre de 2026».
+3. Sesión 5: el recuadro «Sesión siguiente» ya liga a la sesión 5.A.
+
+POR QUÉ HAY UNA SESIÓN EXTRAORDINARIA
+El 24 de septiembre de 2026 se publicaron en el Diario Oficial los nuevos
+formatos oficiales de Avisos e Informes (22 anexos, 4,182 campos) y el nuevo
+formato de alta y registro. Sustituyen a los de 2021. La sesión 5.A es para que
+cada participante sepa qué cambia en SU anexo, qué ajustes le tocan y qué
+entregarle a su proveedor de sistema.
+
+AL SUBIR A GITHUB
+Sube todo el contenido de esta carpeta al mismo repositorio de siempre
+(Add file → Upload files). No hace falta borrar nada.
+
+VERIFICAR
+1. Abrir la portada: debe verse la tarjeta 5·A entre la 5 y la 6, activa,
+   y la 6 debe decir «Martes 6 de octubre».
+2. Entrar a la sesión 5.A y bajar a «Materiales de la sesión»: los seis
+   archivos deben descargar.
+3. Entrar a la sesión 5 y bajar hasta el pie: el recuadro «Sesión siguiente»
+   debe llevar a la 5.A.
+4. Si se ve la versión anterior, recargar con Ctrl+Shift+R.
