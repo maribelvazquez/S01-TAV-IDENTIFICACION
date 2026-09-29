@@ -1,0 +1,41 @@
+AULA ANTILAVADO 360 · v16 · 28 de septiembre de 2026, 20:35
+===========================================================
+
+ESTA CARPETA ES EL AULA COMPLETA. Se sube tal cual.
+
+CÓMO SE SUBE
+Abra el zip, seleccione TODO lo que está adentro y súbalo al repositorio
+(Add file → Upload files). GitHub respeta las carpetas solo: no hay que
+entrar a ninguna ni crearlas a mano. Lo que ya existe se reemplaza.
+
+QUÉ CAMBIÓ RESPECTO DE LA v15 QUE USTED YA SUBIÓ
+Dos archivos, y un solo cambio en los dos:
+
+  s5a/descargables/S5A_ALU_03_Guia_Cambios_en_Sistema.docx
+  s5a/descargables/S5A_ALU_04_Presentacion.pptx
+
+Decían «VENCÍA el plazo de la UIF para instructivos y catálogos».
+El plazo todavía no vence: es el 1 de octubre de 2026. Ahora dicen «VENCE».
+En una lámina que se proyecta en clase y en un documento que se le manda al
+proveedor de sistema, esa diferencia importa.
+
+Todo lo demás de la v15 ya estaba correcto. Se cotejó archivo por archivo
+contra el repositorio y no había ninguna otra diferencia.
+
+EL ÚNICO PENDIENTE: EL COMPENDIO DE LA 9a EDICIÓN
+En biblioteca/ sigue el PDF de la 8a edición (144 páginas, «Octava edición ·
+20 de septiembre · 194 preguntas»), mientras la tarjeta de la biblioteca ya
+anuncia 207 preguntas y 158 páginas.
+
+  1. Tome SANC_S00_ALU_09_Preguntas_Respuestas_207_ACUERDO115_9a_ALUMNO.pdf
+  2. Renómbrelo a  Preguntas_del_Sector_ACUERDO_115.pdf
+  3. Súbalo igual que todo lo demás: reemplaza al que está en biblioteca/
+
+Ese nombre NO se cambia. Si se cambia, se rompen las ligas de la portada.
+
+VERIFICAR DESPUÉS DE SUBIR
+  1. La portada muestra la tarjeta 5·A entre la 5 y la 6, y la 6 dice
+     «Martes 6 de octubre».
+  2. Desde la sesión 5, el recuadro «Sesión siguiente» lleva a la 5.A.
+  3. En la sesión 5.A, los seis materiales descargan.
+  4. Si ve la versión anterior, recargue con Ctrl+Shift+R.
