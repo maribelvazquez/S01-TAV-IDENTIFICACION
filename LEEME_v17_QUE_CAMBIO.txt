@@ -1,0 +1,34 @@
+AULA ANTILAVADO 360 · v17 · 29 de septiembre de 2026
+====================================================
+
+ESTA CARPETA ES EL AULA COMPLETA. Se sube tal cual.
+
+CÓMO SE SUBE
+Abra el zip, seleccione TODO lo que está adentro y súbalo al repositorio
+(Add file → Upload files). GitHub respeta las carpetas solo. Lo que ya
+existe se reemplaza.
+
+QUÉ CAMBIÓ RESPECTO DE LA v16
+Tres archivos:
+
+  1. s5a/descargables/S5A_ALU_05_Compendio_9a_Preguntas_Nuevas.pptx   (NUEVO)
+     19 láminas para abrir la sesión 5·A: las trece preguntas nuevas
+     (195 a 207) con su semáforo y las correcciones de la novena edición.
+
+  2. s5a/index.html
+     En «Materiales de la sesión» se agrega la tarjeta de descarga de esa
+     presentación, debajo de la presentación de la sesión.
+
+  3. biblioteca/Preguntas_del_Sector_ACUERDO_115.pdf
+     Ya es la NOVENA edición (207 preguntas, 158 páginas). Era el único
+     pendiente de la v16. Se conserva el mismo nombre para no romper las
+     ligas de la portada.
+
+NO HAY QUE BORRAR NADA.
+
+VERIFICAR DESPUÉS DE SUBIR
+  1. En la sesión 5·A, «Materiales de la sesión» muestra siete descargas y
+     la nueva baja como PPTX.
+  2. En la portada, la tarjeta «Preguntas del sector» abre un PDF de 158
+     páginas que dice «Novena edición».
+  3. Si ve la versión anterior, recargue con Ctrl+Shift+R.
